@@ -1,7 +1,7 @@
-import styles from './Course.module.scss';
-import classNames from 'classnames/bind';
+// import styles from './Course.module.scss';
+// import classNames from 'classnames/bind';
 
-const cx = classNames.bind(styles);
+// const cx = classNames.bind(styles);
 
 function Course() {
     return ( 

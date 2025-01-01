@@ -1,12 +1,12 @@
-// import styles from './Home.module.scss';
+// import styles from './News.module.scss';
 // import classNames from 'classnames/bind';
 
 // const cx = classNames.bind(styles);
 
-function Home() {
+function News() {
     return ( 
-        <h2>Home page</h2>
+        <h2>News page</h2>
     );
 }
 
-export default Home;
+export default News;
