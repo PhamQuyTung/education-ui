@@ -8,24 +8,28 @@
 }
 
 :root {
-    --theme-color: #0D5EF4;
-    --theme-color2: #F20F10;
-    --title-color: #0F2239;
-    --body-color: #4D5765;
-    --smoke-color: #F3F7FB;
+    --theme-color: #0d5ef4;
+    --theme-color2: #f20f10;
+    --title-color: #0f2239;
+    --body-color: #4d5765;
+    --smoke-color: #f3f7fb;
     --black-color: #000000;
     --white-color: #ffffff;
-    --light-color: #72849B;
-    --yellow-color: #FFB539;
+    --border-color: #ffffff33;
+    --light-color: #72849b;
+    --yellow-color: #ffb539;
     --success-color: #28a745;
     --error-color: #dc3545;
     --border-color: #ecf1f9;
     --main-container: 1380px;
+    --header-top: 54px;
+    --header-nav: 106px;
     --container-gutters: 24px;
     --section-space: 120px;
     --section-space-mobile: 80px;
     --section-title-space: 70px;
     --ripple-ani-duration: 5s;
+    --transition: all 0.3s linear;
 }
 
 html {
@@ -33,10 +37,39 @@ html {
 }
 
 body {
-    font-family: "Montserrat", serif;
+    font-family: 'Montserrat', serif;
     font-size: 1.6rem;
     line-height: 1.5;
     font-optical-sizing: auto;
     font-style: normal;
     text-rendering: optimizespeed;
+}
+
+/* Xóa style mặc định của danh sách */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Xóa style mặc định của đường dẫn */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Đặt hình ảnh không vượt ra ngoài container */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Đặt mặc định cho các thẻ form */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    outline: none;
+    border: none;
 }
