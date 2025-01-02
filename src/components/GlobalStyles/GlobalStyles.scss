@@ -1,5 +1,5 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
@@ -8,7 +8,24 @@
 }
 
 :root {
-    --primary: #fe2c55;
+    --theme-color: #0D5EF4;
+    --theme-color2: #F20F10;
+    --title-color: #0F2239;
+    --body-color: #4D5765;
+    --smoke-color: #F3F7FB;
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --light-color: #72849B;
+    --yellow-color: #FFB539;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --border-color: #ecf1f9;
+    --main-container: 1380px;
+    --container-gutters: 24px;
+    --section-space: 120px;
+    --section-space-mobile: 80px;
+    --section-title-space: 70px;
+    --ripple-ani-duration: 5s;
 }
 
 html {
@@ -16,8 +33,10 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Montserrat", serif;
     font-size: 1.6rem;
     line-height: 1.5;
+    font-optical-sizing: auto;
+    font-style: normal;
     text-rendering: optimizespeed;
 }
