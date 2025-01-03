@@ -10,8 +10,8 @@
     --header-nav: 106px;
 
     height: var(--header-nav);
-    // background-color: var(--white-color);
-    background-color: yellow;
+    background-color: var(--white-color);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .wrapper {
@@ -24,10 +24,154 @@
 }
 
 .logo {
+    padding: 0 12px;
 
+    .img {
+        width: 180px;
+        height: auto;
+    }
 }
 
-.img {
-    width: 180px;
-    height: auto;
+.menu {
+    display: flex;
+    padding: 0 12px;
 }
+
+.item {
+    margin: 0 13px;
+}
+
+.link {
+    font-size: 1.6rem;
+    padding: 36.5px 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--title-color);
+    cursor: pointer;
+    transition: var(--transition);
+
+    &:hover {
+        color: var(--theme-color);
+    }
+}
+
+/* Biểu tượng mũi tên */
+.icon {
+    font-size: 1.6rem;
+    margin-left: 5px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Khi hover vào menu chính */
+.link:hover .icon {
+    transform: rotate(180deg); /* Xoay 180 độ */
+}
+
+.active {
+    color: var(--theme-color);
+}
+
+.activeSub {
+    color: var(--theme-color) !important;
+}
+
+.sub-menu {
+    min-width: 190px;
+    padding: 18px 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(236, 241, 249);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+    transition: opacity 0.3s ease, transform 0.3s ease, animation 0.3s ease;
+    animation: var(--animation-fadeIn);
+}
+
+.sub-item {
+    padding: 6px 10px;
+}
+
+.sub-item__link {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--title-color);
+    transition: var(--transition);
+
+    &:hover {
+        color: var(--theme-color);
+    }
+
+    .sub-item__icon {
+        margin-right: 10px;
+        font-size: 1.4rem;
+        color: var(--theme-color);
+    }
+}
+
+.actions {
+    display: flex;
+    gap: 20px;
+    padding: 0 12px;
+}
+
+.search,
+.cart,
+.more {
+    display: inline-block;
+    width: var(--btn-size, 50px);
+    height: var(--btn-size, 50px);
+    line-height: var(--btn-size, 50px);
+    font-size: var(--btn-font-size, 16px);
+    background-color: var(--icon-bg, #ffffff);
+    color: var(--title-color);
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid rgb(208, 219, 233);
+    cursor: pointer;
+    transition: var(--transition);
+
+    &:hover {
+        background-color: var(--theme-color);
+        color: var(--white-color);
+        border-color: var(--theme-color);
+    }
+}
+
+.actions-search-sub {
+    min-width: 300px;
+    min-height: 50px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 20px 10px;
+    animation: var(--animation-fadeIn);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.search-input {
+    width: 70%;
+    height: 50%;
+    border: 1px solid #cacaca;
+    padding: 12px 10px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.btn-submit {
+    width: 20%;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    background-color: #0d5ef4;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.icon-submit {
+    font-size: 1.6rem;
+    color: var(--white-color);
+}
+

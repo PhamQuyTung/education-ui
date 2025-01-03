@@ -6,6 +6,7 @@ import styles from './Image.module.scss';
 
 const Image = forwardRef(
     ({ src = images.noImage, alt, customClassName, customFallBack = images.noImage, ...props }, ref) => {
+        // console.log('Ref received in Image:', ref);
         return (
             <img
                 ref={ref}

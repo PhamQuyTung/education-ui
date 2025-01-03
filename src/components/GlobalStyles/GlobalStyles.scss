@@ -30,6 +30,7 @@
     --section-title-space: 70px;
     --ripple-ani-duration: 5s;
     --transition: all 0.3s linear;
+    --animation-fadeIn: slideIn 0.3s ease forwards;
 }
 
 html {
@@ -72,4 +73,15 @@ select {
     font: inherit;
     outline: none;
     border: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
