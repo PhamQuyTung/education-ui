@@ -10,6 +10,8 @@ import { faFacebookF, faInstagram, faTiktok, faTwitter, faYoutube } from '@forta
 
 const cx = classNames.bind(styles);
 
+const currentUser = true;
+
 function HeaderTop() {
     return (
         <header className={cx('header-top')}>
@@ -53,10 +55,16 @@ function HeaderTop() {
                     </li>
 
                     <li className={cx('item-box2')}>
-                        <FontAwesomeIcon className={cx('icon')} icon={faUser} />
-                        <span className={cx('user')}>
-                            Đăng nhập / Đăng ký
-                        </span>
+                        {currentUser ? (
+                            <Link to="/profile" className={cx('link')}>
+                                Thông tin cá nhân
+                            </Link>
+                        ) : (
+                            <>
+                                <FontAwesomeIcon className={cx('icon')} icon={faUser} />
+                                <span className={cx('user')}>Đăng nhập / Đăng ký</span>
+                            </>
+                        )}
                     </li>
                 </ul>
             </div>

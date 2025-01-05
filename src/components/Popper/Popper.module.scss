@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    width: 100%;
+    max-height: min(-156px + 100vh, 734px);
+    min-height: 100px;
+    padding-top: 8px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid rgb(236, 241, 249);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+    transition: opacity 0.3s ease, transform 0.3s ease, animation 0.3s ease;
+    animation: var(--animation-fadeIn);
+}

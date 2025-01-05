@@ -1,0 +1,23 @@
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+    transition: all 0.3s linear;
+}
+
+body.dark {
+    background-color: #000000;
+    transition: all 0.3s linear;
+    color: #ffffff;
+}
+
+body.light header {
+    background-color: var(--theme-color);
+    color: #000000;
+    transition: all 0.3s linear;
+}
+
+body.dark header {
+    background-color: #000000;
+    transition: all 0.3s linear;
+    color: #ffffff;
+}
