@@ -1,4 +1,24 @@
 {
-    "welcome": "Chào mừng đến với trang web của chúng tôi",
-    "description": "Đây là bản demo về chuyển đổi ngôn ngữ"
+    "monday": "Thứ 2",
+    "friday": "Thứ 6",
+    "follow": "Theo dõi",
+    "home": "Trang chủ",
+    "introduce": "Giới thiệu",
+    "course": "Khóa học",
+    "activity": "Hoạt động",
+    "events": "Sự kiện",
+    "teacher": "Giảng viên",
+    "news": "Tin tức",
+    "language": "Ngôn ngữ",
+    "english": "Tiếng Anh",
+    "contact": "Liên hệ",
+    "SearchCourses": "Tìm kiếm khóa học",
+    "CartEmpty": "Giỏ hàng của bạn đang trống :(",
+    "AddProducts": "Vui lòng thêm sản phẩm!",
+    "BuyNow": "Mua ngay",
+    "NotNotification": "Bạn chưa nhận được thông báo nào!",
+    "FrequentlyAskedQuestions": "Câu hỏi thường gặp",
+    "LightDarkMode": "Chế độ sáng/tối",
+    "slider": "Trình chiếu",
+    "HomePage": "Trang chủ"
 }

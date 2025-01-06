@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import classNames from 'classnames/bind';
+// import { useTranslation } from 'react-i18next';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faBook, faEllipsis } from '@fortawesome/free-solid-svg-icons';
@@ -26,6 +27,16 @@ function HeaderNav() {
 
     const { theme } = useTheme();
 
+    // const { t, i18n } = useTranslation();
+
+    // function handleMenuChange(menuItem) {
+    //     if (menuItem.code) {
+    //         i18n.changeLanguage(menuItem.code); // Thay đổi ngôn ngữ
+    //     }
+    //     console.log(menuItem);
+    // }
+
+
     useEffect(() => {
         document.body.className = theme; // Cập nhật class cho body
     }, [theme]);
@@ -47,13 +58,17 @@ function HeaderNav() {
         </ul>
     );
 
+    function handleMenuChange(menuItem) {
+        console.log(menuItem);
+    }
+
     return (
         <div className={cx('header-nav')}>
             <div className={cx('wrapper')}>
                 {/* Logo */}
-                <div className={cx('logo')}>
+                <Link to='/' className={cx('logo')}>
                     <Image ref={imageReft} className={cx('img')} src={logo} alt="logo" />
-                </div>
+                </Link>
 
                 {/* Main Menu */}
                 <ul className={cx('menu')}>
@@ -98,7 +113,7 @@ function HeaderNav() {
 
                     {/* OPTIONS */}
                     <div className={cx('option-wrapper')}>
-                        <Menu items={MenuOption} className={cx('custom-menu')}>
+                        <Menu items={MenuOption} className={cx('custom-menu')} onChange={handleMenuChange}>
                             <li className={cx('option')}>
                                 <FontAwesomeIcon className={cx('icon-option')} icon={faEllipsis} />
                             </li>

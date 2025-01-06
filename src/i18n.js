@@ -1,23 +1,21 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import Backend from 'i18next-http-backend'; // Sử dụng để load file JSON
+import LanguageDetector from 'i18next-browser-languagedetector'; // Tự động phát hiện ngôn ngữ
 
-// Import các file dịch
-import enTranslation from '~/locales/en/translation.json';
-import viTranslation from '~/locales/vi/translation.json';
-
-const resources = {
-    en: { translation: enTranslation },
-    vi: { translation: viTranslation },
-};
-
-i18n.use(LanguageDetector) // Tự động phát hiện ngôn ngữ
-    .use(initReactI18next) // Kết nối với react-i18next
+i18n
+    .use(Backend) // Kết nối backend để load file JSON
+    .use(LanguageDetector) // Tự động phát hiện ngôn ngữ
+    .use(initReactI18next) // Kết nối React
     .init({
-        resources,
-        lng: 'vi', // Ngôn ngữ mặc định
-        fallbackLng: 'en', // Sử dụng ngôn ngữ này nếu ngôn ngữ hiện tại không có bản dịch
-        interpolation: { escapeValue: false }, // Không escape ký tự đặc biệt
+        fallbackLng: 'en', // Ngôn ngữ mặc định
+        debug: true, // Bật debug để kiểm tra lỗi
+        interpolation: {
+            escapeValue: false, // React đã xử lý escape
+        },
+        backend: {
+            loadPath: '/locales/{{lng}}/translation.json', // Đường dẫn tới file dịch
+        },
     });
 
 export default i18n;

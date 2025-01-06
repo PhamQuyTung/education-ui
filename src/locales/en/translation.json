@@ -1,4 +1,24 @@
 {
-    "welcome": "Welcome to our website",
-    "description": "This is a demo of language translation"
+    "monday": "Monday",
+    "friday": "Friday",
+    "follow": "Follow",
+    "home": "Home",
+    "introduce": "Introduce",
+    "course": "Course",
+    "activity": "Activity",
+    "events": "Events",
+    "teacher": "Teacher",
+    "news": "News",
+    "contact": "Contact",
+    "language": "Language",
+    "english": "English",
+    "SearchCourses": "Search for courses",
+    "CartEmpty": "Your cart is empty :(",
+    "AddProducts": "Please add products!",
+    "BuyNow": "Buy now",
+    "NotNotification": "You have not received any notifications!",
+    "FrequentlyAskedQuestions": "FAQs",
+    "LightDarkMode": "Light/Dark Mode",
+    "slider": "Slider",
+    "HomePage": "Home Page"
 }
