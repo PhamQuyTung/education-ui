@@ -77,7 +77,7 @@ span.Button_title__yIuSg {
 .primary {
     color: var(--white-color);
     background-color: var(--theme-color);
-    border-color: var(--theme-color); //Đã xử lý vấn đề: Border
+    // border-color: var(--theme-color); //Đã xử lý vấn đề: Border
 
     &:hover {
         background-color: var(--title-color); //Đã xử lý vấn đề: Border
@@ -105,23 +105,23 @@ span.Button_title__yIuSg {
 .Small {
     width: 100%;
     height: 35.8px;
-    padding: 10.5px 20px;
+    // padding: 10.5px 20px;
 }
 
 .Medium {
     width: 100%;
     height: 45.8px;
-    padding: 15.5px 27px;
+    // padding: 15.5px 27px;
 }
 
 .Large {
     width: 100%;
     height: 50.8px;
-    padding: 18px 29px;
+    // padding: 18px 29px;
 }
 
 .ExtraLarge {
     width: 100%;
     height: 55.8px;
-    padding: 20.5px 29px;
+    // padding: 20.5px 29px;
 }

@@ -1,0 +1,142 @@
+.slider {
+    --theme-color: #0d5ef4;
+    --theme-color2: #f20f10;
+    --title-color: #0f2239;
+    --body-color: #4d5765;
+    --smoke-color: #f3f7fb;
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --border-color: #ffffff33;
+    --light-color: #72849b;
+    --yellow-color: #ffb539;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --border-color: #ecf1f9;
+    --main-container: 1380px;
+    --header-top: 54px;
+    --header-nav: 106px;
+    --container-gutters: 24px;
+    --section-space: 120px;
+    --section-space-mobile: 80px;
+    --section-title-space: 70px;
+    --ripple-ani-duration: 5s;
+    --transition: all 0.3s linear;
+    --animation-fadeIn: slideIn 0.3s ease forwards;
+
+    // margin-top: var(--header-nav);
+    min-height: 847px;
+    overflow: hidden;
+}
+
+.wrapper {
+    position: relative;
+    min-height: 847px;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../assets/images/Slider/hero_bg_1_2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: filter 0.3s ease;
+    animation: var(--animation-fadeIn);
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--title-color);
+    opacity: 0.8;
+    z-index: 1;
+}
+
+// Slider container
+.container {
+    // position: absolute;
+    max-width: var(--main-container);
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white-color);
+    z-index: 6;
+    padding: 0 20px;
+}
+
+.content-heading {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+
+    span {
+        padding: 6px 16px;
+        background-color: var(--theme-color);
+        margin-right: 10px;
+        border-radius: 20px;
+    }
+}
+
+.content-body {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 70px;
+
+    .title {
+        font-size: 60px;
+        .highlight {
+            color: var(--theme-color);
+        }
+    }
+}
+
+.content-description {
+    margin: 20px 0 35px 0;
+
+    p {
+        font-size: 1.6rem;
+        color: #b2b2b2;
+    }
+}
+
+.content-start {
+}
+
+.image {
+    max-width: 660px;
+    max-height: 660px;
+    z-index: 6;
+}
+
+.custom-btn {
+    width: 22%;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+// 
+.hero-shape {
+   
+    .shape-1 {
+        position: absolute;
+        top: 24%;
+        right: 0%;
+        width: 75%;
+        height: 100%;
+        z-index: 1;
+    }
+}

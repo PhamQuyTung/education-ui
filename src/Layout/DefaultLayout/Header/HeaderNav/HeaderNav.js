@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import classNames from 'classnames/bind';
 // import { useTranslation } from 'react-i18next';
@@ -36,11 +36,12 @@ function HeaderNav() {
     //     console.log(menuItem);
     // }
 
-
+    // dark mode logic
     useEffect(() => {
         document.body.className = theme; // Cập nhật class cho body
     }, [theme]);
 
+    // renderMenuSub
     const renderSubMenu = () => (
         <ul className={cx('sub-menu')}>
             {[
@@ -58,12 +59,30 @@ function HeaderNav() {
         </ul>
     );
 
-    function handleMenuChange(menuItem) {
-        console.log(menuItem);
-    }
+    // xử lý logic menu
+    // function handleMenuChange(menuItem) {
+    //     console.log(menuItem);
+    // }
 
+    // Logic Header 
+    const [isFixed, setIsFixed] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsFixed(window.scrollY >= 100000);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup sự kiện khi component bị hủy
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    // return jsx
     return (
-        <div className={cx('header-nav')}>
+        <div className={cx('header-nav', { 'ps-fix': isFixed })}>
             <div className={cx('wrapper')}>
                 {/* Logo */}
                 <Link to='/' className={cx('logo')}>
@@ -113,7 +132,7 @@ function HeaderNav() {
 
                     {/* OPTIONS */}
                     <div className={cx('option-wrapper')}>
-                        <Menu items={MenuOption} className={cx('custom-menu')} onChange={handleMenuChange}>
+                        <Menu items={MenuOption} className={cx('custom-menu')}>
                             <li className={cx('option')}>
                                 <FontAwesomeIcon className={cx('icon-option')} icon={faEllipsis} />
                             </li>

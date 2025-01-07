@@ -1,16 +1,16 @@
 import React from 'react';
 import Header from './Header';
-import Slider from './Slider';
+import DefaultSlider from './DefaultSlider';
 
 function DefaultLayout({ children }) {
     return (
-        <div>
+        <>
             <Header />
             <div className="container">
-                <Slider />
+                <DefaultSlider />
                 <div className="content">{children}</div>
             </div>
-        </div>
+        </>
     );
 }
 export default DefaultLayout;

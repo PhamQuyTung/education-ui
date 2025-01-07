@@ -11,6 +11,11 @@
 
     height: var(--header-top);
     background-color: var(--theme-color);
+    transition: var(--transition);
+}
+
+.dp-none {
+    display: none;
 }
 
 .wrapper {

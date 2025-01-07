@@ -12,6 +12,15 @@
     height: var(--header-nav);
     background-color: var(--white-color);
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+}
+
+.ps-fix {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
 }
 
 .wrapper {

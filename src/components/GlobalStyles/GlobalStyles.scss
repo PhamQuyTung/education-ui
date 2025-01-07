@@ -85,3 +85,7 @@ select {
         transform: translateY(0);
     }
 }
+
+h1 {
+    font-size: calc(1.375rem + 1.5vw);
+}

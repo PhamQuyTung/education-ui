@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './HeaderTop.module.scss';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
@@ -13,8 +13,24 @@ const cx = classNames.bind(styles);
 const currentUser = true;
 
 function HeaderTop() {
+    //Logic Header
+    const [isHidden, setIsHidden] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsHidden(window.scrollY >= 10000);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup sự kiện khi component bị hủy
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <header className={cx('header-top')}>
+        <div className={cx('header-top', { 'dp-none': isHidden })}>
             <div className={cx('wrapper')}>
                 <ul className={cx('list-box1')}>
                     <li className={cx('item-box1')}>
@@ -68,7 +84,7 @@ function HeaderTop() {
                     </li>
                 </ul>
             </div>
-        </header>
+        </div>
     );
 }
 

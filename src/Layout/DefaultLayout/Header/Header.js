@@ -4,7 +4,7 @@ import HeaderTop from './HeaderTop';
 
 function Header() {
     return (
-        <div>
+        <div className='Header-main'>
             <HeaderTop />
             <HeaderNav />
         </div>
