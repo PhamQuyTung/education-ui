@@ -30,7 +30,7 @@ function Slider() {
                         // effect="fade" // Hiệu ứng mờ dần
                         autoplay={{
                             delay: 5000, // Thời gian chuyển đổi (5 giây)
-                            disableOnInteraction: true, // Không dừng autoplay khi người dùng tương tác
+                            disableOnInteraction: false, // Không dừng autoplay khi người dùng tương tác
                         }}
                         spaceBetween={50} // Khoảng cách giữa các slide
                         slidesPerView={1} // Số slide hiển thị cùng lúc
@@ -71,7 +71,7 @@ function Slider() {
                                 sale={35}
                                 contentTitle1="Nơi bán khóa học"
                                 contentTitle2="Tốt nhất"
-                                contentTitle3="Hiện nay"
+                                contentTitle3="Tại Việt Nam"
                                 subTitle="Nơi cung cấp những khóa học trực tuyến hàng đầu, giúp bạn nâng tầm kiến thức và kỹ năng."
                                 imgFooter={imagesContent2}
                             />
