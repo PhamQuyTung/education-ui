@@ -1,14 +1,22 @@
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules'; // Import module Autoplay
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import classNames from 'classnames/bind';
 
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Grid2 } from '@mui/material';
-
 import styles from './Slider.module.scss';
-import Button from '~/components/Button';
 import Image from '~/components/Image';
 import imagesContent1 from '~/assets/images/Slider/hero_thumb_1_1.png';
+import imagesContent2 from '~/assets/images/Slider/hero_thumb_1_2.webp';
+import imagesContent3 from '~/assets/images/Slider/hero_thumb_1_3.png';
 import imagesShape1 from '~/assets/images/Slider/shape_1_1.png';
+import imagesShape2 from '~/assets/images/Slider/shape_1_2.png';
+import imagesShape4 from '~/assets/images/Slider/shape_1_3.png';
+import imagesShape5 from '~/assets/images/Slider/shape_1_4.png';
+import SliderContainer from '~/Layout/HeaderOnly/Slider/Container';
 
 const cx = classNames.bind(styles);
 
@@ -17,56 +25,103 @@ function Slider() {
         <div className={cx('slider')}>
             <div className={cx('wrapper')}>
                 <div className={cx('background')}>
-                    {/* Container 1 */}
-                    <Grid2 container spacing={2} className={cx('container')}>
-                        <Grid2 item xs={12} sm={6} md={6} className={cx('content')}>
-                            <div className={cx('content-heading')}>
-                                <p>
-                                    Học từ hôm nay <span>Giảm giá 35%</span>
-                                </p>
-                            </div>
-    
-                            <div className={cx('content-body')}>
-                                <h1 className={cx('title')}>
-                                    Giáo dục là tạo ra
-                                    <br />
-                                    <span className={cx('highlight')}>Tương lai</span>
-                                    <br />
-                                    <span>Tốt đẹp hơn</span>
-                                </h1>
-                            </div>
-    
-                            <div className={cx('content-description')}>
-                                <p>
-                                    Giáo dục có thể được coi là sự truyền tải các giá trị và kiến ​​thức tích lũy của xã
-                                    hội.
-                                </p>
-                            </div>
-    
-                            <div className={cx('content-start')}>
-                                <Button primary ExtraLarge rightIcon={<FontAwesomeIcon icon={faArrowRight} />} className={cx('custom-btn')}>
-                                    Bắt đầu
-                                </Button>
-                            </div>
-                        </Grid2>
-    
-                        <Grid2 item xs={12} sm={6} md={6} className={cx('image')}>
-                            <Image src={imagesContent1} alt='content1' />
-                        </Grid2>
-                    </Grid2>
+                    <Swiper
+                        modules={[Navigation, Pagination, EffectFade, Autoplay]} // Đăng ký các module
+                        // effect="fade" // Hiệu ứng mờ dần
+                        autoplay={{
+                            delay: 5000, // Thời gian chuyển đổi (5 giây)
+                            disableOnInteraction: true, // Không dừng autoplay khi người dùng tương tác
+                        }}
+                        spaceBetween={50} // Khoảng cách giữa các slide
+                        slidesPerView={1} // Số slide hiển thị cùng lúc
+                        navigation // Hiển thị nút điều hướng
+                        pagination={{ clickable: true }} // Bật nút phân trang
+                        scrollbar={{ draggable: true }} // Bật thanh cuộn kéo
+                    >
+                        <SwiperSlide>
+                            <SliderContainer
+                                sale={35}
+                                contentTitle1="Giáo dục là tạo ra"
+                                contentTitle2="Tương lai"
+                                contentTitle3="Tốt đẹp hơn"
+                                subTitle="Giáo dục có thể được coi là sự truyền tải các giá trị và kiến ​​thức tích lũy của xã hội. "
+                                imgFooter={imagesContent1}
+                            />
 
-                    {/* hero shape */}
-                    <div className={cx('hero-shape')}>
-                        <div className={cx('shape-1')}>
-                            <Image src={imagesShape1} alt='shape1' />
-                        </div>
-                        <div className={cx('shape-2')}></div>
-                        <div className={cx('shape-3')}></div>
-                        <div className={cx('shape-4')}></div>
-                        <div className={cx('shape-5')}></div>
-                    </div>
+                            {/* hero shape */}
+                            <div className={cx('hero-shape')}>
+                                <div className={cx('shape-1')}>
+                                    <Image src={imagesShape1} alt="shape1" />
+                                </div>
+                                <div className={cx('shape-2')}>
+                                    <Image src={imagesShape2} alt="shape2" />
+                                </div>
+                                <div className={cx('shape-3')}></div>
+                                <div className={cx('shape-4')}>
+                                    <Image src={imagesShape4} alt="shape3" />
+                                </div>
+                                <div className={cx('shape-5')}>
+                                    <Image src={imagesShape5} alt="shape4" />
+                                </div>
+                            </div>
+                        </SwiperSlide>
 
-                    {/* Container 2 */}
+                        <SwiperSlide>
+                            <SliderContainer
+                                sale={35}
+                                contentTitle1="Nơi bán khóa học"
+                                contentTitle2="Tốt nhất"
+                                contentTitle3="Hiện nay"
+                                subTitle="Nơi cung cấp những khóa học trực tuyến hàng đầu, giúp bạn nâng tầm kiến thức và kỹ năng."
+                                imgFooter={imagesContent2}
+                            />
+
+                            {/* hero shape */}
+                            <div className={cx('hero-shape')}>
+                                <div className={cx('shape-1')}>
+                                    <Image src={imagesShape1} alt="shape1" />
+                                </div>
+                                <div className={cx('shape-2')}>
+                                    <Image src={imagesShape2} alt="shape2" />
+                                </div>
+                                <div className={cx('shape-3')}></div>
+                                <div className={cx('shape-4')}>
+                                    <Image src={imagesShape4} alt="shape3" />
+                                </div>
+                                <div className={cx('shape-5')}>
+                                    <Image src={imagesShape5} alt="shape4" />
+                                </div>
+                            </div>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <SliderContainer
+                                sale={35}
+                                contentTitle1="Đăng ký ngay"
+                                contentTitle2="Nhận các Ưu đãi"
+                                contentTitle3="Và khóa học miễn phí"
+                                subTitle="Khám phá những khóa học chất lượng với ưu đãi độc quyền dành riêng cho bạn. "
+                                imgFooter={imagesContent3}
+                            />
+
+                            {/* hero shape */}
+                            <div className={cx('hero-shape')}>
+                                <div className={cx('shape-1')}>
+                                    <Image src={imagesShape1} alt="shape1" />
+                                </div>
+                                <div className={cx('shape-2')}>
+                                    <Image src={imagesShape2} alt="shape2" />
+                                </div>
+                                <div className={cx('shape-3')}></div>
+                                <div className={cx('shape-4')}>
+                                    <Image src={imagesShape4} alt="shape3" />
+                                </div>
+                                <div className={cx('shape-5')}>
+                                    <Image src={imagesShape5} alt="shape4" />
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
             </div>
         </div>

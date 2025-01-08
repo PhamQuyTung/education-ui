@@ -30,7 +30,7 @@ function HeaderTop() {
     }, []);
 
     return (
-        <div className={cx('header-top', { 'dp-none': isHidden })}>
+        <header className={cx('header-top', { 'dp-none': isHidden })}>
             <div className={cx('wrapper')}>
                 <ul className={cx('list-box1')}>
                     <li className={cx('item-box1')}>
@@ -84,7 +84,7 @@ function HeaderTop() {
                     </li>
                 </ul>
             </div>
-        </div>
+        </header>
     );
 }
 
