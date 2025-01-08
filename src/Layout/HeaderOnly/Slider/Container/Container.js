@@ -11,7 +11,7 @@ import AnimationContent from '~/components/Animation';
 
 const cx = classNames.bind(styles);
 
-function Container1({ sale = 35, contentTitle1, contentTitle2, contentTitle3, subTitle, imgFooter }) {
+function Container1({ sale = 35, contentTitle1, contentTitle2, contentTitle3, subTitle, imgFooter, className }) {
     return (
         <div >
             <Container className={cx('container')}>
@@ -52,7 +52,7 @@ function Container1({ sale = 35, contentTitle1, contentTitle2, contentTitle3, su
                     </Col>
     
                     <Col lg={6} md={12} xs={12} className={cx('image')}>
-                        <Image src={imgFooter} alt="" />
+                        <Image src={imgFooter} alt="" className={className}/>
                     </Col>
                 </Row>
             </Container>

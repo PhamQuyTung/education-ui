@@ -69,7 +69,7 @@ function HeaderNav() {
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsFixed(window.scrollY >= 100000);
+            setIsFixed(window.scrollY >= 1000);
         };
 
         window.addEventListener('scroll', handleScroll);
