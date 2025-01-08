@@ -1,6 +1,14 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules'; // Import module Autoplay
+import {
+    EffectFade,
+    Navigation,
+    Pagination,
+    Autoplay,
+    EffectCube,
+    EffectCoverflow,
+    EffectFlip,
+} from 'swiper/modules'; // Import module Autoplay
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
@@ -26,17 +34,31 @@ function Slider() {
             <div className={cx('wrapper')}>
                 <div className={cx('background')}>
                     <Swiper
-                        modules={[Navigation, Pagination, EffectFade, Autoplay]} // Đăng ký các module
+                        modules={[
+                            Navigation,
+                            Pagination,
+                            EffectFade,
+                            Autoplay,
+                            EffectCube,
+                            EffectCoverflow,
+                            EffectFlip,
+                        ]} // Đăng ký các module
                         // effect="fade" // Hiệu ứng mờ dần
+                        // effect="cube" // Hiệu ứng cube
+                        // effect="coverflow" // Hiệu ứng coverflow
+                        // effect="flip" // Hiệu ứng flip
+
                         autoplay={{
                             delay: 5000, // Thời gian chuyển đổi (5 giây)
                             disableOnInteraction: false, // Không dừng autoplay khi người dùng tương tác
                         }}
                         spaceBetween={50} // Khoảng cách giữa các slide
                         slidesPerView={1} // Số slide hiển thị cùng lúc
-                        navigation // Hiển thị nút điều hướng
+                        navigation={false} // Hiển thị nút điều hướng
                         pagination={{ clickable: true }} // Bật nút phân trang
                         scrollbar={{ draggable: true }} // Bật thanh cuộn kéo
+                        speed={1000} // 1 giây
+                        loop={true} // Lặp lại slider
                     >
                         <SwiperSlide>
                             <SliderContainer

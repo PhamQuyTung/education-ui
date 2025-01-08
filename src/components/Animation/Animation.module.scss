@@ -1,0 +1,12 @@
+/* Trạng thái ban đầu */
+.content {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Khi hiển thị */
+.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
