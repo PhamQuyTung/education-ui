@@ -1,5 +1,5 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 
 import Tippy from '@tippyjs/react/headless';
@@ -7,8 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './Notification.module.scss';
-import Image from '~/components/Image';
-import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
@@ -42,5 +40,9 @@ function Notification({ notificationCount = 0 }) {
         </div>
     );
 }
+
+Notification.propTypes = {
+    notificationCount: PropTypes.number,
+};
 
 export default Notification;

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade, Navigation, Pagination, Autoplay, EffectCube, EffectCoverflow, EffectFlip } from 'swiper/modules'; // Import module Autoplay
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
@@ -9,17 +9,32 @@ import classNames from 'classnames/bind';
 
 import styles from './Slider.module.scss';
 import Image from '~/components/Image';
-import imagesContent1 from '~/assets/images/Slider/hero_thumb_1_1.png';
-import imagesContent2 from '~/assets/images/Slider/hero_thumb_1_2.webp';
-import imagesContent3 from '~/assets/images/Slider/hero_thumb_1_3.png';
-import imagesContent6 from '~/assets/images/Slider/teacherandstudents.png';
-import imagesShape1 from '~/assets/images/Slider/shape_1_1.png';
-import imagesShape2 from '~/assets/images/Slider/shape_1_2.png';
-import imagesShape4 from '~/assets/images/Slider/shape_1_3.png';
-import imagesShape5 from '~/assets/images/Slider/shape_1_4.png';
+import images from '~/assets/images/Slider/images';
 import SliderContainer from '~/Layout/HeaderOnly/Slider/Container';
 
 const cx = classNames.bind(styles);
+
+// Sử dụng hình ảnh
+const { content1, content2, content3, content6, shape1, shape2, shape4, shape5 } = images;
+
+// Component HeroShape
+const HeroShape = () => (
+    <div className={cx('hero-shape')}>
+        <div className={cx('shape-1')}>
+            <Image src={shape1} alt="shape1" />
+        </div>
+        <div className={cx('shape-2')}>
+            <Image src={shape2} alt="shape2" />
+        </div>
+        <div className={cx('shape-3')}></div>
+        <div className={cx('shape-4')}>
+            <Image src={shape4} alt="shape3" />
+        </div>
+        <div className={cx('shape-5')}>
+            <Image src={shape5} alt="shape4" />
+        </div>
+    </div>
+);
 
 function Slider() {
     return (
@@ -27,60 +42,32 @@ function Slider() {
             <div className={cx('wrapper')}>
                 <div className={cx('background')}>
                     <Swiper
-                        modules={[
-                            Navigation,
-                            Pagination,
-                            EffectFade,
-                            Autoplay,
-                            EffectCube,
-                            EffectCoverflow,
-                            EffectFlip,
-                        ]} // Đăng ký các module
-                        // effect="fade" // Hiệu ứng mờ dần
-                        // effect="cube" // Hiệu ứng cube
-                        // effect="coverflow" // Hiệu ứng coverflow
-                        // effect="flip" // Hiệu ứng flip
-
+                        modules={[Navigation, Pagination, Autoplay]} // Chỉ giữ các module cần thiết
+                        effect="slide" // Sử dụng hiệu ứng trượt
                         autoplay={{
                             delay: 5000, // Thời gian chuyển đổi (5 giây)
-                            disableOnInteraction: false, // Không dừng autoplay khi người dùng tương tác
+                            disableOnInteraction: false, // Không dừng autoplay khi tương tác
                         }}
                         spaceBetween={50} // Khoảng cách giữa các slide
-                        slidesPerView={1} // Số slide hiển thị cùng lúc
-                        // navigation={false} // Hiển thị nút điều hướng
-                        pagination={{ clickable: true }} // Bật nút phân trang
-                        // scrollbar={{ draggable: true }} // Bật thanh cuộn kéo
-                        speed={1000} // 1 giây
+                        slidesPerView={1} // Hiển thị 1 slide
+                        pagination={{ clickable: true }} // Hiển thị phân trang
+                        speed={1000} // Tốc độ chuyển đổi (1 giây)
                         loop={true} // Lặp lại slider
                     >
+                        {/* Slide 1 */}
                         <SwiperSlide>
                             <SliderContainer
                                 sale={35}
                                 contentTitle1="Giáo dục là tạo ra"
                                 contentTitle2="Tương lai"
                                 contentTitle3="Tốt đẹp hơn"
-                                subTitle="Giáo dục có thể được coi là sự truyền tải các giá trị và kiến ​​thức tích lũy của xã hội. "
-                                imgFooter={imagesContent1}
+                                subTitle="Giáo dục có thể được coi là sự truyền tải các giá trị và kiến ​​thức tích lũy của xã hội."
+                                imgFooter={content1}
                             />
-
-                            {/* hero shape */}
-                            <div className={cx('hero-shape')}>
-                                <div className={cx('shape-1')}>
-                                    <Image src={imagesShape1} alt="shape1" />
-                                </div>
-                                <div className={cx('shape-2')}>
-                                    <Image src={imagesShape2} alt="shape2" />
-                                </div>
-                                <div className={cx('shape-3')}></div>
-                                <div className={cx('shape-4')}>
-                                    <Image src={imagesShape4} alt="shape3" />
-                                </div>
-                                <div className={cx('shape-5')}>
-                                    <Image src={imagesShape5} alt="shape4" />
-                                </div>
-                            </div>
+                            <HeroShape />
                         </SwiperSlide>
 
+                        {/* Slide 2 */}
                         <SwiperSlide>
                             <SliderContainer
                                 sale={35}
@@ -88,27 +75,12 @@ function Slider() {
                                 contentTitle2="Khóa học tốt nhất"
                                 contentTitle3="Tại Việt Nam"
                                 subTitle="Nơi cung cấp những khóa học trực tuyến hàng đầu, giúp bạn nâng tầm kiến thức và kỹ năng."
-                                imgFooter={imagesContent2}
+                                imgFooter={content2}
                             />
-
-                            {/* hero shape */}
-                            <div className={cx('hero-shape')}>
-                                <div className={cx('shape-1')}>
-                                    <Image src={imagesShape1} alt="shape1" />
-                                </div>
-                                <div className={cx('shape-2')}>
-                                    <Image src={imagesShape2} alt="shape2" />
-                                </div>
-                                <div className={cx('shape-3')}></div>
-                                <div className={cx('shape-4')}>
-                                    <Image src={imagesShape4} alt="shape3" />
-                                </div>
-                                <div className={cx('shape-5')}>
-                                    <Image src={imagesShape5} alt="shape4" />
-                                </div>
-                            </div>
+                            <HeroShape />
                         </SwiperSlide>
 
+                        {/* Slide 3 */}
                         <SwiperSlide>
                             <SliderContainer
                                 sale={35}
@@ -116,54 +88,23 @@ function Slider() {
                                 contentTitle2="dẫn lối bạn"
                                 contentTitle3="đến thành công"
                                 subTitle="Đội ngũ giảng viên giàu kinh nghiệm, tận tâm và chuyên nghiệp trong từng bài giảng."
-                                imgFooter={imagesContent6}
+                                imgFooter={content6}
                                 className={cx('custom-img')}
                             />
-
-                            {/* hero shape */}
-                            <div className={cx('hero-shape')}>
-                                <div className={cx('shape-1')}>
-                                    <Image src={imagesShape1} alt="shape1" />
-                                </div>
-                                <div className={cx('shape-2')}>
-                                    <Image src={imagesShape2} alt="shape2" />
-                                </div>
-                                <div className={cx('shape-3')}></div>
-                                <div className={cx('shape-4')}>
-                                    <Image src={imagesShape4} alt="shape3" />
-                                </div>
-                                <div className={cx('shape-5')}>
-                                    <Image src={imagesShape5} alt="shape4" />
-                                </div>
-                            </div>
+                            <HeroShape />
                         </SwiperSlide>
 
+                        {/* Slide 4 */}
                         <SwiperSlide>
                             <SliderContainer
                                 sale={35}
                                 contentTitle1="Đăng ký ngay"
                                 contentTitle2="Nhận các Ưu đãi"
                                 contentTitle3="Và khóa học miễn phí"
-                                subTitle="Khám phá những khóa học chất lượng với ưu đãi độc quyền dành riêng cho bạn. "
-                                imgFooter={imagesContent3}
+                                subTitle="Khám phá những khóa học chất lượng với ưu đãi độc quyền dành riêng cho bạn."
+                                imgFooter={content3}
                             />
-
-                            {/* hero shape */}
-                            <div className={cx('hero-shape')}>
-                                <div className={cx('shape-1')}>
-                                    <Image src={imagesShape1} alt="shape1" />
-                                </div>
-                                <div className={cx('shape-2')}>
-                                    <Image src={imagesShape2} alt="shape2" />
-                                </div>
-                                <div className={cx('shape-3')}></div>
-                                <div className={cx('shape-4')}>
-                                    <Image src={imagesShape4} alt="shape3" />
-                                </div>
-                                <div className={cx('shape-5')}>
-                                    <Image src={imagesShape5} alt="shape4" />
-                                </div>
-                            </div>
+                            <HeroShape />
                         </SwiperSlide>
                     </Swiper>
                 </div>

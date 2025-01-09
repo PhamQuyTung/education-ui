@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import classNames from 'classnames/bind';
 
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -12,11 +13,20 @@ import AnimationContent from '~/components/Animation';
 
 const cx = classNames.bind(styles);
 
-function Container1({ sale = 35, contentTitle1, contentTitle2, contentTitle3, subTitle, imgFooter, className }) {
+function SliderContainer({
+    sale = 35,
+    contentTitle1 = '',
+    contentTitle2 = '',
+    contentTitle3 = '',
+    subTitle = '',
+    imgFooter,
+    className,
+}) {
     return (
-        <div>
+        <div className={cx('slider-container')}>
             <Container className={cx('container')}>
                 <Row>
+                    {/* Content Section */}
                     <Col lg={6} md={12} xs={12} className={cx('content')}>
                         <AnimationContent>
                             <div className={cx('content-heading')}>
@@ -52,8 +62,9 @@ function Container1({ sale = 35, contentTitle1, contentTitle2, contentTitle3, su
                         </AnimationContent>
                     </Col>
 
+                    {/* Image Section */}
                     <Col lg={6} md={12} xs={12} className={cx('image')}>
-                        <Image src={imgFooter} alt="" className={className} />
+                        <Image src={imgFooter} alt="Slider content" className={cx(className)} />
                     </Col>
                 </Row>
             </Container>
@@ -61,4 +72,14 @@ function Container1({ sale = 35, contentTitle1, contentTitle2, contentTitle3, su
     );
 }
 
-export default Container1;
+SliderContainer.propTypes = {
+    sale: PropTypes.number,
+    contentTitle1: PropTypes.string,
+    contentTitle2: PropTypes.string,
+    contentTitle3: PropTypes.string,
+    subTitle: PropTypes.string,
+    imgFooter: PropTypes.string,
+    className: PropTypes.string,
+}
+
+export default SliderContainer;

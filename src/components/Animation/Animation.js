@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { useEffect, useState, useRef } from 'react';
 import styles from './Animation.module.scss';
 import classNames from 'classnames/bind';
@@ -35,5 +36,9 @@ function Animation({ children }) {
         </div>
     );
 }
+
+Animation.propTypes = {
+    children: PropTypes.node.isRequired,
+};
 
 export default Animation;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 // src/context/ThemeContext.js
 import React, { createContext, useState, useContext } from 'react';
 
@@ -11,6 +12,10 @@ export const ThemeProvider = ({ children }) => {
     };
 
     return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
+};
+
+ThemeProvider.propTypes = {
+    children: PropTypes.node.isRequired,
 };
 
 export const useTheme = () => useContext(ThemeContext);

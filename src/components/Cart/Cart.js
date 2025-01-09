@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
@@ -50,5 +51,9 @@ function Cart({ cartCount = 0 }) {
         </div>
     );
 }
+
+Cart.propTypes = {
+    cartCount: PropTypes.number,
+};
 
 export default Cart;
