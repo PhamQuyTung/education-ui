@@ -124,6 +124,7 @@
     height: 660px;
     border-radius: 50%;
     border: 20px solid #fff;
+    object-fit: cover;
 }
 
 :global(.swiper-pagination-bullet) {

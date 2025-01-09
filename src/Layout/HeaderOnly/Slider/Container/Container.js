@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import classNames from 'classnames/bind';
 
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +14,7 @@ const cx = classNames.bind(styles);
 
 function Container1({ sale = 35, contentTitle1, contentTitle2, contentTitle3, subTitle, imgFooter, className }) {
     return (
-        <div >
+        <div>
             <Container className={cx('container')}>
                 <Row>
                     <Col lg={6} md={12} xs={12} className={cx('content')}>
@@ -23,7 +24,7 @@ function Container1({ sale = 35, contentTitle1, contentTitle2, contentTitle3, su
                                     Học từ hôm nay <span>Giảm giá {sale}%</span>
                                 </p>
                             </div>
-        
+
                             <div className={cx('content-body')}>
                                 <h1 className={cx('title')}>
                                     {contentTitle1}
@@ -33,11 +34,11 @@ function Container1({ sale = 35, contentTitle1, contentTitle2, contentTitle3, su
                                     <span>{contentTitle3}</span>
                                 </h1>
                             </div>
-        
+
                             <div className={cx('content-description')}>
                                 <p>{subTitle}</p>
                             </div>
-        
+
                             <div className={cx('content-start')}>
                                 <Button
                                     primary
@@ -50,9 +51,9 @@ function Container1({ sale = 35, contentTitle1, contentTitle2, contentTitle3, su
                             </div>
                         </AnimationContent>
                     </Col>
-    
+
                     <Col lg={6} md={12} xs={12} className={cx('image')}>
-                        <Image src={imgFooter} alt="" className={className}/>
+                        <Image src={imgFooter} alt="" className={className} />
                     </Col>
                 </Row>
             </Container>

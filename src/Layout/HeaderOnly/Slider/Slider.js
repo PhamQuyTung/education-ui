@@ -1,14 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import {
-    EffectFade,
-    Navigation,
-    Pagination,
-    Autoplay,
-    EffectCube,
-    EffectCoverflow,
-    EffectFlip,
-} from 'swiper/modules'; // Import module Autoplay
+import { EffectFade, Navigation, Pagination, Autoplay, EffectCube, EffectCoverflow, EffectFlip } from 'swiper/modules'; // Import module Autoplay
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
@@ -20,7 +12,7 @@ import Image from '~/components/Image';
 import imagesContent1 from '~/assets/images/Slider/hero_thumb_1_1.png';
 import imagesContent2 from '~/assets/images/Slider/hero_thumb_1_2.webp';
 import imagesContent3 from '~/assets/images/Slider/hero_thumb_1_3.png';
-import imagesContent6 from '~/assets/images/Slider/Screenshot 2025-01-09 004748.png';
+import imagesContent6 from '~/assets/images/Slider/teacherandstudents.png';
 import imagesShape1 from '~/assets/images/Slider/shape_1_1.png';
 import imagesShape2 from '~/assets/images/Slider/shape_1_2.png';
 import imagesShape4 from '~/assets/images/Slider/shape_1_3.png';
