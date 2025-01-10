@@ -2,14 +2,15 @@
 // import classNames from 'classnames/bind';
 
 import Slider from "~/Layout/HeaderOnly/Slider";
+import Category from "./Category";
 
 // const cx = classNames.bind(styles);
 
 function Home() {
     return ( 
-        <div className="Content">
+        <div style={{height: 10000}} className="Content">
             <Slider />
-            <h2>Home page</h2>
+            <Category/>
         </div>
     );
 }

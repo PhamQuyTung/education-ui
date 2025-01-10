@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -20,6 +21,7 @@ function SliderContainer({
     contentTitle3 = '',
     subTitle = '',
     imgFooter,
+    to,
     className,
 }) {
     return (
@@ -49,7 +51,7 @@ function SliderContainer({
                                 <p>{subTitle}</p>
                             </div>
 
-                            <div className={cx('content-start')}>
+                            <Link to={to} className={cx('content-start')}>
                                 <Button
                                     primary
                                     ExtraLarge
@@ -58,7 +60,7 @@ function SliderContainer({
                                 >
                                     Bắt đầu
                                 </Button>
-                            </div>
+                            </Link>
                         </AnimationContent>
                     </Col>
 
@@ -80,6 +82,6 @@ SliderContainer.propTypes = {
     subTitle: PropTypes.string,
     imgFooter: PropTypes.string,
     className: PropTypes.string,
-}
+};
 
 export default SliderContainer;

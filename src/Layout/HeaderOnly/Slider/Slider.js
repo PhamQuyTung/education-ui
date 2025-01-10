@@ -63,6 +63,7 @@ function Slider() {
                                 contentTitle3="Tốt đẹp hơn"
                                 subTitle="Giáo dục có thể được coi là sự truyền tải các giá trị và kiến ​​thức tích lũy của xã hội."
                                 imgFooter={content1}
+                                to='/contact'
                             />
                             <HeroShape />
                         </SwiperSlide>
@@ -76,6 +77,7 @@ function Slider() {
                                 contentTitle3="Tại Việt Nam"
                                 subTitle="Nơi cung cấp những khóa học trực tuyến hàng đầu, giúp bạn nâng tầm kiến thức và kỹ năng."
                                 imgFooter={content2}
+                                to='/contact'
                             />
                             <HeroShape />
                         </SwiperSlide>
@@ -89,6 +91,7 @@ function Slider() {
                                 contentTitle3="đến thành công"
                                 subTitle="Đội ngũ giảng viên giàu kinh nghiệm, tận tâm và chuyên nghiệp trong từng bài giảng."
                                 imgFooter={content6}
+                                to='/contact'
                                 className={cx('custom-img')}
                             />
                             <HeroShape />
@@ -103,6 +106,7 @@ function Slider() {
                                 contentTitle3="Và khóa học miễn phí"
                                 subTitle="Khám phá những khóa học chất lượng với ưu đãi độc quyền dành riêng cho bạn."
                                 imgFooter={content3}
+                                to='/contact'
                             />
                             <HeroShape />
                         </SwiperSlide>
