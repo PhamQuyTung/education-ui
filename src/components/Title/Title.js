@@ -2,13 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
-
-import { faArrowRight, faBook, faBookBookmark } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Button from '~/components/Button';
 import styles from './Title.module.scss';
-import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 
 const cx = classNames.bind(styles);
 
@@ -21,19 +19,28 @@ function Title({ title, sub, description, buttonDescription, clsBox, clsButton, 
                     {title}
                 </span>
                 <h2 className={cx('sub')}>{sub}</h2>
-                <p className={cx('description')}>{description}</p>
+                {description && <p className={cx('description')}>{description}</p>}
             </div>
 
             {children}
 
-            <Link to={to} className={cx('button', clsButton)}>
-                <Button ExtraLarge primary rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
-                    {buttonDescription}
-                </Button>
-            </Link>
+            {to && (
+                <Link to={to} className={cx('button', clsButton)}>
+                    <Button ExtraLarge primary rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
+                        {buttonDescription}
+                    </Button>
+                </Link>
+            )}
         </div>
     );
 }
+
+/*
+    Loại bỏ kiểm tra dư thừa:
+
+    Thêm điều kiện kiểm tra description để tránh render thẻ <p> trống nếu không có giá trị.
+    Kiểm tra to để đảm bảo chỉ render <Link> khi có giá trị đường dẫn.
+*/
 
 Title.propTypes = {
     title: PropTypes.string.isRequired,
@@ -42,6 +49,7 @@ Title.propTypes = {
     buttonDescription: PropTypes.string.isRequired,
     clsBox: PropTypes.string,
     clsButton: PropTypes.string,
+    to: PropTypes.string,
     children: PropTypes.node,
 };
 

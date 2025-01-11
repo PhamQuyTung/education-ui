@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-function Card({ className, children }) {
+function Card({ className = '', children }) {
     return (
         <div className={cx('wrapper', className)}>{children}</div>
     );

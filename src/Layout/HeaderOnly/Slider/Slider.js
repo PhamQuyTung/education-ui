@@ -1,16 +1,17 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import classNames from 'classnames/bind';
+
 
 import styles from './Slider.module.scss';
 import Image from '~/components/Image';
 import images from '~/assets/images/Slider/images';
 import SliderContainer from '~/Layout/HeaderOnly/Slider/Container';
+import { mainSliderConfig } from '~/libs/swiperConfigs';
 
 const cx = classNames.bind(styles);
 
@@ -41,19 +42,7 @@ function Slider() {
         <div className={cx('slider')}>
             <div className={cx('wrapper')}>
                 <div className={cx('background')}>
-                    <Swiper
-                        modules={[Navigation, Pagination, Autoplay]} // Chỉ giữ các module cần thiết
-                        effect="slide" // Sử dụng hiệu ứng trượt
-                        autoplay={{
-                            delay: 5000, // Thời gian chuyển đổi (5 giây)
-                            disableOnInteraction: false, // Không dừng autoplay khi tương tác
-                        }}
-                        spaceBetween={50} // Khoảng cách giữa các slide
-                        slidesPerView={1} // Hiển thị 1 slide
-                        pagination={{ clickable: true }} // Hiển thị phân trang
-                        speed={1000} // Tốc độ chuyển đổi (1 giây)
-                        loop={true} // Lặp lại slider
-                    >
+                    <Swiper {...mainSliderConfig}>
                         {/* Slide 1 */}
                         <SwiperSlide>
                             <SliderContainer
@@ -63,7 +52,7 @@ function Slider() {
                                 contentTitle3="Tốt đẹp hơn"
                                 subTitle="Giáo dục có thể được coi là sự truyền tải các giá trị và kiến ​​thức tích lũy của xã hội."
                                 imgFooter={content1}
-                                to='/contact'
+                                to="/contact"
                             />
                             <HeroShape />
                         </SwiperSlide>
@@ -77,7 +66,7 @@ function Slider() {
                                 contentTitle3="Tại Việt Nam"
                                 subTitle="Nơi cung cấp những khóa học trực tuyến hàng đầu, giúp bạn nâng tầm kiến thức và kỹ năng."
                                 imgFooter={content2}
-                                to='/contact'
+                                to="/contact"
                             />
                             <HeroShape />
                         </SwiperSlide>
@@ -91,7 +80,7 @@ function Slider() {
                                 contentTitle3="đến thành công"
                                 subTitle="Đội ngũ giảng viên giàu kinh nghiệm, tận tâm và chuyên nghiệp trong từng bài giảng."
                                 imgFooter={content6}
-                                to='/contact'
+                                to="/contact"
                                 className={cx('custom-img')}
                             />
                             <HeroShape />
@@ -106,7 +95,7 @@ function Slider() {
                                 contentTitle3="Và khóa học miễn phí"
                                 subTitle="Khám phá những khóa học chất lượng với ưu đãi độc quyền dành riêng cho bạn."
                                 imgFooter={content3}
-                                to='/contact'
+                                to="/contact"
                             />
                             <HeroShape />
                         </SwiperSlide>
