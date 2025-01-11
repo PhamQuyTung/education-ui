@@ -41,7 +41,7 @@ function HeaderNav() {
     }, [theme]);
 
     useEffect(() => {
-        const handleScroll = () => setIsFixed(window.scrollY >= 160);
+        const handleScroll = () => setIsFixed(window.scrollY >= 1000);
         window.addEventListener('scroll', handleScroll);
 
         return () => window.removeEventListener('scroll', handleScroll);

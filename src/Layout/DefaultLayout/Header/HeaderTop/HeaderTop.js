@@ -28,7 +28,7 @@ function HeaderTop() {
     const [isHidden, setIsHidden] = useState(false);
 
     useEffect(() => {
-        const handleScroll = () => setIsHidden(window.scrollY >= 160);
+        const handleScroll = () => setIsHidden(window.scrollY >= 1000);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
