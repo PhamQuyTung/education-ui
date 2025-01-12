@@ -25,6 +25,14 @@
         margin-right: 10px;
         border-radius: 20px;
     }
+
+    .sale {
+        background-color: var(--sale-color);
+        color: #fff;
+        border-radius: 20px;
+        font-weight: 600;
+        transition: var(--transition);
+    }
 }
 
 .content-body {

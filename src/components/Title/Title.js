@@ -10,7 +10,7 @@ import styles from './Title.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Title({ title, sub, description, buttonDescription, clsBox, clsButton, to, children }) {
+function Title({ title, sub, description1, description2, buttonDescription, clsBox, clsSub, clsButton, to, children }) {
     return (
         <div className={cx('box', clsBox)}>
             <div className={cx('heading')}>
@@ -18,8 +18,9 @@ function Title({ title, sub, description, buttonDescription, clsBox, clsButton, 
                     <FontAwesomeIcon icon={faBookmark} className={cx('icon')} />
                     {title}
                 </span>
-                <h2 className={cx('sub')}>{sub}</h2>
-                {description && <p className={cx('description')}>{description}</p>}
+                <h2 className={cx('sub', clsSub)}>{sub}</h2>
+                {description1 && <p className={cx('description1')}>{description1}</p>}
+                {description2 && <p className={cx('description2')}>{description2}</p>}
             </div>
 
             {children}

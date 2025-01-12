@@ -45,8 +45,10 @@
     height: 42px; //Fix chiều cao của thẻ khi thẻ ko được cân bằng
     // font-family: 'IBM Plex Sans', san-serif; // Font family for the menu item 
     color: var(--title-color);
+    font-size: 1.6rem;
     font-weight: 500;
     // line-height: 1.2;
+    text-transform: none !important;
     justify-content: flex-start;
     border-radius: 0;
     padding: 11px 16px;

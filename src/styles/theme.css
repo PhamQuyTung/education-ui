@@ -10,6 +10,10 @@ body.dark {
     color: #ffffff;
 }
 
+body.dark a:hover {
+    color: var(--theme-color)!important;
+}
+
 body.light header {
     background-color: var(--theme-color);
     color: #000000;
@@ -22,6 +26,8 @@ body.dark header {
     color: #ffffff;
 }
 
-body.dark h2 {
-    color: var(--theme-color) !important;
+body.dark h2,
+body.dark .description1,
+body.dark .description2 {
+    color: var(--white-color) !important;
 }

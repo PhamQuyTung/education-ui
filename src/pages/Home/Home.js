@@ -3,6 +3,7 @@
 
 import Slider from "~/Layout/HeaderOnly/Slider";
 import Category from "./Category";
+import AboutContent from "./AboutContent";
 
 // const cx = classNames.bind(styles);
 
@@ -10,7 +11,8 @@ function Home() {
     return ( 
         <div style={{height: 10000}} className="Content">
             <Slider />
-            <Category/>
+            <Category />
+            <AboutContent />
         </div>
     );
 }

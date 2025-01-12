@@ -49,7 +49,7 @@ function SliderContainer({
                     <Col lg={6} md={12} xs={12} className={cx('content')}>
                         <motion.div variants={variants}>
                             <div className={cx('content-heading')}>
-                                <p>
+                                <p className={cx('sale')}>
                                     Học từ hôm nay <span>Giảm giá {sale}%</span>
                                 </p>
                             </div>

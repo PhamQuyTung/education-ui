@@ -15,7 +15,7 @@ const MENUITEMS__OPTION = [
         icon: <FontAwesomeIcon icon={faLanguage} />,
         title: 'Ngôn ngữ',
         children: {
-            title: 'Languages',
+            title: 'Ngôn ngữ',
             data: [
                 {
                     code: 'en',
