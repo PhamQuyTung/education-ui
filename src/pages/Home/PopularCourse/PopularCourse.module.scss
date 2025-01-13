@@ -1,0 +1,32 @@
+.pp-course {
+    padding-top: 80px;
+
+
+    .wrapper {
+        max-width: var(--main-container) !important;
+        margin: 0 auto;
+    }
+}
+
+.custom-card {
+    min-width: 335px !important;
+    min-height: 500px;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.custom-cardContent {
+    text-align: start;
+    padding: 0 20px;
+}
+
+.custom-subTitle {
+    font-size: 4.4rem !important;
+    margin-bottom: 20px !important;
+}
+
+.custom-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

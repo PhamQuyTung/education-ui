@@ -1,11 +1,7 @@
-// import styles from './Home.module.scss';
-// import classNames from 'classnames/bind';
-
 import Slider from "~/Layout/HeaderOnly/Slider";
 import Category from "./Category";
 import AboutContent from "./AboutContent";
-
-// const cx = classNames.bind(styles);
+import PopularCourse from "./PopularCourse";
 
 function Home() {
     return ( 
@@ -13,6 +9,7 @@ function Home() {
             <Slider />
             <Category />
             <AboutContent />
+            <PopularCourse />
         </div>
     );
 }
