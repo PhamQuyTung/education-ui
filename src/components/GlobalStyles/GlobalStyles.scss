@@ -32,11 +32,13 @@
     --ripple-ani-duration: 5s;
     --transition: all 0.3s linear;
     --animation-fadeIn: slideIn 0.3s ease forwards;
-    --font-Roboto: "Roboto", serif;
+    --animation-time-during: 7s linear infinite;
+    --font-Roboto: 'Roboto', serif;
 }
 
 html {
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 body {
@@ -67,7 +69,7 @@ img {
     height: auto;
 }
 
-// 
+//
 p {
     font-family: var(--font-Roboto);
     margin: 0 0 18px 0;
@@ -101,6 +103,11 @@ html *::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0);
 }
 
+h1 {
+    font-size: calc(1.375rem + 1.5vw);
+}
+
+//
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -112,6 +119,48 @@ html *::-webkit-scrollbar-track {
     }
 }
 
-h1 {
-    font-size: calc(1.375rem + 1.5vw);
+// Keyframes
+@keyframes jumpAni {
+    0% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(5%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes jumpReverseAni {
+    0% {
+        bottom: 5%;
+    }
+    40% {
+        bottom: 2%;
+    }
+    100% {
+        bottom: 5%;
+    }
+}
+
+@keyframes jumpReverseAni2 {
+    0% {
+        bottom: -1%;
+    }
+    40% {
+        bottom: -5%;
+    }
+    100% {
+        bottom: -1%;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

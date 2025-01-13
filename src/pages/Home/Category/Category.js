@@ -17,12 +17,10 @@ function Category() {
         threshold: 0.2, // Tỷ lệ phần tử cần hiển thị để trigger animation (0.2 tức 20%)
     });
 
-
-
     return (
         <div className={cx('category')}>
             <Container className={cx('wrapper')}>
-                <Row ref={ref}>
+                <Row ref={ref} initial="hidden" animate={inView ? 'visible' : 'hidden'}>
                     <Col lg={4} md={0} xs={0}>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}

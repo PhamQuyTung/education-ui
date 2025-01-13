@@ -2,7 +2,6 @@
 //     hidden: { opacity: 0 },
 //     visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
 // };
-
 const baseTransition = { duration: 0.8, ease: 'easeOut' };
 
 export const slideInFromLeft = (delay = 0) => ({
