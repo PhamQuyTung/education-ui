@@ -1,3 +1,4 @@
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
@@ -12,7 +13,7 @@ import { faFile, faUser } from '@fortawesome/free-regular-svg-icons';
 
 const cx = classNames.bind(styles);
 
-function CardItem({
+const CardItem = memo(function ({
     classNameCard,
     courseHours,
     courseMinutes,
@@ -53,10 +54,7 @@ function CardItem({
             )}
             {icon && <div className={cx('wrap-icon')}>{icon}</div>}
             <div className={cx('content', clsContent)}>
-                {ratingNum && (
-                    // parseFloat(ratingNum): chắc chắn chuyển đổi thành kiểu dữ liệu float
-                    <FullRating ratingNum={parseFloat(ratingNum)} className={cx('wrap-ratingNum')} />
-                )}
+                {ratingNum && <FullRating ratingNum={parseFloat(ratingNum)} className={cx('wrap-ratingNum')} />}
                 <Link to={toCourse}>
                     <h3 className={cx('title')}>{title}</h3>
                 </Link>
@@ -87,7 +85,7 @@ function CardItem({
                         </Button>
                     </Link>
                 )}
-                {((userShortNamePosted && userNamePosted) && cost) && (
+                {userShortNamePosted && userNamePosted && cost && (
                     <div className={cx('wrap-footer')}>
                         <div className={cx('userShortNamePosted')}>
                             <span className={cx('userShortName')}>{userShortNamePosted}</span>
@@ -104,7 +102,7 @@ function CardItem({
             </div>
         </div>
     );
-}
+});
 
 CardItem.propTypes = {
     userNamePosted: PropTypes.string,
