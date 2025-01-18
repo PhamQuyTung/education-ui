@@ -47,7 +47,7 @@ Title.propTypes = {
     title: PropTypes.string.isRequired,
     sub: PropTypes.string.isRequired,
     description: PropTypes.string,
-    buttonDescription: PropTypes.string.isRequired,
+    buttonDescription: PropTypes.string,
     clsBox: PropTypes.string,
     clsButton: PropTypes.string,
     to: PropTypes.string,

@@ -52,7 +52,7 @@ function AboutContent() {
                                         {/* Chỉ hiển thị Counter khi animation hoàn thành */}
                                         {startCount && (
                                             <h3>
-                                                <CountUp start={0} end={100} duration={3} />k
+                                                <CountUp start={0} end={10} duration={3} />k
                                                 <span className={cx('theme')}>+</span>
                                             </h3>
                                         )}

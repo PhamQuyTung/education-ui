@@ -3,6 +3,7 @@ import Category from './Category';
 import AboutContent from './AboutContent';
 import PopularCourse from './PopularCourse';
 import Banner from '~/components/Banner';
+import Wcu from './Wcu';
 
 function Home() {
     return (
@@ -12,6 +13,7 @@ function Home() {
             <AboutContent />
             <PopularCourse />
             <Banner />
+            <Wcu />
         </div>
     );
 }

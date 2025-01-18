@@ -35,7 +35,7 @@
 .bg {
     width: 100%;
     min-height: 258px;
-    background-image: url('../../assets/images/cta_1_1.webp');
+    background-image: url('../../assets/images/Home/Banner/cta_1_1.webp');
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,33 +44,18 @@
     align-items: center;
     overflow: hidden;
     position: relative;
-
-    &:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background-color: var(--title-color);
-        opacity: 0.8;
-        transition: opacity 0.3s ease;
-    }
+    padding: 30px 0;
 
     &::before {
         content: '';
         position: absolute;
         left: 0;
         top: 0;
-        width: 59%;
+        width: 100%;
         height: 100%;
-        background-image: url('../../assets/images/cta-bg1.webp');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow: hidden;
-        clip-path: polygon(0 0, 60% 0, 40% 100%, 0% 100%);
-        z-index: 2;
+        background-color: var(--title-color);
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
     }
 }
 
@@ -85,32 +70,23 @@
     overflow: hidden;
     z-index: 3;
 
+    .img-mail {
+        width: 38px;
+        height: 38px;
+        object-fit: cover;
+    }
+
     .heading {
-        .wrapper-content {
-            width: 80%;
-            display: flex;
-            align-items: center;
-            justify-content: start;
-            gap: 20px;
+        width: 57%;
+        display: flex;
+        flex-direction: column;
+    }
 
-            .wrapper-img {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                min-width: 38.4px;
-                height: 38.4px;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-        }
-
-        .content {
-            width: 50%;
-        }
+    .content {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
 
         .title {
             font-size: 44px;
@@ -130,7 +106,6 @@
     }
 
     .watch {
-        margin-left: 100px;
 
         .play-link {
             position: relative;
@@ -139,6 +114,7 @@
             height: 80px;
             line-height: 100px;
             text-align: center;
+            top: 30%;
 
             .icon {
                 font-size: 4rem;
