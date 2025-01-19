@@ -4,6 +4,7 @@ import AboutContent from './AboutContent';
 import PopularCourse from './PopularCourse';
 import Banner from '~/components/Banner';
 import Wcu from './Wcu';
+import ScrollToTopWithProgress from '~/components/ScrollToTopWithProgress';
 
 function Home() {
     return (
@@ -14,6 +15,7 @@ function Home() {
             <PopularCourse />
             <Banner />
             <Wcu />
+            <ScrollToTopWithProgress />
         </div>
     );
 }
