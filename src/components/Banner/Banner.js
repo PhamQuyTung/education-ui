@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
@@ -10,11 +11,19 @@ import { faCirclePlay } from '@fortawesome/free-regular-svg-icons';
 import styles from './Banner.module.scss';
 import Button from '~/components/Button';
 import Image from '~/components/Image';
+import ModalVideo from '~/components/Modal';
 import imagesBanner1 from '~/assets/images/Home/Banner/cta-icon1.webp';
+import ReactPlayer from 'react-player';
 
 const cx = classNames.bind(styles);
 
 function Banner() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const toggleModal = () => {
+        setIsModalOpen(!isModalOpen);
+    };
+
     return (
         <div className={cx('banner-container')}>
             <div className={cx('wrapper')}>
@@ -26,9 +35,9 @@ function Banner() {
                                 <div className={cx('heading')}>
                                     <h1 className={cx('title')}>Nhận khóa học trực tuyến</h1>
                                     <p className={cx('description')}>
-                                        Bạn muốn tiếp cận với kiến thức mới mỗi ngày và phát triển bản thân? Bạn muốn học
-                                        tập linh hoạt và tiện lợi ngay tại nhà? Hãy đăng ký nhận khóa học trực tuyến ngay
-                                        hôm nay!
+                                        Bạn muốn tiếp cận với kiến thức mới mỗi ngày và phát triển bản thân? Bạn muốn
+                                        học tập linh hoạt và tiện lợi ngay tại nhà? Hãy đăng ký nhận khóa học trực tuyến
+                                        ngay hôm nay!
                                     </p>
                                 </div>
                                 <Link to="/introduce" className={cx('btn-primary')}>
@@ -38,9 +47,20 @@ function Banner() {
                                 </Link>
                             </Col>
                             <Col lg={4} md={0} xs={0} className={cx('watch')}>
-                                <Link to="/" className={cx('play-link')}>
+                                <button onClick={toggleModal} className={cx('play-link')}>
                                     <FontAwesomeIcon icon={faCirclePlay} className={cx('icon')} />
-                                </Link>
+                                </button>
+
+                                <ModalVideo isOpen={isModalOpen} onClose={toggleModal}>
+                                    <ReactPlayer
+                                        url="https://www.youtube.com/watch?v=T9q3s--ZayE"
+                                        playing={false} // Phát tự động
+                                        controls={true} // Hiển thị điều khiển
+                                        volume={0.8} // Âm lượng 80%
+                                        width="900px"
+                                        height="506px"
+                                    />
+                                </ModalVideo>
                             </Col>
                         </Row>
                     </div>

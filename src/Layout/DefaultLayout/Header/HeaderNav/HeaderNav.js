@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 import { Link, NavLink } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -30,7 +31,7 @@ const SUB_MENU_ITEMS = [
     { to: '/news', label: 'Tin tức' },
 ];
 
-function HeaderNav() {
+function HeaderNav({ isHidden }) {
     const imageRef = useRef(null);
     const { theme } = useTheme();
     const [isFixed, setIsFixed] = useState(false);
@@ -65,7 +66,7 @@ function HeaderNav() {
     const renderSubMenu = () => <ul className={cx('sub-menu')}>{renderMenuItems(SUB_MENU_ITEMS, true)}</ul>;
 
     return (
-        <div className={cx('header-nav', { 'ps-fix': isFixed })}>
+        <div className={cx('header-nav', { 'ps-fix': isFixed }, { 'dp-none': isHidden })}>
             <div className={cx('wrapper')}>
                 {/* Logo */}
                 <Link to="/" className={cx('logo')}>
@@ -103,5 +104,9 @@ function HeaderNav() {
         </div>
     );
 }
+
+HeaderNav.propTypes = {
+    isHidden: PropTypes.bool,
+};
 
 export default HeaderNav;
