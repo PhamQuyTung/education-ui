@@ -41,7 +41,7 @@ function Wcu() {
                                 <Image src={imageWcu1} alt="why choose us 1?" className={cx('img')} />
                             </div>
                             <div className={cx('button-wrap')}>
-                                <Button primary ExtraLarge rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
+                                <Button to='/contact' primary ExtraLarge rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
                                     Bắt đầu
                                 </Button>
                             </div>

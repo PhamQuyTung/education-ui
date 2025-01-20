@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Header from './Header';
 import DefaultSlider from './DefaultSlider';
+import Footer from './Footer';
 
 function DefaultLayout({ children }) {
     return (
@@ -11,6 +12,7 @@ function DefaultLayout({ children }) {
                 <DefaultSlider />
                 <div className="content">{children}</div>
             </div>
+            <Footer/>
         </>
     );
 }

@@ -35,7 +35,7 @@
 
     //CSS các nút đứng cạnh nhau
     + .wrapper {
-        margin-left: 8px;
+        margin-left: 16px;
     }
 
     //CSS nút trạng thái disabled
@@ -87,12 +87,13 @@ span.Button_title__yIuSg {
 }
 
 .outline {
-    color: var(--primary);
+    color: var(--white-color);
     border-color: currentColor;
 
     &:hover {
         border-color: currentColor; //Xử lý vấn đề xung đột hover giữa các nút outline và rounded
-        background-color: rgba(254, 44, 85, 0.06);
+        color: var(--title-color);
+        background-color: var(--white-color);
     }
 }
 

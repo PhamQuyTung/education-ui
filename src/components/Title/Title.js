@@ -18,7 +18,9 @@ function Title({ title, sub, description1, description2, buttonDescription, clsB
                     <FontAwesomeIcon icon={faBookmark} className={cx('icon')} />
                     {title}
                 </span>
-                <h2 className={cx('sub', clsSub)}>{sub}</h2>
+                <h2 className={cx('sub', clsSub)}>
+                    {sub}
+                </h2>
                 {description1 && <p className={cx('description1')}>{description1}</p>}
                 {description2 && <p className={cx('description2')}>{description2}</p>}
             </div>
@@ -45,8 +47,9 @@ function Title({ title, sub, description1, description2, buttonDescription, clsB
 
 Title.propTypes = {
     title: PropTypes.string.isRequired,
-    sub: PropTypes.string.isRequired,
-    description: PropTypes.string,
+    sub: PropTypes.string,
+    description1: PropTypes.string,
+    description2: PropTypes.string,
     buttonDescription: PropTypes.string,
     clsBox: PropTypes.string,
     clsButton: PropTypes.string,

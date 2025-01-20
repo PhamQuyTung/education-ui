@@ -1,0 +1,60 @@
+root {
+    --theme-color: #0d5ef4;
+    --theme-color2: #f20f10;
+    --title-color: #0f2239;
+    --body-color: #4d5765;
+    --smoke-color: #f3f7fb;
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --light-color: #72849b;
+    --yellow-color: #ffb539;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --border-color: #ecf1f9;
+    --main-container: 1380px;
+    --container-gutters: 24px;
+    --section-space: 120px;
+    --section-space-mobile: 80px;
+    --section-title-space: 70px;
+    --ripple-ani-duration: 5s;
+}
+
+.bigCounter {
+    position: relative;
+    top: 1.2%;
+    z-index: 4;
+    padding: 0 20px;
+
+    .wrapper {
+        max-width: var(--main-container);
+        margin: 0 auto;
+        text-align: center;
+        background-image: url('../../../assets/images/Home/BigCounter/counter-bg_1.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+        min-height: 223px;
+
+        .box {
+            height: 223px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            .number {
+                color: var(--white-color);
+                margin-bottom: 10px;
+                font-size: 4rem;
+                line-height: 1.275;
+                font-weight: 600;
+            }
+
+            .des {
+                color: var(--white-color);
+                font-size: 2rem;
+                line-height: 1;
+            }
+        }
+    }
+}

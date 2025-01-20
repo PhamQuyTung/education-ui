@@ -1,0 +1,168 @@
+root {
+    --theme-color: #0d5ef4;
+    --theme-color2: #f20f10;
+    --title-color: #0f2239;
+    --body-color: #4d5765;
+    --smoke-color: #f3f7fb;
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --light-color: #72849b;
+    --yellow-color: #ffb539;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --border-color: #ecf1f9;
+    --main-container: 1380px;
+    --container-gutters: 24px;
+    --section-space: 120px;
+    --section-space-mobile: 80px;
+    --section-title-space: 70px;
+    --ripple-ani-duration: 5s;
+}
+
+.footer {
+    width: 100%;
+    height: 742px;
+}
+
+.bg-main {
+    background-image: url('../../../assets/images/Footer/footer-bg1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+.footer-container {
+    max-width: 1444px;
+    margin: 0 auto;
+
+    .footer-top {
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+
+            .wrap-icon {
+                width: 60px;
+                height: 60px;
+                border: 1px solid #cacaca;
+                border-radius: 50%;
+                line-height: 60px;
+                text-align: center;
+                backdrop-filter: blur(9.8px);
+
+                .icon {
+                    font-size: 2.4rem;
+                    color: var(--white-color);
+
+                    line-height: 60px;
+                    border-radius: 50%;
+                }
+            }
+
+            .content {
+                p {
+                    font-size: 1.4rem;
+                    color: #b3c1d3;
+                }
+
+                a {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    color: var(--white-color);
+                    text-decoration: none;
+                    transition: color 0.3s;
+                }
+            }
+        }
+
+        .box-bdRl {
+            border-left: 2px solid #ffffff33;
+            border-right: 2px solid #ffffff33;
+        }
+    }
+
+    .footer-body {
+        // background-image: url('../../../assets/images/Footer/jiji-1-2.png');
+        // background-position: center;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        padding: 80px 0 40px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.01);
+        margin-top: 20px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        .box2 {
+            padding-left: 40px;
+            .img {
+                width: 240px;
+                height: 87px;
+                object-fit: cover;
+            }
+            .description {
+                margin: 20px 0;
+                font-size: 1.6rem;
+                color: #b3c1d3;
+            }
+            .social {
+                color: var(--white-color);
+
+                h6 {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    color: var(--white-color);
+                    margin-bottom: 15px;
+                }
+                
+                .wrap-iconSocial {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+
+                    a {
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                        line-height: 45px;
+                        text-align: center;
+                        color: var(--white-color);
+                        background-color: #1e2c36;
+                        border: 1px solid #1e2c36;
+                        transition: all 0.3s ease;
+                        margin-right: 5px;
+
+                        &:hover {
+                            background-color: var(--theme-color);
+                        }
+
+                        &:hover .icon-social {
+                            color: var(--white-color);
+                        }
+                    }
+
+                    .icon-social {
+                        font-size: 1.6rem;
+                        color: #b3c1d3;
+                        transition: all 0.3s ease;
+                    }
+                }
+            }
+        }
+    }
+}
