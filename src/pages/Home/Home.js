@@ -8,10 +8,11 @@ import BigCounter from './BigCounter';
 import SaleContent from './SaleContent';
 import ScrollToTopWithProgress from '~/components/ScrollToTopWithProgress';
 import Footer from '~/Layout/DefaultLayout/Footer';
+import IntroduceTeacherContentHome from './IntroduceTeacherContentHome';
 
 function Home() {
     return (
-        <div style={{ height: 10000 }} className="Content">
+        <div className="Content">
             <Slider />
             <Category />
             <AboutContent />
@@ -20,6 +21,7 @@ function Home() {
             <Wcu />
             <BigCounter />
             <SaleContent />
+            <IntroduceTeacherContentHome />
             <Footer />
             <ScrollToTopWithProgress />
         </div>
