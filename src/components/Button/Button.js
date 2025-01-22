@@ -14,6 +14,7 @@ function Button({
     to,
     href,
     primary = false,
+    primary2 = false,
     outline = false,
     disabled = false,
     Small = false,
@@ -35,6 +36,7 @@ function Button({
     const classes = cx('wrapper', {
         [className]: className,
         primary,
+        primary2,
         outline,
         disabled,
         //Thêm các thuộc tính về btn vào đây: ví dụ thêm "small" button
@@ -83,6 +85,7 @@ Button.propTypes = {
     to: PropTypes.string,
     href: PropTypes.string,
     primary: PropTypes.bool,
+    primary2: PropTypes.bool,
     outline: PropTypes.bool,
     disabled: PropTypes.bool,
     Small: PropTypes.bool,

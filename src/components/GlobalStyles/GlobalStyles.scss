@@ -107,7 +107,7 @@ h1 {
     font-size: calc(1.375rem + 1.5vw);
 }
 
-//
+// Keyframes
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -119,7 +119,6 @@ h1 {
     }
 }
 
-// Keyframes
 @keyframes jumpAni {
     0% {
         transform: translateY(0);

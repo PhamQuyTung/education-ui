@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "img": "team_1_1.webp",
+        "name": "Nguyễn Văn Bình",
+        "position": "Thống kê KHDL và kinh doanh",
+        "QuantityCourse": 2,
+        "QuantityStudent": 60
+    },
+    {
+        "id": 2,
+        "img": "team_1_2.webp",
+        "name": "Trần Hà Linh",
+        "position": "Thiết kế đồ họa",
+        "QuantityCourse": 4,
+        "QuantityStudent": 30
+    },
+    {
+        "id": 3,
+        "img": "team_1_3.webp",
+        "name": "Vũ Bạch Ngân",
+        "position": "Thiết kế UI/UX",
+        "QuantityCourse": 3,
+        "QuantityStudent": 50
+    },
+    {
+        "id": 4,
+        "img": "team_1_4.webp",
+        "name": "Phạm Quý Tùng",
+        "position": "Chụp Ảnh Thời Trang",
+        "QuantityCourse": 4,
+        "QuantityStudent": 70
+    }
+]
