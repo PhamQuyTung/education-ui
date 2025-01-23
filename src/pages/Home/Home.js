@@ -9,6 +9,7 @@ import SaleContent from './SaleContent';
 import ScrollToTopWithProgress from '~/components/ScrollToTopWithProgress';
 import Footer from '~/Layout/DefaultLayout/Footer';
 import IntroduceTeacherContentHome from './IntroduceTeacherContentHome';
+import NewsHome from './NewsHome';
 
 function Home() {
     return (
@@ -22,6 +23,7 @@ function Home() {
             <BigCounter />
             <SaleContent />
             <IntroduceTeacherContentHome />
+            <NewsHome />
             <Footer />
             <ScrollToTopWithProgress />
         </div>
