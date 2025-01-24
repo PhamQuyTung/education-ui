@@ -1,14 +1,14 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import styles from './NewsHome.module.scss';
+import styles from './EventHome.module.scss';
 import Title from '~/components/Title';
-import NewsHomeItem from './NewsHomeItem';
+import EventHomeItem from './EventHomeItem';
 
 const cx = classNames.bind(styles);
 
-function NewsHome() {
+function EventHome() {
     return (
-        <div className={cx('newsHome')}>
+        <div className={cx('eventHome')}>
             <div className={cx('wrapper')}>
                 <Title
                     title="Các sự kiện nổi bật"
@@ -17,12 +17,12 @@ function NewsHome() {
                     clsSub={cx('custom-sub')}
                 />
 
-                <div className="newsItem">
-                    <NewsHomeItem />
+                <div className="eventItem">
+                    <EventHomeItem />
                 </div>
             </div>
         </div>
     );
 }
 
-export default NewsHome;
+export default EventHome;

@@ -1,6 +1,6 @@
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'; // Swiper 9.x+
 
-export const newsSliderConfig = {
+export const eventSliderConfig = {
     modules: [Navigation, Pagination, Autoplay],
     effect: 'slide',
     autoplay: { delay: 5000, disableOnInteraction: false },

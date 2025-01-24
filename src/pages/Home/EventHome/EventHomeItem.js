@@ -12,43 +12,43 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 
-import styles from './NewsHome.module.scss';
+import styles from './EventHome.module.scss';
 import Image from '~/components/Image';
 import Button from '~/components/Button';
-import imgNewsContent1 from '~/assets/images/Home/NewsHome/event_img-1.webp';
-import imgNewsContent2 from '~/assets/images/Home/NewsHome/event_img-2.webp';
-import imgNewsContent3 from '~/assets/images/Home/NewsHome/event_img-3.webp';
-import imgNewsAuthor1 from '~/assets/images/Home/NewsHome/event-author1.webp';
+import imgEventContent1 from '~/assets/images/Home/EventHome/event_img-1.webp';
+import imgEventContent2 from '~/assets/images/Home/EventHome/event_img-2.webp';
+import imgEventContent3 from '~/assets/images/Home/EventHome/event_img-3.webp';
+import imgEventAuthor1 from '~/assets/images/Home/EventHome/event-author1.webp';
 import { ClockIcon, LocationIcon } from '~/components/Icons';
-import { newsSliderConfig } from '~/libs/swiperConfigs';
+import { eventSliderConfig } from '~/libs/swiperConfigs';
 
 const cx = classNames.bind(styles);
 
-function NewsHomeItem() {
+function EventHomeItem() {
     const [ref, inView] = useInView({
         triggerOnce: true, // Chỉ kích hoạt animation một lần khi nội dung vào viewport
         threshold: 0.2, // Tỷ lệ phần tử cần hiển thị để trigger animation (0.2 tức 20%)
     });
     return (
         <Row ref={ref}>
-            <Swiper {...newsSliderConfig}>
+            <Swiper {...eventSliderConfig}>
                 <SwiperSlide>
                     <Col lg={4} md={6} xs={12}>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
                             transition={{ duration: 1 }}
-                            className={cx('news')}
+                            className={cx('event')}
                         >
                             <div className={cx('img_wrap')}>
-                                <Image src={imgNewsContent1} alt="imgNewsContent1" className={cx('imgContent')} />
+                                <Image src={imgEventContent1} alt="imgEventContent1" className={cx('imgContent')} />
                             </div>
                             <div className={cx('wrap-content')}>
                                 <div className={cx('event-author')}>
                                     <div className={cx('author-images')}>
                                         <Image
-                                            src={imgNewsAuthor1}
-                                            alt="imgNewsAuthor1"
+                                            src={imgEventAuthor1}
+                                            alt="imgEventAuthor1"
                                             className={cx('author-img1')}
                                         />
                                     </div>
@@ -96,17 +96,17 @@ function NewsHomeItem() {
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
                             transition={{ duration: 1 }}
-                            className={cx('news')}
+                            className={cx('event')}
                         >
                             <div className={cx('img_wrap')}>
-                                <Image src={imgNewsContent2} alt="imgNewsContent2" className={cx('imgContent')} />
+                                <Image src={imgEventContent2} alt="imgEventContent2" className={cx('imgContent')} />
                             </div>
                             <div className={cx('wrap-content')}>
                                 <div className={cx('event-author')}>
                                     <div className={cx('author-images')}>
                                         <Image
-                                            src={imgNewsAuthor1}
-                                            alt="imgNewsAuthor1"
+                                            src={imgEventAuthor1}
+                                            alt="imgEventAuthor1"
                                             className={cx('author-img1')}
                                         />
                                     </div>
@@ -154,17 +154,17 @@ function NewsHomeItem() {
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
                             transition={{ duration: 1 }}
-                            className={cx('news')}
+                            className={cx('event')}
                         >
                             <div className={cx('img_wrap')}>
-                                <Image src={imgNewsContent3} alt="imgNewsContent1" className={cx('imgContent')} />
+                                <Image src={imgEventContent3} alt="imgEventContent1" className={cx('imgContent')} />
                             </div>
                             <div className={cx('wrap-content')}>
                                 <div className={cx('event-author')}>
                                     <div className={cx('author-images')}>
                                         <Image
-                                            src={imgNewsAuthor1}
-                                            alt="imgNewsAuthor1"
+                                            src={imgEventAuthor1}
+                                            alt="imgEventAuthor1"
                                             className={cx('author-img1')}
                                         />
                                     </div>
@@ -212,17 +212,17 @@ function NewsHomeItem() {
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
                             transition={{ duration: 1 }}
-                            className={cx('news')}
+                            className={cx('event')}
                         >
                             <div className={cx('img_wrap')}>
-                                <Image src={imgNewsContent3} alt="imgNewsContent1" className={cx('imgContent')} />
+                                <Image src={imgEventContent3} alt="imgEventContent1" className={cx('imgContent')} />
                             </div>
                             <div className={cx('wrap-content')}>
                                 <div className={cx('event-author')}>
                                     <div className={cx('author-images')}>
                                         <Image
-                                            src={imgNewsAuthor1}
-                                            alt="imgNewsAuthor1"
+                                            src={imgEventAuthor1}
+                                            alt="imgEventAuthor1"
                                             className={cx('author-img1')}
                                         />
                                     </div>
@@ -270,17 +270,17 @@ function NewsHomeItem() {
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
                             transition={{ duration: 1 }}
-                            className={cx('news')}
+                            className={cx('event')}
                         >
                             <div className={cx('img_wrap')}>
-                                <Image src={imgNewsContent1} alt="imgNewsContent1" className={cx('imgContent')} />
+                                <Image src={imgEventContent1} alt="imgEventContent1" className={cx('imgContent')} />
                             </div>
                             <div className={cx('wrap-content')}>
                                 <div className={cx('event-author')}>
                                     <div className={cx('author-images')}>
                                         <Image
-                                            src={imgNewsAuthor1}
-                                            alt="imgNewsAuthor1"
+                                            src={imgEventAuthor1}
+                                            alt="imgEventAuthor1"
                                             className={cx('author-img1')}
                                         />
                                     </div>
@@ -328,17 +328,17 @@ function NewsHomeItem() {
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
                             transition={{ duration: 1 }}
-                            className={cx('news')}
+                            className={cx('event')}
                         >
                             <div className={cx('img_wrap')}>
-                                <Image src={imgNewsContent2} alt="imgNewsContent2" className={cx('imgContent')} />
+                                <Image src={imgEventContent2} alt="imgEventContent2" className={cx('imgContent')} />
                             </div>
                             <div className={cx('wrap-content')}>
                                 <div className={cx('event-author')}>
                                     <div className={cx('author-images')}>
                                         <Image
-                                            src={imgNewsAuthor1}
-                                            alt="imgNewsAuthor1"
+                                            src={imgEventAuthor1}
+                                            alt="imgEventAuthor1"
                                             className={cx('author-img1')}
                                         />
                                     </div>
@@ -386,17 +386,17 @@ function NewsHomeItem() {
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
                             transition={{ duration: 1 }}
-                            className={cx('news')}
+                            className={cx('event')}
                         >
                             <div className={cx('img_wrap')}>
-                                <Image src={imgNewsContent3} alt="imgNewsContent1" className={cx('imgContent')} />
+                                <Image src={imgEventContent3} alt="imgEventContent1" className={cx('imgContent')} />
                             </div>
                             <div className={cx('wrap-content')}>
                                 <div className={cx('event-author')}>
                                     <div className={cx('author-images')}>
                                         <Image
-                                            src={imgNewsAuthor1}
-                                            alt="imgNewsAuthor1"
+                                            src={imgEventAuthor1}
+                                            alt="imgEventAuthor1"
                                             className={cx('author-img1')}
                                         />
                                     </div>
@@ -444,17 +444,17 @@ function NewsHomeItem() {
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
                             transition={{ duration: 1 }}
-                            className={cx('news')}
+                            className={cx('event')}
                         >
                             <div className={cx('img_wrap')}>
-                                <Image src={imgNewsContent3} alt="imgNewsContent1" className={cx('imgContent')} />
+                                <Image src={imgEventContent3} alt="imgEventContent1" className={cx('imgContent')} />
                             </div>
                             <div className={cx('wrap-content')}>
                                 <div className={cx('event-author')}>
                                     <div className={cx('author-images')}>
                                         <Image
-                                            src={imgNewsAuthor1}
-                                            alt="imgNewsAuthor1"
+                                            src={imgEventAuthor1}
+                                            alt="imgEventAuthor1"
                                             className={cx('author-img1')}
                                         />
                                     </div>
@@ -500,4 +500,4 @@ function NewsHomeItem() {
     );
 }
 
-export default NewsHomeItem;
+export default EventHomeItem;

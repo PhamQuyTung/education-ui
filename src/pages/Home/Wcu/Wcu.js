@@ -60,6 +60,7 @@ function Wcu() {
                             </div>
                         </motion.div>
                     </Col>
+                    
                     <Col lg={6} md={12} xs={12}>
                         <motion.div
                             className={cx('content')}
