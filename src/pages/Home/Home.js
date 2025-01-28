@@ -11,6 +11,8 @@ import Footer from '~/Layout/DefaultLayout/Footer';
 import IntroduceTeacherContentHome from './IntroduceTeacherContentHome';
 import EventHome from './EventHome';
 import Brands from './Brands';
+import Banner2 from '~/components/Banner2';
+import Testimonial from './Testimonial';
 
 function Home() {
     return (
@@ -26,6 +28,8 @@ function Home() {
             <IntroduceTeacherContentHome />
             <EventHome />
             <Brands />
+            <Banner2 />
+            <Testimonial />
             <Footer />
             <ScrollToTopWithProgress />
         </div>

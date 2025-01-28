@@ -15,6 +15,7 @@ function Button({
     href,
     primary = false,
     primary2 = false,
+    primary3 = false,
     outline = false,
     disabled = false,
     Small = false,
@@ -37,6 +38,7 @@ function Button({
         [className]: className,
         primary,
         primary2,
+        primary3,
         outline,
         disabled,
         //Thêm các thuộc tính về btn vào đây: ví dụ thêm "small" button
@@ -86,6 +88,7 @@ Button.propTypes = {
     href: PropTypes.string,
     primary: PropTypes.bool,
     primary2: PropTypes.bool,
+    primary3: PropTypes.bool,
     outline: PropTypes.bool,
     disabled: PropTypes.bool,
     Small: PropTypes.bool,

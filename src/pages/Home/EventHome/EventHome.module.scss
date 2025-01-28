@@ -67,6 +67,17 @@
     overflow: hidden; /* Ẩn phần thừa ra ngoài */
     background: transparent; /* Màu nền */
     z-index: 3;
+
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-image: url('../../../assets/images/Home/EventHome/event_img-shape-2.png');
+    //     background-position: center;
+    // }
 }
 
 .imgContent {
@@ -74,6 +85,7 @@
     height: 100%;
     border-radius: 15px;
     object-fit: cover; /* Đảm bảo hình vừa khít trong container */
+    mask-image: url("../../../assets/images/Home/EventHome/event_img-shape-2.png");
     mask-position: 100% 100%;
     mask-size: cover;
     mask-repeat: no-repeat;
@@ -85,12 +97,6 @@
     align-items: center;
     justify-content: end;
     margin-right: 30px;
-}
-
-.author-images {
-}
-
-.author-img1 {
 }
 
 .author-info {

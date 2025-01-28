@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Hà Thanh Nam",
+        "position": "Software Engineer",
+        "content": "Khóa học 'Digital Marketing Mastery' thực sự tuyệt vời! Tôi đã học được rất nhiều về các chiến lược tiếp thị kỹ thuật số và cách áp dụng chúng vào công việc của mình. Nội dung khóa học rất cung cấp và giảng viên rất tận tâm. Tôi đã có thể áp dụng những kiến thức này ngay từ ngày đầu tiên sau khóa học.",
+        "img": "imgTestimonial1",
+        "rating": 3.5
+    },
+    {
+        "id": 2,
+        "name": "Nguyễn Thị Thảo Linh",
+        "position": "Data Engineer",
+        "content": "Webinar 'Tìm Hiểu Về Lập Trình Python' rất hữu ích. Tôi đã không có kiến thức về lập trình trước đây, nhưng qua webinar này, tôi đã có cái nhìn tổng quan về Python và hiểu được tầm quan trọng của nó trong lĩnh vực công nghệ. Tôi rất hài lòng với nội dung và cách trình bày của giảng viên.",
+        "img": "imgTestimonial2",
+        "rating": 5
+    },
+    {
+        "id": 3,
+        "name": "Đào Thanh Diệp",
+        "position": "Frontend Developer",
+        "content": "Khóa học ReactJS đã giúp tôi nâng cao kỹ năng lập trình giao diện web. Bài giảng rất chi tiết và nhiều bài tập thực hành thực tế.",
+        "img": "imgTestimonial3",
+        "rating": 4.5
+    },
+    {
+        "id": 4,
+        "name": "Lê Hoàng Trinh",
+        "position": "Backend Developer",
+        "content": "Tôi đã hiểu sâu hơn về các khái niệm backend nhờ khóa học Node.js. Kiến thức được trình bày rất dễ hiểu, phù hợp cho cả người mới bắt đầu.",
+        "img": "imgTestimonial4",
+        "rating": 4
+    },
+    {
+        "id": 5,
+        "name": "Phạm Xuân Bắc",
+        "position": "UI/UX Designer",
+        "content": "Khóa học Thiết Kế UI/UX mang đến những góc nhìn mới mẻ và quy trình thiết kế chuyên nghiệp. Tôi đã áp dụng ngay vào dự án của mình.",
+        "img": "imgTestimonial5",
+        "rating": 4.8
+    },
+    {
+        "id": 6,
+        "name": "Ngô Đức Anh",
+        "position": "Mobile App Developer",
+        "content": "Khóa học Flutter đã thay đổi cách tôi tiếp cận lập trình ứng dụng di động. Bài giảng rất rõ ràng và có nhiều ví dụ thực tế.",
+        "img": "imgTestimonial6",
+        "rating": 5
+    },
+    {
+        "id": 7,
+        "name": "Vũ Thị Mai",
+        "position": "Project Manager",
+        "content": "Khóa học Quản Lý Dự Án thực sự rất hữu ích. Tôi đã học được cách quản lý công việc hiệu quả và giao tiếp tốt hơn với đội nhóm.",
+        "img": "imgTestimonial7",
+        "rating": 4.7
+    },
+    {
+        "id": 8,
+        "name": "Phạm Ngọc Nhi",
+        "position": "DevOps Engineer",
+        "content": "Khóa học DevOps giúp tôi hiểu rõ hơn về các công cụ và quy trình triển khai. Hướng dẫn rất cụ thể và dễ làm theo.",
+        "img": "imgTestimonial8",
+        "rating": 4.3
+    },
+    {
+        "id": 9,
+        "name": "Nguyễn Hữu Phát",
+        "position": "Fullstack Developer",
+        "content": "Tôi rất hài lòng với khóa học Fullstack Web Development. Nội dung được tổ chức logic, phù hợp với cả người học trái ngành.",
+        "img": "imgTestimonial9",
+        "rating": 4.9
+    },
+    {
+        "id": 10,
+        "name": "Đặng Thanh Tú",
+        "position": "AI Specialist",
+        "content": "Khóa học Trí Tuệ Nhân Tạo thực sự đột phá! Giảng viên cung cấp kiến thức mới nhất và hướng dẫn cách áp dụng vào thực tế.",
+        "img": "imgTestimonial10",
+        "rating": 4.6
+    }
+]

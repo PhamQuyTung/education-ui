@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Rating } from '@mui/material';
+import classNames from 'classnames/bind';
+import { Row, Col } from 'react-bootstrap';
 
-function BasicRating({ className, ratingNum }) {
+import styles from './Ratings.module.scss';
+
+const cx = classNames.bind(styles);
+
+function BasicRating({ className, ratingNum, dpNone = false }) {
     // Đảm bảo giá trị luôn là số (mặc định là 0 nếu không hợp lệ)
     const [value, setValue] = useState(Number(ratingNum) || 0); // Giá trị mặc định
 
@@ -25,7 +31,9 @@ function BasicRating({ className, ratingNum }) {
                 value={value}
                 readOnly
             />
-            <p style={{ margin: 0 }}>({value})</p>
+            <p className={cx({ dpNone : 'dpNone' })} style={{ margin: 0 }}>
+                ({value})
+            </p>
         </div>
     );
 }
@@ -33,6 +41,7 @@ function BasicRating({ className, ratingNum }) {
 BasicRating.propTypes = {
     className: PropTypes.string,
     ratingNum: PropTypes.number,
+    dpNone: PropTypes.bool, // Cho phép hiển thị hoặc không
 };
 
 export default BasicRating;

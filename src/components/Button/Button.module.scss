@@ -97,6 +97,18 @@ span.Button_title__yIuSg {
     }
 }
 
+.primary3 {
+    color: var(--title-color);
+    background-color: var(--white-color);
+    // border-color: var(--theme-color); //Đã xử lý vấn đề: Border
+
+    &:hover {
+        background-color: var(--title-color); //Đã xử lý vấn đề: Border
+        color: var(--white-color);
+        // background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
+    }
+}
+
 .outline {
     color: var(--white-color);
     border-color: currentColor;
