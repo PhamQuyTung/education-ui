@@ -13,6 +13,7 @@ import EventHome from './EventHome';
 import Brands from './Brands';
 import Banner2 from '~/components/Banner2';
 import Testimonial from './Testimonial';
+import NewsHome from './NewsHome';
 
 function Home() {
     return (
@@ -30,6 +31,7 @@ function Home() {
             <Brands />
             <Banner2 />
             <Testimonial />
+            <NewsHome />
             <Footer />
             <ScrollToTopWithProgress />
         </div>

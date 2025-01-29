@@ -3,7 +3,7 @@
 }
 
 .bg {
-    background-image: url("../../../assets/images/Home/Testimonial/testi_bg_1-2.png");
+    background-image: url('../../../assets/images/Home/Testimonial/testi_bg_1-2.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,6 +11,7 @@
     // margin-top: 100px;
     width: 100%;
     min-height: 904px;
+    position: relative;
 }
 
 .wrapper {
@@ -36,7 +37,7 @@
 
 .content {
     display: flex;
-    // flex-wrap: wrap;    
+    // flex-wrap: wrap;
     gap: 30px;
 
     p {
@@ -92,4 +93,39 @@
     background: var(--shape-color);
     z-index: -1;
     border-radius: 0 0 100% 100%;
+}
+
+.shape-wrap1 {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    animation: jumpAni 7s linear infinite;
+}
+
+.shape-wrap2 {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    animation: spin 10s linear infinite;
+}
+
+@keyframes jumpAni {
+    0% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

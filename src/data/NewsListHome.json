@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "img": "imageContent1",
+        "title": "Nền tảng giáo dục sáng tạo và chuyển giao",
+        "date": "2021-09-15",
+        "author": "John Doe"
+    },
+    {
+        "id": 2,
+        "img": "imageContent2",
+        "title": "Xu hướng công nghệ trong giáo dục năm 2024",
+        "date": "2024-02-10",
+        "author": "Jane Smith"
+    },
+    {
+        "id": 3,
+        "img": "imageContent3",
+        "title": "Làm thế nào để học hiệu quả hơn?",
+        "date": "2023-07-22",
+        "author": "Michael Johnson"
+    },
+    {
+        "id": 4,
+        "img": "imageContent4",
+        "title": "Ứng dụng AI trong giảng dạy hiện đại",
+        "date": "2022-11-05",
+        "author": "Emily Davis"
+    }
+]

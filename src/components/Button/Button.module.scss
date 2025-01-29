@@ -121,6 +121,9 @@ span.Button_title__yIuSg {
 }
 
 .text {
+    background-color: transparent !important;
+    color: var(--theme-color) !important;
+    font-weight: 500;
     &:hover {
         text-decoration: underline;
     }

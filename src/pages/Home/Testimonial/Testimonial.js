@@ -15,6 +15,8 @@ import FullRating from '~/components/Rating';
 import dataTestimonial from '~/data/Testimonial';
 import { testimonialSliderConfig } from '~/libs/swiperConfigs';
 import { ShapeIcon } from '~/components/Icons';
+import shapeImage1 from '~/assets/images/Home/Testimonial/testi-bg-shape_1_1.webp';
+import shapeImage2 from '~/assets/images/Home/Testimonial/testi-bg-shape_1_2.webp';
 
 const cx = classNames.bind(styles);
 
@@ -42,13 +44,13 @@ function Testimonial() {
             <div className={cx('bg')}>
                 <div className={cx('wrapper')}>
                     <Title title="Học viên nói gì về chúng tôi?" sub="Đánh giá từ học viên" clsBox={cx('custom-box')} />
+
                     <Row ref={ref}>
                         <Swiper {...testimonialSliderConfig}>
                             {dataTestimonial.map((testimonial) => (
                                 <SwiperSlide key={testimonial.id}>
                                     <Col lg={12} md={12} xs={12}>
                                         <motion.div
-                                            
                                             initial={{ opacity: 0, y: 50 }}
                                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
                                             transition={{ duration: 1 }}
@@ -87,6 +89,14 @@ function Testimonial() {
                             ))}
                         </Swiper>
                     </Row>
+                </div>
+                
+                <div className={cx('shape-wrap1')}>
+                    <Image src={shapeImage1} alt="shapeImage1" />
+                </div>
+
+                <div className={cx('shape-wrap2')}>
+                    <Image src={shapeImage2} alt="shapeImage2" />
                 </div>
             </div>
         </div>
