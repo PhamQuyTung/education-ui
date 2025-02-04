@@ -3,7 +3,15 @@ import PropTypes from 'prop-types';
 import { Link, NavLink } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faBook, faEllipsis } from '@fortawesome/free-solid-svg-icons';
+import {
+    faAngleDown,
+    faAngleRight,
+    faBars,
+    faBook,
+    faEllipsis,
+    faMinus,
+    faPlus,
+} from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 
 import styles from './HeaderNav.module.scss';
@@ -15,6 +23,7 @@ import Notification from '~/components/Notification';
 import MenuOption from '~/Layout/DefaultLayout/Header/HeaderNav/menuItemOption';
 import SearchHeader from '~/components/Search';
 import { useTheme } from '~/context/ThemeContext';
+import ModalNavBars from '~/components/Modal';
 
 const cx = classNames.bind(styles);
 
@@ -35,6 +44,11 @@ function HeaderNav({ isHidden }) {
     const imageRef = useRef(null);
     const { theme } = useTheme();
     const [isFixed, setIsFixed] = useState(false);
+    const [isOppenModalNavBarsMobile, setIsOppenModalNavBarsMobile] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleSubMenu = () => setIsOpen(!isOpen);
+    const toggleModalNavBarsMobile = () => setIsOppenModalNavBarsMobile(!isOppenModalNavBarsMobile);
 
     useEffect(() => {
         // Áp dụng theme
@@ -100,6 +114,102 @@ function HeaderNav({ isHidden }) {
                         </Menu>
                     </div>
                 </ul>
+
+                {/* Header-navbars-menu__mbtl */}
+                <div className={cx('Header-navbars-menu__mbtl')}>
+                    <button onClick={toggleModalNavBarsMobile} className={cx('Header-navbars-menu__mbtl-btn')}>
+                        <FontAwesomeIcon icon={faBars} className={cx('icon-bars')} />
+                    </button>
+
+                    <ModalNavBars
+                        clsOL={cx('custom-overlay')}
+                        clsModal={cx('custom-modal')}
+                        clsContent={cx('custom-content')}
+                        clsBtn={cx('custom-btn')}
+                        isOpen={isOppenModalNavBarsMobile}
+                        onClose={toggleModalNavBarsMobile}
+                    >
+                        <Link to="/" className={cx('logo-mobile')}>
+                            <Image ref={imageRef} className={cx('img')} src={logo} alt="logo" />
+                        </Link>
+
+                        <ul className={cx('header-navbars-menu__mbtl-list')}>
+                            <li className={cx('item-mobile')}>
+                                <NavLink to="/" className={cx('link-mobile')}>
+                                    <FontAwesomeIcon icon={faAngleRight} className={cx('icon-angleRight')} />
+                                    Trang chủ
+                                </NavLink>
+                            </li>
+
+                            <li className={cx('item-mobile')}>
+                                <NavLink to="/introduce" className={cx('link-mobile')}>
+                                    <FontAwesomeIcon icon={faAngleRight} className={cx('icon-angleRight')} />
+                                    Giới thiệu
+                                </NavLink>
+                            </li>
+
+                            <li className={cx('item-mobile')}>
+                                <NavLink to="/course" className={cx('link-mobile')}>
+                                    <FontAwesomeIcon icon={faAngleRight} className={cx('icon-angleRight')} />
+                                    Khóa học
+                                </NavLink>
+                            </li>
+
+                            {/* Hoạt động - Có submenu */}
+                            <li className={cx('item-mobile', { open: isOpen })}>
+                                <div className={cx('item-mobile__wrap')}>
+                                    <Link to="#" className={cx('link-mobile')}>
+                                        <FontAwesomeIcon
+                                            icon={isOpen ? faAngleDown : faAngleRight}
+                                            className={cx('icon-angleRight')}
+                                        />
+                                        Hoạt Động
+                                    </Link>
+
+                                    <FontAwesomeIcon
+                                        icon={isOpen ? faMinus : faPlus}
+                                        className={cx('icon-toggle')}
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            toggleSubMenu();
+                                        }}
+                                    />
+                                </div>
+                            </li>
+
+                            {/* Submenu */}
+                            {isOpen && (
+                                <ul className={cx('submenu')}>
+                                    <li className={cx('submenu-item')}>
+                                        <NavLink to="/events" className={cx('link-mobile')}>
+                                            <FontAwesomeIcon icon={faAngleRight} className={cx('icon-angleRight')} />
+                                            Sự kiện
+                                        </NavLink>
+                                    </li>
+                                    <li className={cx('submenu-item')}>
+                                        <NavLink to="/teacher" className={cx('link-mobile')}>
+                                            <FontAwesomeIcon icon={faAngleRight} className={cx('icon-angleRight')} />
+                                            Giảng viên
+                                        </NavLink>
+                                    </li>
+                                    <li className={cx('submenu-item')}>
+                                        <NavLink to="/news" className={cx('link-mobile')}>
+                                            <FontAwesomeIcon icon={faAngleRight} className={cx('icon-angleRight')} />
+                                            Tin tức
+                                        </NavLink>
+                                    </li>
+                                </ul>
+                            )}
+
+                            <li className={cx('item-mobile')}>
+                                <NavLink to="/contact" className={cx('link-mobile')}>
+                                    <FontAwesomeIcon icon={faAngleRight} className={cx('icon-angleRight')} />
+                                    Liên hệ
+                                </NavLink>
+                            </li>
+                        </ul>
+                    </ModalNavBars>
+                </div>
             </div>
         </div>
     );

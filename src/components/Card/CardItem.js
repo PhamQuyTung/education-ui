@@ -47,17 +47,22 @@ const CardItem = memo(function ({
                     </p>
                 </div>
             )}
+
             {img && (
                 <div className={cx('wrap-img')}>
                     <Image className={cx('img')} src={img} />
                 </div>
             )}
+
             {icon && <div className={cx('wrap-icon')}>{icon}</div>}
+            
             <div className={cx('content', clsContent)}>
                 {ratingNum && <FullRating ratingNum={parseFloat(ratingNum)} className={cx('wrap-ratingNum')} />}
+
                 <Link to={toCourse}>
                     <h3 className={cx('title')}>{title}</h3>
                 </Link>
+
                 {((quantityUnit && level) || quantityStudent) && (
                     <div className={cx('box-meta')}>
                         <span className={cx('lesson')}>
@@ -78,6 +83,7 @@ const CardItem = memo(function ({
                 )}
 
                 {sub && <p className={cx('sub')}>{sub}</p>}
+
                 {buttonDescription && (
                     <Link to={toBtn}>
                         <Button Small primary rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
@@ -85,6 +91,7 @@ const CardItem = memo(function ({
                         </Button>
                     </Link>
                 )}
+
                 {userShortNamePosted && userNamePosted && cost && (
                     <div className={cx('wrap-footer')}>
                         <div className={cx('userShortNamePosted')}>

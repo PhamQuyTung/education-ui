@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
-// import ReactPlayer from 'react-player';
+import ReactPlayer from 'react-player';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +13,6 @@ import Button from '~/components/Button';
 import Image from '~/components/Image';
 import ModalVideo from '~/components/Modal';
 import imagesBanner1 from '~/assets/images/Home/Banner/cta-icon1.webp';
-import ReactPlayer from 'react-player';
 
 const cx = classNames.bind(styles);
 

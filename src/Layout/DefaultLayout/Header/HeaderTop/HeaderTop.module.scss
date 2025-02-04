@@ -31,6 +31,7 @@
     display: flex;
     // gap: 30px;
     padding: 0 12px;
+    align-items: center;
 }
 
 .item-box1,
@@ -95,10 +96,51 @@
 }
 
 .link-brand {
-
 }
 
 .icon {
     color: var(--white-color);
     font-size: 1.6rem;
+}
+
+//==============================Responsive styles==============================
+// Mobile nhỏ (dưới 480px)
+@media (max-width: 480px) {
+    .list-box1 {
+        display: flex;
+        // gap: 30px;
+        padding: 0 12px;
+        align-items: center;
+        display: none;
+    }
+
+    .item-box2:nth-child(2) {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        color: var(--white-color);
+        font-weight: 400;
+        display: none;
+    }
+
+    .wrapper {
+        max-width: var(--main-container);
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+// Tablet (768px trở xuống)
+@media (max-width: 768px) {
+}
+
+// Laptop nhỏ (1024px trở xuống)
+@media (max-width: 1024px) {
+}
+
+// PC & Laptop lớn (1280px trở xuống)
+@media (max-width: 1280px) {
 }

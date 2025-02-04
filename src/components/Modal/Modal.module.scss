@@ -8,6 +8,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 999999;
+    transition: all 0.3s linear;
 }
 
 .modal {
@@ -16,6 +18,7 @@
     padding: 20px;
     position: relative;
     animation: fadeIn 0.5s ease;
+    transition: all 0.3s linear;
 }
 
 .closeButton {
@@ -25,6 +28,10 @@
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.icon-close {
+    font-size: 1.8rem;
 }
 
 .content {

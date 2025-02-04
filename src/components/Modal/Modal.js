@@ -7,16 +7,16 @@ import styles from './Modal.module.scss';
 
 const cx = classNames.bind(styles);
 
-const Modal = ({ isOpen, onClose, children }) => {
+const Modal = ({ isOpen, onClose, children, clsOL, clsModal, clsContent, clsBtn }) => {
     if (!isOpen) return null;
 
     return (
-        <div className={cx('overlay')} onClick={onClose}>
-            <div className={cx('modal')} onClick={(e) => e.stopPropagation()}>
-                <button className={cx('closeButton')} onClick={onClose}>
-                    <FontAwesomeIcon icon={faXmark} />
+        <div className={cx('overlay', clsOL)} onClick={onClose}>
+            <div className={cx('modal', clsModal)} onClick={(e) => e.stopPropagation()}>
+                <button className={cx('closeButton', clsBtn)} onClick={onClose}>
+                    <FontAwesomeIcon icon={faXmark} className={cx('icon-close')} />
                 </button>
-                <div className={cx('content')}>{children}</div>
+                <div className={cx('content', clsContent)}>{children}</div>
             </div>
         </div>
     );
@@ -26,6 +26,10 @@ Modal.propTypes = {
     isOpen: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
     children: PropTypes.node,
+    className: PropTypes.string,
+    clsModal: PropTypes.string,
+    clsOL: PropTypes.string,
+    clsContent: PropTypes.string,
 };
 
 export default Modal;

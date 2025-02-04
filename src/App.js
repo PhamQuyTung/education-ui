@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
     return (
         <Router>
-            <div className="App">
+            <div style={{ overflow: 'hidden' }} className="App">
                 <Routes>
                     {publicRoutes.map((route, index) => {
                         const Page = route.component;
