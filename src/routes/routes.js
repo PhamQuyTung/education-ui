@@ -10,6 +10,7 @@ import Events from '~/pages/Events';
 import Teacher from '~/pages/Teacher';
 import News from '~/pages/News';
 import Contact from '~/pages/Contact';
+import CourseDetail from '~/pages/Course/CourseDetail';
 
 // Public routes
 const publicRoutes = [
@@ -20,6 +21,7 @@ const publicRoutes = [
     { path: '/teacher', component: Teacher },
     { path: '/news', component: News },
     { path: '/contact', component: Contact },
+    { path: '/courseDetail', component: CourseDetail },
 ];
 const privateRoutes = [];
 export { publicRoutes, privateRoutes };

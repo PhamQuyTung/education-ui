@@ -1,0 +1,44 @@
+.breadcrumb {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    color: var(--white-color);
+    line-height: 26px;
+}
+
+.breadcrumb-title {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.18;
+    text-transform: uppercase;
+    color: var(--white-color);
+    margin: -0.2em 0 -0.26em 0;
+}
+
+.breadcrumb-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.breadcrumb-menu_link {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 2rem;
+    font-weight: 500;
+    transition: all 0.3s linear;
+
+    &:hover {
+        color: var(--theme-color);
+    }
+}
+
+.breadcrumb-menu_span {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.icon {
+    margin: 0 10px;
+}

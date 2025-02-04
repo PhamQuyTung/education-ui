@@ -8,7 +8,7 @@ function DefaultLayout({ children }) {
     return (
         <>
             <Header />
-            <div className="container">
+            <div className="section">
                 <DefaultSlider />
                 <div className="content">{children}</div>
             </div>

@@ -1,11 +1,16 @@
-// import styles from './Introduce.module.scss';
-// import classNames from 'classnames/bind';
+import styles from './Introduce.module.scss';
+import classNames from 'classnames/bind';
+// import {Row, Col} from 
 
-// const cx = classNames.bind(styles);
+const cx = classNames.bind(styles);
 
 function Introduce() {
     return ( 
-        <h2>Introduce page</h2>
+        <div className={cx('introduce')}>
+            <div className={cx('wrapper')}>
+                <h2>Introduce page</h2>
+            </div>
+        </div>
     );
 }
 

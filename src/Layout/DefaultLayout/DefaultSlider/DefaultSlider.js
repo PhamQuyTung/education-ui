@@ -1,15 +1,20 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './DefaultSlider.module.scss';
 import classNames from 'classnames/bind';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import Button from '~/components/Button';
+import BreadCrumb from '~/components/BreadCrumb';
 
 const cx = classNames.bind(styles);
 
-function Slider() {
+function DefaultSlider() {
     return (
-        <h1>Slider Default Navbar</h1>
+        <div className={cx('sliderRouter')}>
+            <div className={cx('bg')}>
+                <BreadCrumb />
+                <div className={cx('shape1')}></div>
+                <div className={cx('shape2')}></div>
+                <div className={cx('shape3')}></div>
+            </div>
+        </div>
     );
 }
 
-export default Slider;
+export default DefaultSlider;

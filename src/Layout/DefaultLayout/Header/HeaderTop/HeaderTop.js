@@ -22,7 +22,7 @@ const CONTACT_INFO = [
     { icon: faClock, text: 'Thứ 2 - Thứ 6: 9:00 - 18:00' },
 ];
 
-const currentUser = true;
+const currentUser = false;
 
 function HeaderTop() {
     const [isHidden, setIsHidden] = useState(false);

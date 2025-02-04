@@ -8,17 +8,12 @@ import Button from '~/components/Button';
 
 // const cx = classNames.bind(styles);
 
-function Course() {
+function CourseDetail() {
     return (
-        <div className="Course">
-            <h2>List Course page</h2>
-            {/* <div>
-                <Link to="/courseDetail">
-                    <Button ExtraLarge primary rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>Xem thêm chi tiết khóa học</Button>
-                </Link>
-            </div> */}
+        <div className="CourseDetail">
+            <h2>CourseDetail page</h2>
         </div>
     );
 }
 
-export default Course;
+export default CourseDetail;
