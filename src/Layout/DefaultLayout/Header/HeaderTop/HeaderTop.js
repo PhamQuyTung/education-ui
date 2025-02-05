@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import styles from './HeaderTop.module.scss';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
@@ -6,6 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faClock, faEnvelope, faUser } from '@fortawesome/free-regular-svg-icons';
 import { faFacebookF, faTiktok, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import Image from '~/components/Image';
+import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
@@ -22,10 +25,9 @@ const CONTACT_INFO = [
     { icon: faClock, text: 'Thứ 2 - Thứ 6: 9:00 - 18:00' },
 ];
 
-const currentUser = false;
-
-function HeaderTop() {
+function HeaderTop({ currentUser }) {
     const [isHidden, setIsHidden] = useState(false);
+    // const currentUser = false;
 
     useEffect(() => {
         const handleScroll = () => setIsHidden(window.scrollY >= 1000);
@@ -63,16 +65,21 @@ function HeaderTop() {
                         Theo dõi:
                         <span className={cx('icon-brands')}>{renderSocialMedia()}</span>
                     </li>
+
                     <li className={cx('item-box2')}>
                         {currentUser ? (
                             <Link to="/profile" className={cx('link')}>
-                                Thông tin cá nhân
+                                <Image
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH61-RtuTNedGNWMriGAojvkz8748TqbQr2Q&s"
+                                    alt="user1"
+                                />
                             </Link>
                         ) : (
-                            <>
-                                <FontAwesomeIcon className={cx('icon')} icon={faUser} />
-                                <span className={cx('user')}>Đăng nhập / Đăng ký</span>
-                            </>
+                            <Link to="/">
+                                <Button Small primary3>
+                                    Login
+                                </Button>
+                            </Link>
                         )}
                     </li>
                 </ul>
@@ -80,5 +87,9 @@ function HeaderTop() {
         </header>
     );
 }
+
+HeaderTop.propTypes = {
+    currentUser: PropTypes.bool,
+};
 
 export default HeaderTop;

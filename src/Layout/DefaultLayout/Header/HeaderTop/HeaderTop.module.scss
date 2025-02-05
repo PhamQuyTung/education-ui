@@ -62,11 +62,29 @@
     &:hover {
         color: var(--black-color);
     }
+
+    img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+}
+
+.login-wrap_btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    cursor: pointer;
+    transition: var(--transition);
+    background-color: var(--black-color);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .phone-link,
 .mail-link,
-.user {
+.login {
     color: var(--white-color);
     font-size: 16px;
     text-decoration: none;
@@ -115,12 +133,11 @@
     }
 
     .item-box2:nth-child(2) {
-        display: flex;
+        display: flex !important;
         gap: 10px;
         align-items: center;
         color: var(--white-color);
         font-weight: 400;
-        display: none;
     }
 
     .wrapper {
@@ -135,10 +152,77 @@
 
 // Tablet (768px trở xuống)
 @media (max-width: 768px) {
+    .list-box1 {
+        display: flex;
+        // gap: 30px;
+        padding: 0 12px;
+        align-items: center;
+        display: none;
+    }
+
+    .list-box2 {
+        width: 100%;
+        display: flex;
+        // gap: 30px;
+        padding: 0 12px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .item-box2:nth-child(2) {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        color: var(--white-color);
+        font-weight: 400;
+    }
+
+    .wrapper {
+        max-width: var(--main-container);
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 // Laptop nhỏ (1024px trở xuống)
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 768px) {
+    .list-box1 {
+        display: flex;
+        // gap: 30px;
+        padding: 0 12px;
+        align-items: center;
+        display: none;
+    }
+
+    .list-box2 {
+        width: 100%;
+        display: flex;
+        // gap: 30px;
+        padding: 0 12px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 24px;
+    }
+
+    .item-box2:nth-child(2) {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        color: var(--white-color);
+        font-weight: 400;
+    }
+
+    .wrapper {
+        max-width: var(--main-container);
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 // PC & Laptop lớn (1280px trở xuống)

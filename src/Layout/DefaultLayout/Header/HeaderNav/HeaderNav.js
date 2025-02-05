@@ -11,6 +11,7 @@ import {
     faEllipsis,
     faMinus,
     faPlus,
+    faSearch,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 
@@ -40,7 +41,7 @@ const SUB_MENU_ITEMS = [
     { to: '/news', label: 'Tin tức' },
 ];
 
-function HeaderNav({ isHidden }) {
+function HeaderNav({ isHidden, currentUser }) {
     const imageRef = useRef(null);
     const { theme } = useTheme();
     const [isFixed, setIsFixed] = useState(false);
@@ -105,7 +106,7 @@ function HeaderNav({ isHidden }) {
                 <ul className={cx('actions')}>
                     <SearchHeader />
                     <Cart cartCount={0} />
-                    <Notification notificationCount={0} />
+                    {currentUser && <Notification notificationCount={0} />} {/* Hiển thị nếu currentUser = true */}
                     <div className={cx('option-wrapper')}>
                         <Menu items={MenuOption} className={cx('custom-menu')}>
                             <li className={cx('option')}>
@@ -117,13 +118,18 @@ function HeaderNav({ isHidden }) {
 
                 {/* Header-navbars-menu__mbtl */}
                 <div className={cx('Header-navbars-menu__mbtl')}>
-                    <button onClick={toggleModalNavBarsMobile} className={cx('Header-navbars-menu__mbtl-btn')}>
+                    {/* <SearchHeader /> */}
+                    <Cart cartCount={0} />
+                    {currentUser && <Notification notificationCount={0} />} {/* Hiển thị nếu currentUser = true */}
+                    <button
+                        onClick={toggleModalNavBarsMobile}
+                        className={cx('Header-navbars-menu__mbtl-btn')}
+                    >
                         <FontAwesomeIcon icon={faBars} className={cx('icon-bars')} />
                     </button>
-
                     <ModalNavBars
                         clsOL={cx('custom-overlay')}
-                        clsModal={cx('custom-modal')}
+                        clsModal={cx('custom-modal', { 'show' : isOppenModalNavBarsMobile })}
                         clsContent={cx('custom-content')}
                         clsBtn={cx('custom-btn')}
                         isOpen={isOppenModalNavBarsMobile}
@@ -132,6 +138,20 @@ function HeaderNav({ isHidden }) {
                         <Link to="/" className={cx('logo-mobile')}>
                             <Image ref={imageRef} className={cx('img')} src={logo} alt="logo" />
                         </Link>
+
+                        <form action="/">
+                            <div className={cx('actions-search-sub')}>
+                                <input
+                                    className={cx('search-input')}
+                                    type="text"
+                                    placeholder="Tìm kiếm khóa học...."
+                                    required
+                                />
+                                <button className={cx('btn-submit')} type="submit">
+                                    <FontAwesomeIcon className={cx('icon-submit')} icon={faSearch} />
+                                </button>
+                            </div>
+                        </form>
 
                         <ul className={cx('header-navbars-menu__mbtl-list')}>
                             <li className={cx('item-mobile')}>
@@ -217,6 +237,9 @@ function HeaderNav({ isHidden }) {
 
 HeaderNav.propTypes = {
     isHidden: PropTypes.bool,
+    isFixed: PropTypes.bool,
+    currentUser: PropTypes.bool,
+    notificationCount: PropTypes.number,
 };
 
 export default HeaderNav;
