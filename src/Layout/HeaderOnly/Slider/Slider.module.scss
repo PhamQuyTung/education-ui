@@ -24,13 +24,13 @@
     --animation-fadeIn: slideIn 0.3s ease forwards;
 
     // margin-top: var(--header-nav);
-    min-height: 847px;
+    max-height: 847px;
     overflow: hidden;
 }
 
 .wrapper {
     position: relative;
-    min-height: 847px;
+    height: 100%;
 }
 
 .background {
@@ -180,3 +180,52 @@
     }
 }
 
+//==============================Responsive styles==============================
+// Mobile nhỏ (dưới 480px)
+@media (max-width: 480px) {
+    .shape-1 {
+        display: none;
+    }
+
+    .shape-2 {
+        display: none;
+    }
+
+    .shape-3,
+    .shape-4,
+    .shape-5 {
+        display: none;
+    }
+}
+
+// Tablet (768px trở xuống)
+@media (max-width: 768px) and (min-width: 480px) {
+    .shape-1 {
+        display: none;
+    }
+
+    .shape-2 {
+        display: none;
+    }
+
+    .shape-3,
+    .shape-4,
+    .shape-5 {
+        display: none;
+    }
+}
+
+// Laptop nhỏ (1024px trở xuống)
+@media (max-width: 1024px) and (min-width: 768px) {
+    .shape-1 {
+        display: none;
+    }
+
+    .shape-2 {
+        display: none;
+    }
+}
+
+// PC & Laptop lớn (1280px trở xuống)
+@media (max-width: 1280px) {
+}

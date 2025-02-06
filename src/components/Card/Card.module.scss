@@ -174,3 +174,29 @@
         }
     }
 }
+
+//==============================Responsive styles==============================
+// Mobile nhỏ (dưới 480px)
+@media (max-width: 480px) {
+    .wrapper {
+        margin-top: 30px;
+    }
+}
+
+// Tablet (768px trở xuống)
+@media (max-width: 768px) and (min-width: 480px) {
+    .wrapper {
+        margin-top: 30px;
+    }
+}
+
+// Laptop nhỏ (1024px trở xuống)
+@media (max-width: 1024px) and (min-width: 768px) {
+    .wrapper {
+        margin-top: 30px;
+    }
+}
+
+// PC & Laptop lớn (1280px trở xuống)
+@media (max-width: 1280px) {
+}

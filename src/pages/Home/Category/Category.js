@@ -32,6 +32,9 @@ function Category() {
                                 sub="Khám phá các danh mục hàng đầu"
                                 buttonDescription="Xem tất cả danh mục"
                                 to="/course"
+                                clsBox={cx('custom-box')}
+                                clsTitle={cx('custom-title')}
+                                clsSub={cx('custom-sub')}
                                 clsButton={cx('custom-btn')}
                             ></Title>
                         </motion.div>

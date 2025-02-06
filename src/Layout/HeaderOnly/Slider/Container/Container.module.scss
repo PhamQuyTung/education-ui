@@ -72,3 +72,85 @@
     font-size: 1.4rem;
     text-transform: uppercase;
 }
+
+//==============================Responsive styles==============================
+// Mobile nhỏ (dưới 480px)
+@media (max-width: 480px) {
+    .content {
+        padding: 0 12px !important;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .title {
+        font-size: 3.4rem !important;
+    }
+
+    .content-description {
+        p {
+            font-size: 1.4rem;
+        }
+    }
+
+    .custom-btn {
+        width: 45%;
+    }
+}
+
+// Tablet (768px trở xuống)
+@media (max-width: 768px) and (min-width: 480px) {
+    .content {
+        padding: 0 12px !important;
+        margin: 0 24px;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .title {
+        font-size: 3.4rem !important;
+    }
+
+    .content-description {
+        p {
+            font-size: 1.4rem;
+        }
+    }
+
+    .custom-btn {
+        width: 35%;
+    }
+}
+
+// Laptop nhỏ (1024px trở xuống)
+@media (max-width: 1024px) and (min-width: 768px) {
+    .content {
+        padding: 0 12px !important;
+        margin: 0 24px;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .title {
+        font-size: 3.4rem !important;
+    }
+
+    .content-description {
+        p {
+            font-size: 1.4rem;
+        }
+    }
+
+    .custom-btn {
+        width: 35%;
+    }
+}
+
+// PC & Laptop lớn (1280px trở xuống)
+@media (max-width: 1280px) {
+}
