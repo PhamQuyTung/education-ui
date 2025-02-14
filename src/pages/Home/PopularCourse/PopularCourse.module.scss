@@ -1,10 +1,10 @@
 .pp-course {
-    // background-image: url('../../../assets/images/Home/ProductContent/course_bg_1-2.png');
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // position: relative;
-    
+    background-image: url('../../../assets/images/Home/ProductContent/course_bg_1-2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
     padding: 100px 0;
     margin-top: 100px;
 
@@ -15,8 +15,13 @@
     }
 }
 
+.custom-col {
+    width: 350px !important;
+    max-width: 100%;
+    margin: 0 auto !important;
+}
+
 .custom-card {
-    min-width: 335px !important;
     min-height: 500px;
     padding: 0;
     border-radius: 10px;
@@ -30,6 +35,8 @@
 .custom-subTitle {
     font-size: 4.4rem !important;
     margin-bottom: 20px !important;
+    line-height: 1.208 !important;
+    text-transform: capitalize;
 }
 
 .custom-box {
@@ -37,4 +44,78 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+}
+
+//==============================Responsive styles==============================
+// Mobile siêu nhỏ (dưới 480px)
+@media (max-width: 344px) {
+    .custom-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .custom-title {
+        text-align: center;
+        margin-bottom: 12px !important;
+    }
+
+    .custom-subTitle {
+        font-size: 2.6rem !important;
+        margin-bottom: 40px !important;
+        text-align: center;
+    }
+}
+
+// Mobile nhỏ (dưới 480px)
+@media (max-width: 480px) and (min-width: 345px) {
+    .custom-col {
+        width: 100% !important;
+    }
+
+    .custom-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .custom-title {
+        text-align: center;
+        margin-bottom: 12px !important;
+    }
+
+    .custom-subTitle {
+        font-size: 2.6rem !important;
+        margin-bottom: 40px !important;
+        text-align: center;
+    }
+}
+
+// Tablet nhỏ & Mobile (768px to 480px)
+@media (max-width: 768px) and (min-width: 480px) {
+    .custom-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .custom-title {
+        margin-bottom: 12px !important;
+    }
+
+    .custom-subTitle {
+        font-size: 2.6rem !important;
+        margin-bottom: 40px !important;
+    }
+}
+
+// Laptop nhỏ & Tablet (1024px trở xuống)
+@media (max-width: 1024px) and (min-width: 768px) {
+}
+
+// PC & Laptop lớn (1280px trở xuống)
+@media (max-width: 1280px) {
 }

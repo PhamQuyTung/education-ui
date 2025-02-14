@@ -15,7 +15,7 @@ import Button from '~/components/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faClock, faUser } from '@fortawesome/free-regular-svg-icons';
-import { eventSliderConfig } from '~/libs/swiperConfigs/eventSliderConfig';
+import { newsContentSliderConfig } from '~/libs/swiperConfigs/newsContentSliderConfig';
 import NewsHomeList from '~/data/NewsListHome';
 
 const cx = classNames.bind(styles);
@@ -35,7 +35,7 @@ function NewsHomeItem() {
 
     return (
         <Row ref={ref}>
-            <Swiper {...eventSliderConfig}>
+            <Swiper {...newsContentSliderConfig}>
                 {NewsHomeList.map((news) => (
                     <SwiperSlide key={news.id}>
                         <Col lg={4} md={12} xs={12}>

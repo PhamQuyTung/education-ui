@@ -43,7 +43,7 @@ function IntroduceTeacherContentHome() {
         <div className={cx('teacher')}>
             <div className={cx('wrapper')}>
                 <Row ref={ref}>
-                    <Col lg={6} md={12} xs={12}>
+                    <Col lg={6} md={12} xs={12} className={cx('custom-colW100')}>
                         <motion.div
                             className={cx('title-heading')}
                             initial={{ opacity: 0, x: -400 }}
@@ -73,7 +73,7 @@ function IntroduceTeacherContentHome() {
                         </motion.div>
                     </Col>
 
-                    <Col lg={6} md={12} xs={12}>
+                    <Col lg={6} md={12} xs={12} className={cx('custom-col')}>
                         <motion.div
                             className={cx('teacher-wrap')}
                             initial={{ opacity: 0, x: 400 }}
@@ -82,7 +82,7 @@ function IntroduceTeacherContentHome() {
                         >
                             <Row>
                                 {Teachers.map((teacher) => (
-                                    <Col lg={6} md={6} xs={12} key={teacher.id}>
+                                    <Col lg={6} md={6} xs={12} className={cx('custom-col_product')} key={teacher.id}>
                                         <div className={cx('teacher-item')}>
                                             <div className={cx('img-wrap')}>
                                                 <Image src={TeacherImages[teacher.img]} alt={teacher.name} />

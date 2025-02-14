@@ -165,3 +165,117 @@
         opacity: 0;
     }
 }
+
+//==============================Responsive styles==============================
+// Mobile nhỏ (dưới 480px)
+@media (max-width: 480px) {
+    .content {
+        flex-direction: column;
+        padding: 0 30px !important;
+    }
+
+    .heading {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 2.6rem !important;
+    }
+
+    .bg {
+        height: 659px;
+        background-position: center !important;
+    }
+
+    .img-mail {
+        width: 90px !important;
+        height: 90px !important;
+    }
+
+    .play-link {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(50%, 50%);
+    }
+}
+
+// Tablet (768px to 480px)
+@media (max-width: 768px) and (min-width: 480px) {
+    .content {
+        justify-content: center;
+        // flex-direction: column;
+    }
+
+    .bg {
+        height: 400px;
+        background-position: center !important;
+    }
+
+    .title {
+        font-size: 3.6rem !important;
+    }
+
+    .play-link {
+        position: absolute;
+        top: -30% !important;
+        left: 38% !important;
+        transform: translate(50%, 50%);
+    }
+}   
+
+// Laptop nhỏ (820px to 768px)
+@media (max-width: 820px) and (min-width: 768px) {
+    .content {
+        justify-content: center;
+    }
+
+    .bg {
+        height: 400px;
+        background-position: center !important;
+    }
+
+    .title {
+        font-size: 3.6rem !important;
+    }
+
+    .play-link {
+        position: absolute;
+        top: -30% !important;
+        left: 38% !important;
+        transform: translate(50%, 50%);
+    }
+}
+
+// Laptop nhỏ (1024px to 820px)
+@media (max-width: 1024px) and (min-width: 821px) {
+    .content {
+        justify-content: center;
+    }
+
+    .bg {
+        height: 400px;
+        background-position: center !important;
+    }
+
+    .title {
+        font-size: 3.6rem !important;
+    }
+
+    // .play-link {
+    //     position: absolute;
+    //     top: -30% !important;
+    //     left: 38% !important;
+    //     transform: translate(50%, 50%);
+    // }
+
+    .watch {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+// PC & Laptop lớn (1280px trở xuống)
+@media (max-width: 1280px) {
+}

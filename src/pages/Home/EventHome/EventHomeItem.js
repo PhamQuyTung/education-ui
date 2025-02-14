@@ -33,7 +33,7 @@ function EventHomeItem() {
         <Row ref={ref}>
             <Swiper {...eventSliderConfig}>
                 <SwiperSlide>
-                    <Col lg={4} md={6} xs={12}>
+                    <Col lg={4} md={6} xs={12} className={cx('custom-colW100')}>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
@@ -91,7 +91,7 @@ function EventHomeItem() {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <Col lg={4} md={6} xs={12}>
+                    <Col lg={4} md={6} xs={12} className={cx('custom-colW100')}>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
@@ -149,7 +149,7 @@ function EventHomeItem() {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <Col lg={4} md={6} xs={12}>
+                    <Col lg={4} md={6} xs={12} className={cx('custom-colW100')}>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
@@ -207,7 +207,7 @@ function EventHomeItem() {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <Col lg={4} md={6} xs={12}>
+                    <Col lg={4} md={6} xs={12} className={cx('custom-colW100')}>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
@@ -265,7 +265,7 @@ function EventHomeItem() {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <Col lg={4} md={6} xs={12}>
+                    <Col lg={4} md={6} xs={12} className={cx('custom-colW100')}>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
@@ -323,7 +323,7 @@ function EventHomeItem() {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <Col lg={4} md={6} xs={12}>
+                    <Col lg={4} md={6} xs={12} className={cx('custom-colW100')}>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
@@ -381,7 +381,7 @@ function EventHomeItem() {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <Col lg={4} md={6} xs={12}>
+                    <Col lg={4} md={6} xs={12} className={cx('custom-colW100')}>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
@@ -439,7 +439,7 @@ function EventHomeItem() {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <Col lg={4} md={6} xs={12}>
+                    <Col lg={4} md={6} xs={12} className={cx('custom-colW100')}>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}

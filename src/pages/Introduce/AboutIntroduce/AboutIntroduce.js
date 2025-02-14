@@ -36,6 +36,7 @@ function Introduce() {
                         title="Chúng tôi làm gì"
                         sub="Khóa Học trực tuyến phù hợp với bạn"
                         clsBox={cx('custom-box')}
+                        clsSub={cx('custom-sub')}
                     />
                 </motion.div>
 

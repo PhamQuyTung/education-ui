@@ -15,7 +15,7 @@ function Banner2() {
         <div className={cx('banner2')}>
             <div className={cx('wrapper')}>
                 <Row>
-                    <Col lg={6} md={12} xs={12}>
+                    <Col lg={6} md={12} xs={12} className={cx('custom-colMtT10')}>
                         <div className={cx('Box')}>
                             <div className={cx('Box-bg1')}>
                                 <div className={cx('Box-content')}>
@@ -38,7 +38,7 @@ function Banner2() {
                         </div>
                     </Col>
 
-                    <Col lg={6} md={12} xs={12}>
+                    <Col lg={6} md={12} xs={12} className={cx('custom-colMtT10')}>
                         <div className={cx('Box')}>
                             <div className={cx('Box-bg2')}>
                                 <div className={cx('Box-content')}>

@@ -29,7 +29,7 @@ function Wcu() {
         <div className={cx('wcu')} style={{ paddingTop: 80 }}>
             <div className={cx('container')}>
                 <Row ref={ref}>
-                    <Col lg={6} md={12} xs={12}>
+                    <Col lg={6} md={12} xs={12} className={cx('custom-col100')}>
                         <motion.div
                             className={cx('contentFirst')}
                             initial={{ opacity: 0, x: -400 }}
@@ -61,7 +61,7 @@ function Wcu() {
                         </motion.div>
                     </Col>
                     
-                    <Col lg={6} md={12} xs={12}>
+                    <Col lg={6} md={12} xs={12} className={cx('custom-col100')}>
                         <motion.div
                             className={cx('content')}
                             initial={{ opacity: 0, x: 400 }}
@@ -75,7 +75,7 @@ function Wcu() {
                                 clsSub={cx('custom-sub')}
                             >
                                 <Row>
-                                    <Col lg={6} md={12} xs={12}>
+                                    <Col lg={6} md={6} xs={12}>
                                         <div className={cx('box')}>
                                             <div className={cx('wrap-icon')}>
                                                 <FontAwesomeIcon icon={faCircleCheck} className={cx('icon')} />
@@ -92,7 +92,7 @@ function Wcu() {
                                         </div>
                                     </Col>
 
-                                    <Col lg={6} md={12} xs={12}>
+                                    <Col lg={6} md={6} xs={12}>
                                         <div className={cx('box')}>
                                             <div className={cx('wrap-icon')}>
                                                 <FontAwesomeIcon icon={faCircleCheck} className={cx('icon')} />
@@ -108,7 +108,7 @@ function Wcu() {
                                         </div>
                                     </Col>
 
-                                    <Col lg={6} md={12} xs={12}>
+                                    <Col lg={6} md={6} xs={12}>
                                         <div className={cx('box')}>
                                             <div className={cx('wrap-icon')}>
                                                 <FontAwesomeIcon icon={faCircleCheck} className={cx('icon')} />
@@ -124,7 +124,7 @@ function Wcu() {
                                         </div>
                                     </Col>
 
-                                    <Col lg={6} md={12} xs={12}>
+                                    <Col lg={6} md={6} xs={12}>
                                         <div className={cx('box')}>
                                             <div className={cx('wrap-icon')}>
                                                 <FontAwesomeIcon icon={faCircleCheck} className={cx('icon')} />

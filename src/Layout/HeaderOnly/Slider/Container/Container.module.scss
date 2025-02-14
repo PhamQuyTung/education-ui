@@ -85,7 +85,7 @@
     }
 
     .title {
-        font-size: 3.4rem !important;
+        font-size: 3.2rem !important;
     }
 
     .content-description {
@@ -99,7 +99,7 @@
     }
 }
 
-// Tablet (768px trở xuống)
+// Tablet nhỏ (768px trở xuống)
 @media (max-width: 768px) and (min-width: 480px) {
     .content {
         padding: 0 12px !important;
@@ -107,11 +107,18 @@
     }
 
     .image {
-        display: none;
+        // display: none;
+        max-width: 330px !important;
+        max-height: 330px !important;
+        padding-right: 24px !important;
     }
 
     .title {
         font-size: 3.4rem !important;
+    }
+
+    .content {
+        width: 50% !important;
     }
 
     .content-description {
@@ -121,19 +128,49 @@
     }
 
     .custom-btn {
-        width: 35%;
+        width: 45% !important;
     }
 }
 
-// Laptop nhỏ (1024px trở xuống)
-@media (max-width: 1024px) and (min-width: 768px) {
+// Tablet (820px to 768px)
+@media (max-width: 820px) and (min-width: 769px) {
     .content {
-        padding: 0 12px !important;
-        margin: 0 24px;
+        padding: 0 34px !important;
     }
 
     .image {
-        display: none;
+        width: 330px !important;
+        height: 330px !important;
+    }
+
+    .title {
+        font-size: 3.4rem !important;
+    }
+
+    .content {
+        width: 52% !important;
+    }
+
+    .content-description {
+        p {
+            font-size: 1.4rem;
+        }
+    }
+
+    .custom-btn {
+        width: 45%;
+    }
+}
+
+// Laptop nhỏ (1024px to 820px)
+@media (max-width: 1024px) and (min-width: 821px) {
+    .content {
+        padding: 0 34px !important;
+    }
+
+    .image {
+        width: 456px !important;
+        height: 456px !important;
     }
 
     .title {

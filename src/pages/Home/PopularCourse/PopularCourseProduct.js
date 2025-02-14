@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 
 import styles from './PopularCourse.module.scss';
 import { Card, CardItem } from '~/components/Card';
-import { productSliderConfig } from '~/libs/swiperConfigs';
+import { productSliderConfig2 } from '~/libs/swiperConfigs';
 import productCourses from '~/data/productCourses';
 
 const cx = classNames.bind(styles);
@@ -36,7 +36,7 @@ function PopularCourseProduct() {
     return (
         <Card>
             <Row ref={ref}>
-                <Swiper {...productSliderConfig} className={cx('custom-slider')}>
+                <Swiper {...productSliderConfig2} className={cx('custom-slider')}>
                     {productCourses.map((productCourse, index) => (
                         <SwiperSlide key={index}>
                             <motion.div
@@ -44,7 +44,7 @@ function PopularCourseProduct() {
                                 animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
                                 transition={{ duration: 1 }}
                             >
-                                <Col lg={4} md={12} xs={12}>
+                                <Col lg={8} md={12} xs={12} className={cx('custom-col')}>
                                     <CardItem
                                         courseHours={productCourse.courseHours}
                                         courseMinutes={productCourse.courseMinutes}

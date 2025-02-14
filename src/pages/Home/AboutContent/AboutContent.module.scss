@@ -142,10 +142,10 @@
 }
 
 .custom-sub {
-    font-size: 4rem !important;
+    font-size: 4rem;
     text-transform: capitalize;
-    margin-bottom: 15px !important;
-    line-height: 1.208 !important;
+    margin-bottom: 15px;
+    line-height: 1.208;
 }
 
 .check {
@@ -193,4 +193,196 @@
         color: var(--theme-color);
         transition: var(--transition);
     }
+}
+
+//==============================Responsive styles==============================
+// Mobile supper small (dưới 375px) 
+@media (max-width: 375px) {
+    .about-content {
+        padding-top: 80px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 60px;
+    }
+
+    .img1-wrap {
+        width: 174px;
+        // position: absolute;
+        // top: 50px;
+    }
+
+    .img2-wrap {
+        position: absolute;
+        right: 3% !important;
+        bottom: 50px !important;
+    }
+
+    .img3-wrap {
+        position: absolute;
+        right: 3% !important;
+    }
+
+    .shape1-wrap {
+        display: none;
+    }
+
+    .content-title {
+        margin-top: 30px;
+    }
+
+    .custom-sub {
+        font-size: 2.6rem !important;
+        margin-bottom: 20px !important;
+    }
+}
+
+// Mobile (dưới 480px to 375px)
+@media (max-width: 480px) and (min-width: 375px){
+    .about-content {
+        padding-top: 80px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 60px;
+    }
+
+    .img1-wrap {
+        width: 220px;
+        // position: absolute;
+        // top: 50px;
+    }
+
+    .img2-wrap {
+        position: absolute;
+        right: 3% !important;
+    }
+
+    .img3-wrap {
+        position: absolute;
+        right: 3% !important;
+    }
+
+    .shape1-wrap {
+        display: none;
+    }
+
+    .content-title {
+        margin-top: 30px;
+    }
+
+    .custom-sub {
+        font-size: 2.6rem !important;
+        margin-bottom: 20px !important;
+    }
+}
+
+// Tablet nhỏ (768px trở xuống to 480px)
+@media (max-width: 768px) and (min-width: 480px) {
+    .about-content {
+        padding-top: 80px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 60px;
+        margin: 0 24px;
+    }
+
+    .shape1-wrap {
+        position: relative;
+        left: 0 !important;
+    }
+
+    .content-title {
+        margin-top: 30px;
+    }
+
+    .custom-sub {
+        margin-bottom: 20px !important;
+    }
+}
+
+// Tablet (820px trở xuống to 768px)
+@media (max-width: 820px) and (min-width: 769px) {
+    .about-content {
+        padding-top: 80px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 60px;
+        margin: 0 24px;
+    }
+
+    .shape1-wrap {
+        position: relative;
+        left: 0 !important;
+    }
+
+    .content-title {
+        margin-top: 30px;
+    }
+
+    .content-img {
+        // text-align: center;
+    }
+
+    .img2-wrap {
+        position: absolute;
+        left: 270px;
+    }
+
+    .img3-wrap {
+        right: 16.2% !important;
+    }
+
+    .custom-col100 {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    .custom-sub {
+        margin-bottom: 20px !important;
+    }
+}
+
+// Laptop nhỏ (1024px trở xuống to 820px)
+@media (max-width: 1024px) and (min-width: 821px) {
+    .about-content {
+        padding-top: 80px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 60px;
+        margin: 0 24px;
+    }
+
+    .shape1-wrap {
+        position: relative;
+        left: 0 !important;
+    }
+
+    .content-title {
+        margin-top: 30px;
+    }
+
+    .content-img {
+        // text-align: center;
+    }
+
+    .img2-wrap {
+        position: absolute;
+        left: 270px;
+    }
+
+    .img3-wrap {
+        right: 34.3% !important;
+    }
+
+    .custom-col100 {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    .custom-sub {
+        margin-bottom: 20px !important;
+    }
+}
+
+// PC & Laptop lớn (1280px trở xuống)
+@media (max-width: 1280px) {
 }

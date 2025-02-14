@@ -30,7 +30,7 @@ function AboutContent() {
         <div className={cx('about-content')}>
             <div className={cx('wrapper')}>
                 <Row ref={ref}>
-                    <Col lg={6} md={12} xs={12}>
+                    <Col lg={6} md={12} xs={12} className={cx('custom-col100')}>
                         <motion.div
                             className={cx('content-img')}
                             initial={{ opacity: 0, x: -400 }}
@@ -67,7 +67,7 @@ function AboutContent() {
                         </motion.div>
                     </Col>
 
-                    <Col lg={6} md={12} xs={12}>
+                    <Col lg={6} md={12} xs={12} className={cx('custom-col100')}>
                         <motion.div
                             className={cx('content-title')}
                             initial={{ opacity: 0, x: 400 }}

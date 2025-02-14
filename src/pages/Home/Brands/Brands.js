@@ -56,7 +56,7 @@ function Brands() {
 
                     <Col lg={6} md={12} xs={12} className={cx('main-brands')}>
                         <Row>
-                            <Col lg={3} md={6} xs={3}>
+                            <Col lg={3} md={3} xs={3}>
                                 <motion.div
                                     initial={{ opacity: 0, x: 400 }}
                                     animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -67,7 +67,7 @@ function Brands() {
                                     </div>
                                 </motion.div>
                             </Col>
-                            <Col lg={3} md={6} xs={3}>
+                            <Col lg={3} md={3} xs={3}>
                                 <motion.div
                                     initial={{ opacity: 0, x: 400 }}
                                     animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -78,7 +78,7 @@ function Brands() {
                                     </div>
                                 </motion.div>
                             </Col>
-                            <Col lg={3} md={6} xs={3}>
+                            <Col lg={3} md={3} xs={3}>
                                 <motion.div
                                     initial={{ opacity: 0, x: 400 }}
                                     animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -89,7 +89,7 @@ function Brands() {
                                     </div>
                                 </motion.div>
                             </Col>
-                            <Col lg={3} md={6} xs={3}>
+                            <Col lg={3} md={3} xs={3}>
                                 <motion.div
                                     initial={{ opacity: 0, x: 400 }}
                                     animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -100,7 +100,7 @@ function Brands() {
                                     </div>
                                 </motion.div>
                             </Col>
-                            <Col lg={3} md={6} xs={3}>
+                            <Col lg={3} md={3} xs={3}>
                                 <motion.div
                                     initial={{ opacity: 0, x: 400 }}
                                     animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -111,7 +111,7 @@ function Brands() {
                                     </div>
                                 </motion.div>
                             </Col>
-                            <Col lg={3} md={6} xs={3}>
+                            <Col lg={3} md={3} xs={3}>
                                 <motion.div
                                     initial={{ opacity: 0, x: 400 }}
                                     animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -122,7 +122,7 @@ function Brands() {
                                     </div>
                                 </motion.div>
                             </Col>
-                            <Col lg={3} md={6} xs={3}>
+                            <Col lg={3} md={3} xs={3}>
                                 <motion.div
                                     initial={{ opacity: 0, x: 400 }}
                                     animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -133,7 +133,7 @@ function Brands() {
                                     </div>
                                 </motion.div>
                             </Col>
-                            <Col lg={3} md={6} xs={3}>
+                            <Col lg={3} md={3} xs={3}>
                                 <motion.div
                                     initial={{ opacity: 0, x: 400 }}
                                     animate={inView ? { opacity: 1, x: 0 } : {}}

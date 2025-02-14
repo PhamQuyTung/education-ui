@@ -55,7 +55,6 @@
     padding: 40px;
     border-radius: 10px;
     background-color: var(--white-color);
-    border: 1px solid var(--border-color);
     margin-top: 67px;
 }
 
@@ -85,7 +84,7 @@
     height: 100%;
     border-radius: 15px;
     object-fit: cover; /* Đảm bảo hình vừa khít trong container */
-    mask-image: url("../../../assets/images/Home/EventHome/event_img-shape-2.png");
+    mask-image: url('../../../assets/images/Home/EventHome/event_img-shape-2.png');
     mask-position: 100% 100%;
     mask-size: cover;
     mask-repeat: no-repeat;
@@ -152,4 +151,138 @@
 .custom-box {
     text-align: center;
     text-transform: capitalize !important;
+}
+
+//==============================Responsive styles==============================
+// Mobile (345px trở xuống)
+@media (max-width: 344px) {
+    .custom-sub {
+        font-size: 2.6rem !important;
+    }
+
+    .event {
+        min-width: 305px !important;
+    }
+
+    .wrap-content {
+        margin-top: 130px !important;
+    }
+
+    .event-author {
+        justify-content: start;
+    }
+}
+
+// Mobile (480px xuống 345px)
+@media (max-width: 480px) and (min-width: 345px) {
+    .custom-sub {
+        font-size: 2.6rem !important;
+    }
+
+    .event {
+        min-width: 305px !important;
+    }
+
+    .wrap-content {
+        margin-top: 130px !important;
+    }
+
+    .event-author {
+        justify-content: start;
+    }
+}
+
+// Tablet nhỏ (768px xuống 481px)
+@media (max-width: 768px) and (min-width: 481px) {
+    .event {
+        min-width: 414px;
+        position: relative;
+        z-index: 2;
+        display: block;
+    }
+
+    .wrap-content {
+        margin-top: 130px !important;
+    }
+
+    .custom-colW100 {
+        width: 100% !important;
+    }
+
+    .img_wrap {
+        position: absolute;
+        display: inline-block;
+        left: -10px;
+        top: -70px;
+        overflow: hidden;
+        background: transparent;
+        z-index: 3;
+    }
+
+    .event-author {
+        justify-content: center;
+    }
+
+    .event-date {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+// Tablet (820px xuống 769px)
+@media (max-width: 820px) and (min-width: 769px) {
+    .event {
+        min-width: 414px;
+        position: relative;
+        z-index: 2;
+        display: block;
+    }
+
+    .wrap-content {
+        margin-top: 130px !important;
+    }
+
+    .custom-colW100 {
+        width: 100% !important;
+    }
+
+    .img_wrap {
+        position: absolute;
+        display: inline-block;
+        left: -10px;
+        top: -70px;
+        overflow: hidden;
+        background: transparent;
+        z-index: 3;
+    }
+
+    .event-author {
+        justify-content: center;
+    }
+
+    .event-date {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+// Laptop nhỏ (1024px xuống 821px)
+@media (max-width: 1024px) and (min-width: 821px) {
+    .event {
+        min-width: 460px !important;
+    }
+
+    .wrap-content {
+        margin-top: 130px !important;
+    }
+
+    .event-author {
+        justify-content: start;
+    }
+}
+
+// PC & Laptop lớn (1280px xuống 1025px)
+@media (max-width: 1280px) and (min-width: 1025px) {
 }

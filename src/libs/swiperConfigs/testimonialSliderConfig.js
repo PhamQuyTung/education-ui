@@ -10,7 +10,8 @@ export const testimonialSliderConfig = {
     breakpoints: {
         300: { slidesPerView: 1, spaceBetween: 30 },
         768: { slidesPerView: 1, spaceBetween: 20 },
-        1024: { slidesPerView: 2, spaceBetween: 25 },
+        1024: { slidesPerView: 1, spaceBetween: 25 },
+        1280: { slidesPerView: 2, spaceBetween: 25 },
     },
     speed: 1000,
 };

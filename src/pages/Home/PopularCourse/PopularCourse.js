@@ -13,6 +13,7 @@ function PopularCourse() {
                 <Title
                     title="Phổ biến hàng đầu"
                     sub="Các khóa học phổ biến"
+                    clsTitle={cx('custom-title')}
                     clsSub={cx('custom-subTitle')}
                     buttonDescription="Xem tất cả khoá học"
                     to="/course"

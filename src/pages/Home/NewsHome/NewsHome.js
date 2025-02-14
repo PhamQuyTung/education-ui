@@ -13,6 +13,7 @@ function NewsHome() {
                 <Title
                     title="Tin tức và blog của chúng tôi"
                     sub="Tin tức mới nhất"
+                    clsTitle={cx('custom-title')}
                     clsBox={cx('custom-box')}
                     clsSub={cx('custom-sub')}
                     to='/news'

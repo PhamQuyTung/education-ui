@@ -121,7 +121,7 @@
 
 .custom-img {
     width: 660px;
-    height: 660px;
+    max-height: 660px;
     border-radius: 50%;
     border: 20px solid #fff;
     object-fit: cover;
@@ -181,7 +181,7 @@
 }
 
 //==============================Responsive styles==============================
-// Mobile nhỏ (dưới 480px)
+// Mobile (dưới 480px)
 @media (max-width: 480px) {
     .shape-1 {
         display: none;
@@ -198,7 +198,7 @@
     }
 }
 
-// Tablet (768px trở xuống)
+// Tablet nhỏ (768px trở xuống)
 @media (max-width: 768px) and (min-width: 480px) {
     .shape-1 {
         display: none;
@@ -215,14 +215,41 @@
     }
 }
 
-// Laptop nhỏ (1024px trở xuống)
-@media (max-width: 1024px) and (min-width: 768px) {
+// Tablet (820px to 768px)
+@media (max-width: 820px) and (min-width: 768px) {
     .shape-1 {
         display: none;
     }
 
     .shape-2 {
         display: none;
+    }
+
+    .custom-img {
+        width: 330px;
+        height: 330px;
+        border-radius: 50%;
+        border: 20px solid #fff;
+        object-fit: cover;
+    }
+}
+
+// Laptop nhỏ (1024px to 768px)
+@media (max-width: 1024px) and (min-width: 820px) {
+    .shape-1 {
+        display: none;
+    }
+
+    .shape-2 {
+        display: none;
+    }
+
+    .custom-img {
+        width: 456px;
+        height: 456px;
+        border-radius: 50%;
+        border: 20px solid #fff;
+        object-fit: cover;
     }
 }
 

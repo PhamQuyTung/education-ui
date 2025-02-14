@@ -42,3 +42,61 @@
 .icon {
     margin: 0 10px;
 }
+
+//==============================Responsive styles==============================
+// Mobile (345px trở xuống)
+@media (max-width: 344px) {
+    .breadcrumb-title {
+        font-size: 3.2rem !important;
+    }
+
+    .breadcrumb-menu_link,
+    .breadcrumb-menu_span {
+        font-size: 1.6rem !important;
+    }
+}
+
+// Mobile (480px xuống 345px)
+@media (max-width: 480px) and (min-width: 345px) {
+    .breadcrumb-title {
+        font-size: 3.2rem !important;
+    }
+
+    .breadcrumb-menu_link,
+    .breadcrumb-menu_span {
+        font-size: 1.6rem !important;
+    }
+}
+
+// Tablet nhỏ (768px xuống 481px)
+@media (max-width: 768px) and (min-width: 481px) {
+    .breadcrumb-title {
+        font-size: 3.8rem !important;
+    }
+
+    .breadcrumb-menu_link,
+    .breadcrumb-menu_span {
+        font-size: 1.6rem !important;
+    }
+}
+
+// Tablet (820px xuống 769px)
+@media (max-width: 820px) and (min-width: 769px) {
+    .breadcrumb-title {
+        font-size: 3.8rem !important;
+    }
+
+    .breadcrumb-menu_link,
+    .breadcrumb-menu_span {
+        font-size: 1.6rem !important;
+    }
+}
+
+// Laptop nhỏ (1024px xuống 821px)
+@media (max-width: 1024px) and (min-width: 821px) {
+    
+}
+
+// PC & Laptop lớn (1280px xuống 1025px)
+@media (max-width: 1280px) and (min-width: 1025px) {
+}

@@ -58,3 +58,121 @@
 .custom-title {
     color: var(--white-color) !important;
 }
+
+//==============================Responsive styles==============================
+// Mobile (345px trở xuống)
+@media (max-width: 344px) {
+    .banner2 {
+        padding: 0 10px;
+    }
+
+    .custom-colMtT10 {
+        margin-top: 20px !important;
+    }
+
+    .Box-content {
+        padding: 30px;
+    }
+
+    .custom-sub {
+        font-size: 2.2rem !important;
+        margin-bottom: 35px !important;
+        line-height: 1.4;
+    }
+}
+
+// Mobile (480px xuống 345px)
+@media (max-width: 480px) and (min-width: 345px) {
+    .banner2 {
+        padding: 0 10px;
+    }
+
+    .custom-colMtT10 {
+        margin-top: 20px !important;
+    }
+
+    .Box-content {
+        padding: 30px;
+    }
+
+    .custom-sub {
+        font-size: 2.2rem !important;
+        margin-bottom: 35px !important;
+        line-height: 1.4;
+    }
+}
+
+// Tablet nhỏ (768px xuống 481px)
+@media (max-width: 768px) and (min-width: 481px) {
+    .banner2 {
+        padding: 0 10px;
+    }
+
+    .custom-colMtT10 {
+        margin-top: 20px !important;
+    }
+
+    .Box-content {
+        padding: 60px;
+    }
+
+    .custom-sub {
+        font-size: 2.4rem !important;
+        margin-bottom: 35px !important;
+        line-height: 1.4;
+    }
+}
+
+// Tablet (820px xuống 769px)
+@media (max-width: 820px) and (min-width: 769px) {
+    .banner2 {
+        padding: 0 10px;
+    }
+
+    .custom-colMtT10 {
+        margin-top: 20px !important;
+    }
+
+    .Box-content {
+        padding: 60px;
+    }
+
+    .custom-sub {
+        font-size: 2.4rem !important;
+        margin-bottom: 35px !important;
+        line-height: 1.4;
+    }
+}
+
+// Laptop nhỏ (1024px xuống 821px)
+@media (max-width: 1024px) and (min-width: 821px) {
+    .banner2 {
+        padding: 0 20px;
+    }
+
+    .custom-colMtT10 {
+        margin-top: 20px !important;
+        padding: 0 20px !important;
+        width: 100% !important;
+    }
+
+    .Box-bg1,
+    .Box-bg2 {
+        width: 100%;
+    }
+
+    .Box-content {
+        padding: 60px;
+    }
+
+    .custom-sub {
+        font-size: 2.4rem !important;
+        margin-bottom: 35px !important;
+        line-height: 1.4;
+    }
+}
+
+
+// PC & Laptop lớn (1280px xuống 1025px)
+@media (max-width: 1280px) and (min-width: 1025px) {
+}

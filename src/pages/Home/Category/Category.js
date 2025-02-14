@@ -21,7 +21,7 @@ function Category() {
         <div className={cx('category')}>
             <Container className={cx('wrapper')}>
                 <Row ref={ref} initial="hidden" animate={inView ? 'visible' : 'hidden'}>
-                    <Col lg={4} md={0} xs={0}>
+                    <Col lg={4} md={0} xs={0} className={cx('custom-col')}>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
@@ -40,7 +40,7 @@ function Category() {
                         </motion.div>
                     </Col>
 
-                    <Col lg={8} md={12} xs={12}>
+                    <Col lg={8} md={12} xs={12} className={cx('custom-col2')}>
                         <CategoryList />
                     </Col>
                 </Row>

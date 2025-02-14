@@ -33,7 +33,7 @@
 
 .shape1 {
     position: absolute;
-    background-image: url("../../../assets/images/Introduce/Slider/breadcumb_shape_1_1.png");
+    background-image: url('../../../assets/images/Introduce/Slider/breadcumb_shape_1_1.png');
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,7 +44,7 @@
 
 .shape2 {
     position: absolute;
-    background-image: url("../../../assets/images/Introduce/Slider/breadcumb_shape_1_2.png");
+    background-image: url('../../../assets/images/Introduce/Slider/breadcumb_shape_1_2.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,12 +54,11 @@
     bottom: 30px;
     animation: jumpAni 5s linear infinite;
     z-index: 1;
-    
 }
 
 .shape3 {
     position: absolute;
-    background-image: url("../../../assets/images/Introduce/Slider/breadcumb_shape_1_3.png");
+    background-image: url('../../../assets/images/Introduce/Slider/breadcumb_shape_1_3.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -114,4 +113,45 @@
     100% {
         transform: rotate(360deg);
     }
+}
+
+//==============================Responsive styles==============================
+// Mobile (345px trở xuống)
+@media (max-width: 344px) {
+    .shape2,
+    .shape3 {
+        display: none;
+    }
+}
+
+// Mobile (480px xuống 345px)
+@media (max-width: 480px) and (min-width: 345px) {
+    .shape2,
+    .shape3 {
+        display: none;
+    }
+}
+
+// Tablet nhỏ (768px xuống 481px)
+@media (max-width: 768px) and (min-width: 481px) {
+    .shape2,
+    .shape3 {
+        display: none;
+    }
+}
+
+// Tablet (820px xuống 769px)
+@media (max-width: 820px) and (min-width: 769px) {
+    .shape2,
+    .shape3 {
+        display: none;
+    }
+}
+
+// Laptop nhỏ (1024px xuống 821px)
+@media (max-width: 1024px) and (min-width: 821px) {
+}
+
+// PC & Laptop lớn (1280px xuống 1025px)
+@media (max-width: 1280px) and (min-width: 1025px) {
 }

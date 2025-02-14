@@ -74,10 +74,10 @@ function SaleContent() {
                                 transition={{ duration: 1 }}
                                 onAnimationComplete={() => setStartCount(true)} // Bắt đầu Counter sau animation
                             >
-                                <Button to='/contact' primary ExtraLarge rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
+                                <Button to='/contact' primary ExtraLarge rightIcon={<FontAwesomeIcon icon={faArrowRight} />} className={cx('custom-btn')}>
                                     Tham gia
                                 </Button>
-                                <Button outline ExtraLarge rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
+                                <Button to='/' outline ExtraLarge rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
                                     Trở thành giảng viên
                                 </Button>
                             </motion.div>

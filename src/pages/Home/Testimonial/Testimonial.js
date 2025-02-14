@@ -43,13 +43,13 @@ function Testimonial() {
         <div className={cx('testimonial')}>
             <div className={cx('bg')}>
                 <div className={cx('wrapper')}>
-                    <Title title="Học viên nói gì về chúng tôi?" sub="Đánh giá từ học viên" clsBox={cx('custom-box')} />
+                    <Title title="Học viên nói gì về chúng tôi?" sub="Đánh giá từ học viên" clsBox={cx('custom-box')} clsSub={cx('custom-sub')} />
 
                     <Row ref={ref}>
                         <Swiper {...testimonialSliderConfig}>
                             {dataTestimonial.map((testimonial) => (
                                 <SwiperSlide key={testimonial.id}>
-                                    <Col lg={12} md={12} xs={12}>
+                                    <Col lg={12} md={12} xs={12} className={cx('custom-colPd36')}>
                                         <motion.div
                                             initial={{ opacity: 0, y: 50 }}
                                             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
