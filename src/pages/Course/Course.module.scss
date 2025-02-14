@@ -1,0 +1,139 @@
+:root {
+    --theme-color: #0d5ef4;
+    --theme-color2: #f20f10;
+    --title-color: #0f2239;
+    --body-color: #4d5765;
+    --smoke-color: #f3f7fb;
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --border-color: #ffffff33;
+    --light-color: #72849b;
+    --yellow-color: #ffb539;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --border-color: #ecf1f9;
+    --main-container: 1400px;
+    --header-top: 54px;
+    --header-nav: 106px;
+    --container-gutters: 24px;
+    --section-space: 120px;
+    --section-space-mobile: 80px;
+    --section-title-space: 70px;
+    --ripple-ani-duration: 5s;
+    --transition: all 0.3s linear;
+    --animation-fadeIn: slideIn 0.3s ease forwards;
+    --animation-time-during: 7s linear infinite;
+    --font-Roboto: 'Roboto', serif;
+}
+
+.Course {
+    max-width: var(--main-container);
+    margin: 0 auto;
+    padding-top: 120px;
+    height: 10000px;
+}
+
+// SortBar
+.sb {
+    background: var(--smoke-color);
+    border-radius: 10px;
+    padding: 28px 34px 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .sb-quantity {
+        font-size: 1.8rem;
+        color: var(--title-color);
+    }
+
+    .sb-search {
+        width: 420px; /* Kích thước mặc định */
+        max-width: 100%; /* Đảm bảo không vượt quá kích thước màn hình */
+        display: flex;
+        position: relative;
+
+        .sb-input {
+            width: 100%;
+            padding: 8px 16px 8px 48px;
+            border-radius: 25px;
+            border: 2px solid rgb(232, 232, 232);
+            transition: var(--transition);
+
+            &:focus {
+                border-color: var(--theme-color);
+            }
+        }
+
+        .sb-btn {
+            position: absolute;
+            left: 10px;
+            transform: translate(50%, 50%);
+            background-color: transparent;
+
+            .icon-Search {
+                font-size: 1.8rem;
+                color: #8f8f8f;
+                cursor: default;
+                transition: var(--transition);
+
+                &:hover {
+                    color: var(--body-color);
+                }
+            }
+        }
+
+        .clear-text {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            transform: translate(50%, 10px);
+
+            .icon-clear {
+                cursor: pointer;
+                color: var(--body-color);
+            }
+        }
+    }
+
+    .sb-option {
+        // width: 276px;
+
+        .sb-option-button {
+            font-size: 1.6rem;
+            color: #212327;
+
+            .sb-option-btn {
+                border-radius: 5px;
+                padding: 8px 16px;
+                border: 2px solid rgb(232, 232, 232);
+                background-color: var(--white-color);
+                .icon-AngleDown {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+.sb-option_sub {
+    // width: 276px;
+    background-color: var(--white-color);
+    border: 2px solid rgb(232, 232, 232);
+    border-radius: 5px;
+
+    .sb-option_item {
+        padding: 8px 16px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--smoke-color);
+        }
+
+        span {
+            font-size: 1.4rem;
+            color: #212327;
+        }
+    }
+}
