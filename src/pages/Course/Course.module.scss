@@ -29,8 +29,7 @@
 .Course {
     max-width: var(--main-container);
     margin: 0 auto;
-    padding-top: 120px;
-    height: 10000px;
+    padding: 120px 12px;
 }
 
 // SortBar
@@ -46,55 +45,6 @@
     .sb-quantity {
         font-size: 1.8rem;
         color: var(--title-color);
-    }
-
-    .sb-search {
-        width: 420px; /* Kích thước mặc định */
-        max-width: 100%; /* Đảm bảo không vượt quá kích thước màn hình */
-        display: flex;
-        position: relative;
-
-        .sb-input {
-            width: 100%;
-            padding: 8px 16px 8px 48px;
-            border-radius: 25px;
-            border: 2px solid rgb(232, 232, 232);
-            transition: var(--transition);
-
-            &:focus {
-                border-color: var(--theme-color);
-            }
-        }
-
-        .sb-btn {
-            position: absolute;
-            left: 10px;
-            transform: translate(50%, 50%);
-            background-color: transparent;
-
-            .icon-Search {
-                font-size: 1.8rem;
-                color: #8f8f8f;
-                cursor: default;
-                transition: var(--transition);
-
-                &:hover {
-                    color: var(--body-color);
-                }
-            }
-        }
-
-        .clear-text {
-            position: absolute;
-            right: 25px;
-            top: 0;
-            transform: translate(50%, 10px);
-
-            .icon-clear {
-                cursor: pointer;
-                color: var(--body-color);
-            }
-        }
     }
 
     .sb-option {
@@ -136,4 +86,71 @@
             color: #212327;
         }
     }
+}
+
+// Product
+.Product {
+    margin-top: 40px;
+}
+
+.custom-card {
+    padding: 0;
+    gap: 0;
+}
+
+.custom-cardContent {
+    text-align: start;
+    padding: 20px;
+}
+
+// Pagination
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #cdcfd5;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin-top: 40px;
+    width: 100%;
+    // max-width: 400px;
+}
+
+.page-info {
+    font-size: 14px;
+    color: var(--title-color);
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-number {
+    font-size: 14px;
+    color: var(--title-color);
+}
+
+.current-page {
+    color: #1a73e8;
+    font-weight: bold;
+}
+
+.button {
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: #eee;
+    color: #555;
+    cursor: pointer;
+    border: none;
+}
+
+.button:hover {
+    background-color: #ddd;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: default;
 }

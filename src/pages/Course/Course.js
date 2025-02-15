@@ -1,8 +1,4 @@
-import React from'react';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from'react-router-dom';
-import Button from '~/components/Button';
+import React, { useState } from 'react';
 import styles from './Course.module.scss';
 import classNames from 'classnames/bind';
 
@@ -13,11 +9,13 @@ import CoursePagination from './CoursePagination';
 const cx = classNames.bind(styles);
 
 function Course() {
+    const [page, setPage] = useState(1);
+    const totalPages = 5; // Tổng số trang
     return (
         <div className={cx('Course')}>
             <CourseSortBar />
-            {/* <CourseProduct />
-            <CoursePagination /> */}
+            {/* <CourseProduct /> */}
+            <CoursePagination currentPage={page} totalPages={totalPages} onPageChange={setPage} />
         </div>
     );
 }

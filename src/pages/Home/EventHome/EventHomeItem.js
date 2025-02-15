@@ -29,6 +29,7 @@ function EventHomeItem() {
         triggerOnce: true, // Chỉ kích hoạt animation một lần khi nội dung vào viewport
         threshold: 0.2, // Tỷ lệ phần tử cần hiển thị để trigger animation (0.2 tức 20%)
     });
+    
     return (
         <Row ref={ref}>
             <Swiper {...eventSliderConfig}>
