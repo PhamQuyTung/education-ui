@@ -55,7 +55,7 @@ const CardItem = memo(function ({
             )}
 
             {icon && <div className={cx('wrap-icon')}>{icon}</div>}
-            
+
             <div className={cx('content', clsContent)}>
                 {ratingNum && <FullRating ratingNum={parseFloat(ratingNum)} className={cx('wrap-ratingNum')} />}
 
@@ -101,8 +101,8 @@ const CardItem = memo(function ({
                             </Link>
                         </div>
                         <div className={cx('wrap-cost')}>
-                            <span className={cx('cost-first')}>{cost}₫</span>
-                            <span className={cx('cost-sale')}>{costSale}₫</span>
+                            <span className={cx('cost-first', { 'has-sale': costSale })}>{cost}₫</span>
+                            {costSale && <span className={cx('cost-saled')}>{costSale}₫</span>}
                         </div>
                     </div>
                 )}
@@ -114,8 +114,8 @@ const CardItem = memo(function ({
 CardItem.propTypes = {
     userNamePosted: PropTypes.string,
     userShortNamePosted: PropTypes.string,
-    cost: PropTypes.string,
-    costSale: PropTypes.string,
+    cost: PropTypes.number,
+    costSale: PropTypes.number,
     clsContent: PropTypes.string,
     quantityUnit: PropTypes.number,
     quantityStudent: PropTypes.number,

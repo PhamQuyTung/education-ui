@@ -162,16 +162,23 @@
 
         .cost-first {
             font-size: 1.6rem;
-            color: var(--body-color);
             margin-right: 10px;
-            text-decoration: line-through;
+            color: var(--theme-color2);
+            font-weight: bold;
+            // text-decoration: line-through;
         }
 
-        .cost-sale {
+        .cost-saled {
             font-size: 1.6rem;
             color: var(--theme-color2);
             font-weight: bold;
         }
+
+        .cost-first.has-sale {
+            text-decoration: line-through;
+            color: gray;
+        }
+        
     }
 }
 

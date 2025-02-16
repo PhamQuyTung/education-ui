@@ -9,7 +9,7 @@ import styles from './Course.module.scss';
 import SearchCourse from '~/components/SearchCourse';
 import productCourses from '~/data/productCourses';
 import { Card, CardItem } from '~/components/Card';
-
+import CoursePagination from './CoursePagination';
 const cx = classNames.bind(styles);
 
 const images = {
@@ -21,17 +21,26 @@ const images = {
     'course_6.png': require('~/assets/images/Home/ProductContent/course_6.png'),
     'course_7.png': require('~/assets/images/Home/ProductContent/course_7.png'),
     'course_8.png': require('~/assets/images/Home/ProductContent/course_8.png'),
+    'course_9.png': require('~/assets/images/Home/ProductContent/course_9.png'),
+    'course_10.png': require('~/assets/images/Home/ProductContent/course_10.png'),
+    'course_11.png': require('~/assets/images/Home/ProductContent/course_11.png'),
+    'course_12.png': require('~/assets/images/Home/ProductContent/course_12.png'),
+    // 'course_13.png': require('~/assets/images/Home/ProductContent/course_13.png'),
+    // 'course_14.png': require('~/assets/images/Home/ProductContent/course_14.png'),
+    // 'course_15.png': require('~/assets/images/Home/ProductContent/course_15.png'),
+    // 'course_16.png': require('~/assets/images/Home/ProductContent/course_16.png'),
+    // 'course_17.png': require('~/assets/images/Home/ProductContent/course_17.png'),
+    // 'course_18.png': require('~/assets/images/Home/ProductContent/course_18.png'),
+    // 'course_19.png': require('~/assets/images/Home/ProductContent/course_19.png'),
+    // 'course_20.png': require('~/assets/images/Home/ProductContent/course_20.png'),
+    // 'course_21.png': require('~/assets/images/Home/ProductContent/course_21.png'),
 };
 
 function SortBar() {
-    // const [isSelected, setIsSelected] = useState('Sắp xếp theo chủ đề (A-Z)'); // Trạng thái khi người dùng đã bấm vào option chưa
     const [sortType, setSortType] = useState('Sắp xếp mặc định');
     const [sortedProducts, setSortedProducts] = useState(productCourses);
-
-    // Xử lý khi người dùng chọn option
-    // const handleSelect = (text) => {
-    //     setIsSelected(text);
-    // };
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 9; // Giới hạn sản phẩm mỗi trang
 
     // Hàm xử lý sắp xếp
     const handleSort = (type) => {
@@ -42,19 +51,19 @@ function SortBar() {
                 sorted.sort((a, b) => a.title.localeCompare(b.title));
                 break;
             case 'Sắp xếp theo chủ đề (Z-A)':
-                sorted.sort((a, b) => b.title.localeCompare(a.title));
+                sorted.sort((b, a) => a.title.localeCompare(b.title));
                 break;
             case 'Sắp xếp theo giá tiền (cao nhất)':
-                sorted.sort((a, b) => b.cost - a.cost);
+                sorted.sort((a, b) => (b.costSale ?? b.cost) - (a.costSale ?? a.cost));
                 break;
             case 'Sắp xếp theo giá tiền (thấp nhất)':
-                sorted.sort((a, b) => a.cost - b.cost);
+                sorted.sort((a, b) => (a.costSale ?? a.cost) - (b.costSale ?? b.cost));
                 break;
             case 'Khóa học đang sale':
-                sorted = sorted.filter((p) => p.cost < 1000000); // Giả sử giá < 1000000 là đang sale
+                sorted = sorted.filter((p) => p.costSale && p.costSale < p.cost);
                 break;
             case 'Sắp xếp mặc định':
-                sorted.sort((a, b) => a.id - b.id); // Sắp xếp theo id
+                sorted.sort((a, b) => a.id - b.id);
                 break;
             default:
                 break;
@@ -62,75 +71,86 @@ function SortBar() {
 
         setSortType(type);
         setSortedProducts(sorted);
+        setCurrentPage(1); // Reset về trang đầu khi thay đổi sắp xếp
     };
+
+    // Tính tổng số trang
+    const totalPages = Math.ceil(sortedProducts.length / itemsPerPage);
+
+    // Lọc danh sách khóa học cho trang hiện tại
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const currentProducts = sortedProducts.slice(startIndex, endIndex);
 
     return (
         <div className={cx('sb')}>
             <div className={cx('sb-quantity')}>
-                <strong>11</strong> khóa học
+                <strong>{sortedProducts.length}</strong> khóa học
             </div>
-            {/* SearchCourse Component */}
+
             <SearchCourse />
-            {/* SortBar */}
-            <Tippy
-                interactive // Cho phép tương tác với submenu
-                trigger="click" // Chỉ xuất hiện khi bấm
-                placement="bottom" // Vị trí hiển thị submenu
-                // visible
-                delay={[100, 0]}
-                popperOptions={{
-                    modifiers: [
-                        { name: 'preventOverflow', options: { boundary: 'window' } }, // Ngăn menu bị đẩy ra ngoài
-                        { name: 'flip', enabled: false }, // Tắt tự động đổi vị trí
-                    ],
-                }}
-                render={(attrs) => (
-                    <ul className={cx('sb-option_sub')} tabIndex="-1" {...attrs}>
-                        <li className={cx('sb-option_item')} onClick={() => handleSort('Sắp xếp theo chủ đề (A-Z)')}>
-                            <span>Sắp xếp theo chủ đề (A-Z)</span>
-                        </li>
 
-                        <li className={cx('sb-option_item')} onClick={() => handleSort('Sắp xếp theo chủ đề (Z-A)')}>
-                            <span>Sắp xếp theo chủ đề (Z-A)</span>
-                        </li>
-
-                        <li
-                            className={cx('sb-option_item')}
-                            onClick={() => handleSort('Sắp xếp theo giá tiền (cao nhất)')}
-                        >
-                            <span>Sắp xếp theo giá tiền (cao nhất)</span>
-                        </li>
-
-                        <li
-                            className={cx('sb-option_item')}
-                            onClick={() => handleSort('Sắp xếp theo giá tiền (thấp nhất)')}
-                        >
-                            <span>Sắp xếp theo giá tiền (thấp nhất)</span>
-                        </li>
-
-                        <li className={cx('sb-option_item')} onClick={() => handleSort('Khóa học đang sale')}>
-                            <span>Khóa học đang sale</span>
-                        </li>
-
-                        <li className={cx('sb-option_item')} onClick={() => handleSort('Sắp xếp mặc định')}>
-                            <span>Sắp xếp mặc định</span>
-                        </li>
-                    </ul>
-                )}
-            >
-                <div className={cx('sb-option')}>
-                    <div className={cx('sb-option-button')}>
-                        <button className={cx('sb-option-btn')}>
-                            {sortType}
-                            <FontAwesomeIcon icon={faAngleDown} className={cx('icon-AngleDown')} />
-                        </button>
+            <div>
+                <Tippy
+                    interactive
+                    trigger="click"
+                    placement="bottom"
+                    delay={[100, 0]}
+                    popperOptions={{
+                        modifiers: [
+                            { name: 'preventOverflow', options: { boundary: 'window' } },
+                            { name: 'flip', enabled: false },
+                        ],
+                    }}
+                    render={(attrs) => (
+                        <ul className={cx('sb-option_sub')} tabIndex="-1" {...attrs}>
+                            <li
+                                className={cx('sb-option_item')}
+                                onClick={() => handleSort('Sắp xếp theo chủ đề (A-Z)')}
+                            >
+                                <span>Sắp xếp theo chủ đề (A-Z)</span>
+                            </li>
+                            <li
+                                className={cx('sb-option_item')}
+                                onClick={() => handleSort('Sắp xếp theo chủ đề (Z-A)')}
+                            >
+                                <span>Sắp xếp theo chủ đề (Z-A)</span>
+                            </li>
+                            <li
+                                className={cx('sb-option_item')}
+                                onClick={() => handleSort('Sắp xếp theo giá tiền (cao nhất)')}
+                            >
+                                <span>Sắp xếp theo giá tiền (cao nhất)</span>
+                            </li>
+                            <li
+                                className={cx('sb-option_item')}
+                                onClick={() => handleSort('Sắp xếp theo giá tiền (thấp nhất)')}
+                            >
+                                <span>Sắp xếp theo giá tiền (thấp nhất)</span>
+                            </li>
+                            <li className={cx('sb-option_item')} onClick={() => handleSort('Khóa học đang sale')}>
+                                <span>Khóa học đang sale</span>
+                            </li>
+                            <li className={cx('sb-option_item')} onClick={() => handleSort('Sắp xếp mặc định')}>
+                                <span>Sắp xếp mặc định</span>
+                            </li>
+                        </ul>
+                    )}
+                >
+                    <div className={cx('sb-option')}>
+                        <div className={cx('sb-option-button')}>
+                            <button className={cx('sb-option-btn')}>
+                                {sortType}
+                                <FontAwesomeIcon icon={faAngleDown} className={cx('icon-AngleDown')} />
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </Tippy>
+                </Tippy>
+            </div>
 
             {/* Sản phẩm sau khi sắp xếp */}
             <Row>
-                {sortedProducts.map((productCourse, index) => (
+                {currentProducts.map((productCourse, index) => (
                     <Col lg={4} md={12} xs={12} key={index}>
                         <Card>
                             <CardItem
@@ -148,13 +168,18 @@ function SortBar() {
                                 userShortNamePosted={productCourse.userShortNamePosted}
                                 userNamePosted={productCourse.userNamePosted}
                                 cost={parseFloat(productCourse.cost)}
-                                costSale={parseFloat(productCourse.costSale)}
+                                costSale={productCourse.costSale ? parseFloat(productCourse.costSale) : null}
                                 toCourse={productCourse.toCourse}
                             />
                         </Card>
                     </Col>
                 ))}
             </Row>
+
+            {/* Pagination */}
+            {totalPages > 1 && (
+                <CoursePagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
+            )}
         </div>
     );
 }
