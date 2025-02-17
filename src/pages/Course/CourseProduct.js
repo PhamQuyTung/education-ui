@@ -53,7 +53,9 @@ function Product() {
                                 userShortNamePosted={productCourse.userShortNamePosted}
                                 userNamePosted={productCourse.userNamePosted}
                                 cost={parseFloat(productCourse.cost)}
-                                costSale={productCourse.costSale ? parseFloat(productCourse.costSale) : null}
+                                costSale={
+                                    productCourse.costSale ? Math.round(parseFloat(productCourse.costSale)) : null
+                                }
                                 toCourse={productCourse.toCourse}
                             />
                         </Card>

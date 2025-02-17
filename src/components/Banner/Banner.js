@@ -52,7 +52,7 @@ function Banner() {
 
                                 <ModalVideo isOpen={isModalOpen} onClose={toggleModal}>
                                     <ReactPlayer
-                                        url="https://www.youtube.com/watch?v=T9q3s--ZayE"
+                                        url="https://www.youtube.com/watch?v=BGkc6dKUZ84"
                                         playing={false} // Phát tự động
                                         controls={true} // Hiển thị điều khiển
                                         volume={0.8} // Âm lượng 80%

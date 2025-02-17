@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFile, faUser } from '@fortawesome/free-regular-svg-icons';
 import { faArrowRight, faChartSimple, faClock } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './Card.module.scss';
 import Button from '~/components/Button';
 import FullRating from '~/components/Rating';
 import Image from '~/components/Image';
-import { faFile, faUser } from '@fortawesome/free-regular-svg-icons';
+import { formatCurrency } from '~/utils/FormatCurrency';
 
 const cx = classNames.bind(styles);
 
@@ -101,8 +102,8 @@ const CardItem = memo(function ({
                             </Link>
                         </div>
                         <div className={cx('wrap-cost')}>
-                            <span className={cx('cost-first', { 'has-sale': costSale })}>{cost}₫</span>
-                            {costSale && <span className={cx('cost-saled')}>{costSale}₫</span>}
+                            <span className={cx('cost-first', { 'has-sale': costSale })}>{formatCurrency(cost)}</span>
+                            {costSale && <span className={cx('cost-saled')}>{formatCurrency(costSale)}</span>}
                         </div>
                     </div>
                 )}
