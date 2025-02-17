@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "img": "team_1_1.webp",
+        "name": "Nguyễn Văn Bình",
+        "position": "Thống kê KHDL và kinh doanh",
+        "QuantityCourse": 2,
+        "QuantityStudent": 60
+    },
+    {
+        "id": 2,
+        "img": "team_1_2.webp",
+        "name": "Trần Hà Linh",
+        "position": "Thiết kế đồ họa",
+        "QuantityCourse": 4,
+        "QuantityStudent": 30
+    },
+    {
+        "id": 3,
+        "img": "team_1_3.webp",
+        "name": "Vũ Bạch Ngân",
+        "position": "Thiết kế UI/UX",
+        "QuantityCourse": 3,
+        "QuantityStudent": 50
+    },
+    {
+        "id": 4,
+        "img": "team_1_4.webp",
+        "name": "Phạm Quý Tùng",
+        "position": "Chụp Ảnh Thời Trang",
+        "QuantityCourse": 4,
+        "QuantityStudent": 70
+    },
+    {
+        "id": 5,
+        "img": "team_1_5.webp",
+        "name": "Đỗ Minh Hoàng",
+        "position": "Phát triển Web",
+        "QuantityCourse": 5,
+        "QuantityStudent": 80
+    },
+    {
+        "id": 6,
+        "img": "team_1_6.webp",
+        "name": "Đào Xuân Trung",
+        "position": "Marketing Online",
+        "QuantityCourse": 3,
+        "QuantityStudent": 55
+    },
+    {
+        "id": 7,
+        "img": "team_1_7.webp",
+        "name": "Trịnh Thanh Huyền",
+        "position": "Phát triển Game",
+        "QuantityCourse": 4,
+        "QuantityStudent": 40
+    },
+    {
+        "id": 8,
+        "img": "team_1_8.webp",
+        "name": "Lê Phúc Lộc",
+        "position": "Biên tập Video",
+        "QuantityCourse": 2,
+        "QuantityStudent": 65
+    }
+]

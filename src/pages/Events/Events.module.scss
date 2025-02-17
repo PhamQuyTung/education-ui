@@ -27,7 +27,7 @@
 }
 
 .events {
-    background-color: #f2f6fa;
+    // background-color: #f2f6fa;
     padding: 80px 0;
     display: flex;
     justify-content: center;
@@ -37,7 +37,7 @@
     max-width: var(--main-container);
     margin: 0 auto;
     padding: 0 20px;
-    background-color: #f2f6fa;
+    // background-color: #f2f6fa;
 }
 
 .custom-colW100 {
@@ -63,6 +63,7 @@
     border-radius: 10px;
     background-color: var(--white-color);
     margin-top: 67px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.13);
 }
 
 .img_wrap {

@@ -1,0 +1,483 @@
+root {
+    --theme-color: #0d5ef4;
+    --theme-color2: #f20f10;
+    --title-color: #0f2239;
+    --body-color: #4d5765;
+    --smoke-color: #f3f7fb;
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --border-color: #ffffff33;
+    --light-color: #72849b;
+    --yellow-color: #ffb539;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --border-color: #ecf1f9;
+    --main-container: 1400px;
+    --header-top: 54px;
+    --header-nav: 106px;
+    --container-gutters: 24px;
+    --section-space: 120px;
+    --section-space-mobile: 80px;
+    --section-title-space: 70px;
+    --ripple-ani-duration: 5s;
+    --transition: all 0.3s linear;
+    --animation-fadeIn: slideIn 0.3s ease forwards;
+    --animation-time-during: 7s linear infinite;
+    --font-Roboto: 'Roboto', serif;
+}
+
+.teacherTeam {
+    // padding: 120px 0;
+    position: relative;
+}
+
+.teacher-wrap {
+    max-width: var(--main-container);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+.custom-col_product {
+    padding: 0 8px !important;
+}
+
+.custom-btn {
+    background-color: var(--theme-color2) !important;
+}
+
+.custom-box {
+    margin-bottom: 15px !important;
+    text-transform: capitalize;
+}
+
+.title-heading {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 12px;
+}
+
+.wrap-btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    margin-left: 16px;
+}
+
+.teacher-item {
+    border-radius: 10px;
+    border: 1px solid var(--f-2-f-2-f-2, #f2f2f2);
+    background: var(--white-color, #fff);
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.06);
+    margin-bottom: 14px;
+
+    // &:hover .img-wrap img {
+    //     transform: scale(1.05);
+    // }
+
+    .img-wrap {
+        position: relative;
+        z-index: 1;
+        // overflow: hidden;
+        // border-radius: 10px 10px 0 0;
+
+        img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+            transition: var(--transition);
+        }
+    }
+}
+
+.teacher-info {
+    padding: 16px;
+
+    a {
+        font-size: 2.4rem;
+        color: var(--title-color);
+        transition: var(--transition);
+        font-weight: 600;
+
+        &:hover {
+            color: var(--theme-color);
+        }
+    }
+
+    p {
+        color: var(--theme-color);
+        font-size: 1.6rem;
+    }
+}
+
+.team-info {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-top: 1px solid var(--border-color);
+
+    .team-info1 {
+        position: relative;
+        margin: 0;
+        padding-right: 16px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 25%;
+            right: 0;
+            width: 2px;
+            height: 14px;
+            background: #b3c1d3;
+        }
+    }
+
+    .team-info2 {
+        margin: 0;
+    }
+}
+
+.icon {
+    color: var(--theme-color);
+    margin-right: 5px;
+}
+
+.plus-btn {
+    position: absolute;
+    right: 30px;
+    bottom: -25px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: var(--white-color);
+    background-color: var(--theme-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 3;
+}
+
+.social-list {
+    position: absolute;
+    right: 3px;
+    bottom: 60px;
+    transition: var(--transition);
+    animation: slideInY 0.3s ease;
+}
+
+.social-item {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    margin-bottom: 5px;
+    color: var(--theme-color);
+    background-color: var(--white-color);
+    border-radius: 50%;
+    transition: var(--transition);
+
+    &:hover {
+        color: var(--white-color);
+        background-color: var(--theme-color);
+        border-radius: 50%;
+        border: 1px solid var(--theme-color);
+    }
+}
+
+.social-link {
+    text-decoration: none;
+    display: block;
+}
+
+// Teacher Content
+.teacher-content {
+    padding: 80px 0;
+    background-color: var(--smoke-color);
+}
+
+.teacher-content_wrapper {
+    max-width: var(--main-container);
+    margin: 0 auto;
+}
+
+.custom-bigCol {
+    padding: 0 20px !important;
+}
+
+.custom-bigColCt {
+    padding: 0 20px !important;
+    text-align: center;
+}
+
+.custom-sub {
+    margin-bottom: 40px !important;
+}
+
+.img-content {
+    img {
+    }
+}
+
+.content-info {
+    margin-bottom: 40px;
+}
+
+.custom-colPd {
+    padding: 12px !important;
+}
+
+.info-card {
+    height: 100%;
+    border-radius: 10px;
+    background: var(--white-color);
+    box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.07);
+    padding: 30px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 15px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    h4 {
+        font-size: 2.4rem;
+        color: var(--title-color);
+        margin: 0;
+        font-weight: 600;
+    }
+}
+
+.icon-check {
+    color: var(--theme-color);
+}
+
+//==============================Responsive styles==============================
+// Mobile (345px trở xuống)
+@media (max-width: 344px) {
+    .teacher {
+        padding: 60px 0;
+    }
+
+    .custom-box {
+        font-size: 2.6rem !important;
+    }
+
+    .contact-link {
+        display: block;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .shape-wrap {
+        display: none;
+    }
+
+    .custom-row {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .custom-sub {
+        font-size: 2.8rem !important;
+    }
+
+    .info-card h4 {
+        font-size: 1.8rem !important;
+    }
+}
+
+// Mobile (480px xuống 345px)
+@media (max-width: 480px) and (min-width: 345px) {
+    .teacher {
+        padding: 60px 0;
+    }
+
+    .custom-box {
+        font-size: 2.6rem !important;
+    }
+
+    .contact-link {
+        display: block;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .shape-wrap {
+        display: none;
+    }
+
+    .custom-row {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .custom-sub {
+        font-size: 2.8rem !important;
+    }
+
+    .info-card h4 {
+        font-size: 1.8rem !important;
+    }
+}
+
+// Tablet nhỏ (768px xuống 481px)
+@media (max-width: 768px) and (min-width: 481px) {
+    .teacher {
+        padding: 60px 0;
+    }
+
+    .wrapper {
+        padding: 0 40px;
+    }
+
+    .wrap-btn {
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+    }
+
+    .custom-box {
+        font-size: 3.6rem !important;
+    }
+
+    .contact-link {
+        display: block;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .custom-col {
+        margin-top: 20px !important;
+    }
+
+    .custom-col_product {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .shape-wrap {
+        display: none;
+    }
+
+    .custom-row {
+        flex-direction: column-reverse;
+        gap: 10px;
+        padding: 0 20px !important;
+    }
+}
+
+// Tablet (820px xuống 769px)
+@media (max-width: 820px) and (min-width: 769px) {
+    .teacher {
+        padding: 60px 0;
+    }
+
+    .wrapper {
+        padding: 0 40px;
+    }
+
+    .wrap-btn {
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+    }
+
+    .custom-box {
+        font-size: 3.6rem !important;
+    }
+
+    .contact-link {
+        display: block;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .custom-col {
+        margin-top: 20px !important;
+    }
+
+    .custom-col_product {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .shape-wrap {
+        display: none;
+    }
+
+    .custom-row {
+        flex-direction: column-reverse;
+        gap: 10px;
+        padding: 0 20px !important;
+    }
+}
+
+// Laptop nhỏ (1024px xuống 821px)
+@media (max-width: 1024px) and (min-width: 821px) {
+    .teacher {
+        padding: 60px 0;
+    }
+
+    .wrapper {
+        padding: 0 40px;
+    }
+
+    .wrap-btn {
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+    }
+
+    .custom-box {
+        font-size: 3.6rem !important;
+    }
+
+    .contact-link {
+        display: block;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .custom-colW100 {
+        width: 100% !important;
+    }
+
+    .custom-col {
+        width: 100% !important;
+        margin-top: 20px !important;
+    }
+
+    .custom-col_product {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .shape-wrap {
+        display: none;
+    }
+
+    .custom-row {
+        flex-direction: column-reverse;
+        gap: 10px;
+        padding: 0 20px !important;
+    }
+
+    .custom-bigColCt,
+    .custom-bigCol {
+        width: 100% !important;
+    }
+}
+
+// PC & Laptop lớn (1280px xuống 1025px)
+@media (max-width: 1280px) and (min-width: 1025px) {
+}
