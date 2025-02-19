@@ -1,0 +1,94 @@
+.form-wrap {
+    padding-top: 18px;
+}
+
+.custom-colMb24 {
+    margin-bottom: 24px;
+}
+
+.form-fullName,
+.form-email,
+.form-select,
+.form-phoneNb,
+.form-message {
+    position: relative;
+}
+
+.input-fullName,
+.input-email,
+.input-select,
+.input-phoneNb {
+    height: 55px;
+    padding: 0 25px 0 25px;
+    padding-right: 45px;
+    border: 1px solid transparent;
+    color: var(--body-color);
+    background-color: var(--white-color);
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    font-family: var(--body-font);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    appearance: none;
+}
+
+.input-message {
+    height: 200px;
+    padding: 16px 25px 17px 25px;
+    padding-right: 45px;
+    border: 1px solid transparent;
+    color: var(--body-color);
+    background-color: var(--white-color);
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    font-family: var(--body-font);
+    font-weight: 500;
+    appearance: none;
+    resize: none;
+}
+
+.input-fullName::placeholder,
+.input-email::placeholder,
+.input-select::placeholder,
+.input-phoneNb::placeholder,
+.input-message::placeholder {
+    color: #212529;
+    opacity: 0.8;
+}
+
+.form-icon-user,
+.form-icon-envelop,
+.form-icon-phoneNb {
+    position: absolute;
+    top: 28px;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.6rem;
+    color: #93a5be;
+}
+
+.form-icon-message {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 1.6rem;
+    color: #93a5be;
+}
+
+.form-icon-phone-wrap path {
+    stroke: #93a5be;
+}
+
+.is-invalid {
+    border: 1px solid red !important;
+}
+
+.error-text {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
