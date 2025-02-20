@@ -4,27 +4,59 @@
         "img": "imageContent1",
         "title": "Nền tảng giáo dục sáng tạo và chuyển giao",
         "date": "2021-09-15",
-        "author": "John Doe"
+        "author": "John Doe",
+        "category": "Finance",
+        "card": "Education",
+        "description": "Uniquely pursue emerging experiences before liemerging content. Efficiently underwhelm customer directed total linkage after B2C synergy. Dynamically simplify superior human capital whereas efficient infrastructures generate business web-readiness after wireless outsourcing. A platform dedicated to exploring the transformative power of education. We believe that education is not"
     },
     {
         "id": 2,
         "img": "imageContent2",
         "title": "Xu hướng công nghệ trong giáo dục năm 2024",
         "date": "2024-02-10",
-        "author": "Jane Smith"
+        "author": "Jane Smith",
+        "category": "Technology",
+        "card": "Business",
+        "description": "Uniquely pursue emerging experiences before liemerging content. Efficiently underwhelm customer directed total linkage after B2C synergy. Dynamically simplify superior human capital whereas efficient infrastructures generate business web-readiness after wireless outsourcing. A platform dedicated to exploring the transformative power of education. We believe that education is not"
     },
     {
         "id": 3,
         "img": "imageContent3",
         "title": "Làm thế nào để học hiệu quả hơn?",
         "date": "2023-07-22",
-        "author": "Michael Johnson"
+        "author": "Michael Johnson",
+        "category": "Tips",
+        "card": "Solution",
+        "description": "Uniquely pursue emerging experiences before liemerging content. Efficiently underwhelm customer directed total linkage after B2C synergy. Dynamically simplify superior human capital whereas efficient infrastructures generate business web-readiness after wireless outsourcing. A platform dedicated to exploring the transformative power of education. We believe that education is not"
     },
     {
         "id": 4,
         "img": "imageContent4",
         "title": "Ứng dụng AI trong giảng dạy hiện đại",
         "date": "2022-11-05",
-        "author": "Emily Davis"
+        "author": "Emily Davis",
+        "category": "Technology",
+        "card": "Business",
+        "description": "Uniquely pursue emerging experiences before liemerging content. Efficiently underwhelm customer directed total linkage after B2C synergy. Dynamically simplify superior human capital whereas efficient infrastructures generate business web-readiness after wireless outsourcing. A platform dedicated to exploring the transformative power of education. We believe that education is not"
+    },
+    {
+        "id": 5,
+        "img": "imageContent5",
+        "title": "Khóa học RPA UI Path",
+        "date": "2025-20-01",
+        "author": "Phạm Quý Tùng",
+        "category": "RPA",
+        "card": "Company",
+        "description": "Uniquely pursue emerging experiences before liemerging content. Efficiently underwhelm customer directed total linkage after B2C synergy. Dynamically simplify superior human capital whereas efficient infrastructures generate business web-readiness after wireless outsourcing. A platform dedicated to exploring the transformative power of education. We believe that education is not"
+    },
+    {
+        "id": 6,
+        "img": "imageContent6",
+        "title": "Giới thiệu khóa học chỉnh sửa ảnh với phần mềm photoshop",
+        "date": "2025-21-02",
+        "author": "Ngô Thị Ngọc Thảo",
+        "category": "Photoshop",
+        "card": "Education",
+        "description": "Uniquely pursue emerging experiences before liemerging content. Efficiently underwhelm customer directed total linkage after B2C synergy. Dynamically simplify superior human capital whereas efficient infrastructures generate business web-readiness after wireless outsourcing. A platform dedicated to exploring the transformative power of education. We believe that education is not"
     }
 ]
