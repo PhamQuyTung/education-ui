@@ -38,7 +38,9 @@ const images = {
 
 function SortBar() {
     const [sortType, setSortType] = useState('Sắp xếp mặc định');
+    
     const [sortedProducts, setSortedProducts] = useState(productCourses);
+
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 9; // Giới hạn sản phẩm mỗi trang
 

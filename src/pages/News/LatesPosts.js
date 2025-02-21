@@ -27,7 +27,7 @@ function LatesPosts() {
                     <ul className={cx('list')}>
                         {NewsListHome.slice(0, 3).map((news) => (
                             <li className={cx('itemLP')} key={news.id}>
-                                <Link to="/" className={cx('itemLP-link')}>
+                                <Link to="#" className={cx('itemLP-link')}>
                                     <Image src={imageContent[news.img]} alt={news.title} className={cx('img')} />
                                     <h4>{news.title}</h4>
                                 </Link>

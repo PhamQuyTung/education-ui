@@ -22,7 +22,7 @@ function Categories() {
                     <ul className={cx('list')}>
                         {NewsListHome.map((category) => (
                             <li className={cx('item')} key={category.id}>
-                                <Link to="/" className={cx('item-link')}>
+                                <Link to="#" className={cx('item-link')}>
                                     <FontAwesomeIcon icon={faBookBookmark} className={cx('icon-book')} />
                                     <span>{category.category}</span>
                                 </Link>

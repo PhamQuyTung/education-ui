@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import Image from '~/components/Image';
@@ -16,6 +16,7 @@ import LatesPosts from './LatesPosts';
 import Cards from './Cards';
 import Ads from './Ads';
 import NewsListHome from '~/data/NewsListHome';
+import NewsPagination from '../Course/CoursePagination';
 
 const imageContent = {
     imageContent1: require('~/assets/images/NewsContent/blog-s-1-1.webp'),
@@ -27,12 +28,25 @@ const imageContent = {
 const cx = classNames.bind(styles);
 
 function News() {
+    const [sortedProducts, setSortedProducts] = useState(NewsListHome);
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 3; // Giới hạn sản phẩm mỗi trang
+
+    // Tính tổng số trang
+    const totalPages = Math.ceil(sortedProducts.length / itemsPerPage);
+
+    // Lọc danh sách khóa học cho trang hiện tại
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const currentProducts = sortedProducts.slice(startIndex, endIndex);
+
     return (
         <div className={cx('news')}>
             <div className={cx('wrapper')}>
                 <Row>
                     <Col lg={8} md={12} xs={12} className={cx('custom-colPd15')}>
-                        {NewsListHome.map((news) => (
+                        {currentProducts.map((news) => (
                             <div className={cx('main')} key={news.id}>
                                 <div className={cx('img_wrap')}>
                                     <Image src={imageContent[news.img]} alt={news.title} className={cx('imgContent')} />
@@ -66,7 +80,7 @@ function News() {
 
                                     <p>{news.description}</p>
 
-                                    <Link to="/">
+                                    <Link to="#">
                                         <Button primary ExtraLarge rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
                                             Đọc thêm
                                         </Button>
@@ -92,6 +106,15 @@ function News() {
                         {/* Ads */}
                         <Ads />
                     </Col>
+
+                    {/* Pagination */}
+                    {totalPages > 1 && (
+                        <NewsPagination
+                            currentPage={currentPage}
+                            totalPages={totalPages}
+                            onPageChange={setCurrentPage}
+                        />
+                    )}
                 </Row>
             </div>
         </div>

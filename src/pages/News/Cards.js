@@ -20,7 +20,7 @@ function Cards() {
                     <ul className={cx('list')}>
                         {[...new Set(NewsListHome.map((news) => news.card))].map((card, index) => (
                             <li className={cx('itemC')} key={index}>
-                                <Link to="/" className={cx('itemC-link')}>
+                                <Link to="#" className={cx('itemC-link')}>
                                     {card}
                                 </Link>
                             </li>
