@@ -25,20 +25,21 @@ import MenuOption from '~/Layout/DefaultLayout/Header/HeaderNav/menuItemOption';
 import SearchHeader from '~/components/Search';
 import { useTheme } from '~/context/ThemeContext';
 import ModalNavBars from '~/components/Modal';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
-    { to: '/', label: 'Trang chủ' },
-    { to: '/introduce', label: 'Giới thiệu' },
-    { to: '/course', label: 'Khóa học' },
-    { to: '/contact', label: 'Liên hệ' },
+    { to: config.ROUTES_CONFIG.HOME, label: 'Trang chủ' },
+    { to: config.ROUTES_CONFIG.INTRODUCE, label: 'Giới thiệu' },
+    { to: config.ROUTES_CONFIG.COURSE, label: 'Khóa học' },
+    { to: config.ROUTES_CONFIG.CONTACT, label: 'Liên hệ' },
 ];
 
 const SUB_MENU_ITEMS = [
-    { to: '/events', label: 'Sự kiện' },
-    { to: '/teacher', label: 'Giảng viên' },
-    { to: '/news', label: 'Tin tức' },
+    { to: config.ROUTES_CONFIG.EVENTS, label: 'Sự kiện' },
+    { to: config.ROUTES_CONFIG.TEACHER, label: 'Giảng viên' },
+    { to: config.ROUTES_CONFIG.NEWS, label: 'Tin tức' },
 ];
 
 function HeaderNav({ isHidden, currentUser }) {
@@ -84,13 +85,14 @@ function HeaderNav({ isHidden, currentUser }) {
         <div className={cx('header-nav', { 'ps-fix': isFixed }, { 'dp-none': isHidden })}>
             <div className={cx('wrapper')}>
                 {/* Logo */}
-                <Link to="/" className={cx('logo')}>
+                <Link to={config.ROUTES_CONFIG.HOME} className={cx('logo')}>
                     <Image ref={imageRef} className={cx('img')} src={logo} alt="logo" />
                 </Link>
 
                 {/* Main Menu */}
                 <ul className={cx('menu')}>
                     {renderMenuItems(MENU_ITEMS.slice(0, -1))}
+
                     <li className={cx('item')}>
                         <Tippy interactive placement="bottom" delay={[300, 0]} render={renderSubMenu}>
                             <span className={cx('link')}>
@@ -99,7 +101,8 @@ function HeaderNav({ isHidden, currentUser }) {
                             </span>
                         </Tippy>
                     </li>
-                    {renderMenuItems([MENU_ITEMS[MENU_ITEMS.length - 1]])}
+
+                    {renderMenuItems([MENU_ITEMS[MENU_ITEMS.length - 1]])}  
                 </ul>
 
                 {/* Actions */}

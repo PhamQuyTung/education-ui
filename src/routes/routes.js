@@ -12,16 +12,20 @@ import News from '~/pages/News';
 import Contact from '~/pages/Contact';
 import CourseDetail from '~/pages/Course/CourseDetail';
 
+//
+import config from '~/config';
+
 // Public routes
 const publicRoutes = [
-    { path: '/', component: Home, layout: HeaderOnly },
-    { path: '/introduce', component: Introduce },
-    { path: '/course', component: Course },
-    { path: '/events', component: Events },
-    { path: '/teacher', component: Teacher },
-    { path: '/news', component: News },
-    { path: '/contact', component: Contact },
-    { path: '/courseDetail', component: CourseDetail },
+    { path: config.ROUTES_CONFIG.HOME, component: Home, layout: HeaderOnly },
+    { path: config.ROUTES_CONFIG.INTRODUCE, component: Introduce },
+    { path: config.ROUTES_CONFIG.COURSE, component: Course },
+    { path: config.ROUTES_CONFIG.EVENTS, component: Events },
+    { path: config.ROUTES_CONFIG.TEACHER, component: Teacher },
+    { path: config.ROUTES_CONFIG.NEWS, component: News },
+    { path: config.ROUTES_CONFIG.CONTACT, component: Contact },
+    { path: config.ROUTES_CONFIG.COURSE_DETAIL, component: CourseDetail },
 ];
 const privateRoutes = [];
+
 export { publicRoutes, privateRoutes };

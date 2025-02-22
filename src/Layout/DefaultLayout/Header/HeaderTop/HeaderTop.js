@@ -12,6 +12,12 @@ import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
+const CONTACT_INFO = [
+    { icon: faPhone, text: '0385607680', link: 'tel:0385607680' },
+    { icon: faEnvelope, text: 'pqthp18903@gmail.com', link: 'mailto:pqthp18903@gmail.com' },
+    { icon: faClock, text: 'Thứ 2 - Thứ 6: 9:00 - 18:00' },
+];
+
 const SOCIAL_MEDIA = [
     { icon: faFacebookF, link: '/' },
     { icon: faTiktok, link: '/' },
@@ -19,15 +25,8 @@ const SOCIAL_MEDIA = [
     { icon: faTwitter, link: '/' },
 ];
 
-const CONTACT_INFO = [
-    { icon: faPhone, text: '0385607680', link: '/' },
-    { icon: faEnvelope, text: 'info@themona.global', link: '/' },
-    { icon: faClock, text: 'Thứ 2 - Thứ 6: 9:00 - 18:00' },
-];
-
 function HeaderTop({ currentUser }) {
     const [isHidden, setIsHidden] = useState(false);
-    // const currentUser = false;
 
     useEffect(() => {
         const handleScroll = () => setIsHidden(window.scrollY >= 1000);
@@ -35,19 +34,27 @@ function HeaderTop({ currentUser }) {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const renderContactInfo = () =>
-        CONTACT_INFO.map(({ icon, text, link }, index) => (
-            <li key={index} className={cx('item-box1')}>
-                <FontAwesomeIcon className={cx('icon')} icon={icon} />
-                {link ? (
+const renderContactInfo = () =>
+    CONTACT_INFO.map(({ icon, text, link }, index) => (
+        <li key={index} className={cx('item-box1')}>
+            <FontAwesomeIcon className={cx('icon')} icon={icon} />
+
+            {link ? (
+                link.startsWith('tel:') || link.startsWith('mailto:') ? (
+                    <a href={link} className={cx('link')}>
+                        {text}
+                    </a>
+                ) : (
                     <Link to={link} className={cx('link')}>
                         {text}
                     </Link>
-                ) : (
-                    <span>{text}</span>
-                )}
-            </li>
-        ));
+                )
+            ) : (
+                <span>{text}</span> // Nếu không có link thì hiển thị span
+            )}
+        </li>
+    ));
+
 
     const renderSocialMedia = () =>
         SOCIAL_MEDIA.map(({ icon, link }, index) => (
