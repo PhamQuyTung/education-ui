@@ -6,6 +6,7 @@ const ROUTES_CONFIG = {
     TEACHER: '/teacher',
     NEWS: '/news',
     CONTACT: '/contact',
+    LOGIN: '/login',
     COURSE_DETAIL: '/courseDetail',
 }
 

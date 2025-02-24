@@ -14,6 +14,7 @@ import image1 from '~/assets/images/Home/AboutContent/about1.webp';
 import image2 from '~/assets/images/Home/AboutContent/about_1_2.webp';
 import image4 from '~/assets/images/Home/AboutContent/about_1_4.webp';
 import shape1 from '~/assets/images/Home/AboutContent/BookShape.webp';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -81,7 +82,7 @@ function AboutContent() {
                                 description2="Chúng tôi là một nền tảng học trực tuyến cung cấp một loạt các khóa học đa dạng và chất lượng, từ marketing, kinh doanh, phát triển cá nhân, thiết kế đến kỹ năng sống và nhiều lĩnh vực khác. Với đội ngũ giảng viên giàu kinh nghiệm và kiến thức chuyên môn sâu rộng, chúng tôi cam kết mang đến cho bạn những khóa học chất lượng cao và mang tính thực tiễn."
                                 buttonDescription="Tìm hiểu thêm"
                                 clsSub={cx('custom-sub')}
-                                to="/introduce"
+                                to={config.ROUTES_CONFIG.INTRODUCE}
                             >
                                 <Row className={cx('check')}>
                                     <Col lg={4} md={5} xs={12} className={cx('check-img')}>

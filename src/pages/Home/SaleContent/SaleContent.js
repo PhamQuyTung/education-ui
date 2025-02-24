@@ -14,6 +14,7 @@ import Image from '~/components/Image';
 import shape1 from '~/assets/images/Home/SaleContent/cta_2_shape1.webp';
 import shape2 from '~/assets/images/Home/SaleContent/cta_2_shape2.webp';
 import shape3 from '~/assets/images/Home/SaleContent/cta_2_shape3.webp';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -74,10 +75,10 @@ function SaleContent() {
                                 transition={{ duration: 1 }}
                                 onAnimationComplete={() => setStartCount(true)} // Bắt đầu Counter sau animation
                             >
-                                <Button to='/contact' primary ExtraLarge rightIcon={<FontAwesomeIcon icon={faArrowRight} />} className={cx('custom-btn')}>
+                                <Button to={config.ROUTES_CONFIG.CONTACT} primary ExtraLarge rightIcon={<FontAwesomeIcon icon={faArrowRight} />} className={cx('custom-btn')}>
                                     Tham gia
                                 </Button>
-                                <Button to='/' outline ExtraLarge rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
+                                <Button to={config.ROUTES_CONFIG.HOME} outline ExtraLarge rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
                                     Trở thành giảng viên
                                 </Button>
                             </motion.div>

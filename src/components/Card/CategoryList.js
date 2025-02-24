@@ -11,6 +11,7 @@ import { Card, CardItem } from '~/components/Card';
 import { MarketingIcon, UiUxIcon, SSIcon } from '~/components/Icons';
 import styles from './Card.module.scss';
 import { productSliderConfig } from '~/libs/swiperConfigs';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -77,7 +78,7 @@ function CategoryList() {
                                         title={category.title}
                                         sub={category.sub}
                                         buttonDescription={category.buttonDescription}
-                                        to="/"
+                                        to={config.ROUTES_CONFIG.HOME}
                                     />
                                 </motion.div>
                             </Col>

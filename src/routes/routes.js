@@ -1,6 +1,7 @@
 // File này chứa các tuyến đường
 // Layouts
 import HeaderOnly from '~/Layout/HeaderOnly';
+import NoLayOut from '~/Layout/NoLayOut';
 
 // Pages
 import Home from '~/pages/Home';
@@ -10,6 +11,7 @@ import Events from '~/pages/Events';
 import Teacher from '~/pages/Teacher';
 import News from '~/pages/News';
 import Contact from '~/pages/Contact';
+import Login from '~/pages/Login';
 import CourseDetail from '~/pages/Course/CourseDetail';
 
 //
@@ -24,6 +26,7 @@ const publicRoutes = [
     { path: config.ROUTES_CONFIG.TEACHER, component: Teacher },
     { path: config.ROUTES_CONFIG.NEWS, component: News },
     { path: config.ROUTES_CONFIG.CONTACT, component: Contact },
+    { path: config.ROUTES_CONFIG.LOGIN, component: Login, layout: NoLayOut },
     { path: config.ROUTES_CONFIG.COURSE_DETAIL, component: CourseDetail },
 ];
 const privateRoutes = [];

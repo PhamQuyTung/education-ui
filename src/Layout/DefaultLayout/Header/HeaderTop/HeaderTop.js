@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import styles from './HeaderTop.module.scss';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faClock, faEnvelope, faUser } from '@fortawesome/free-regular-svg-icons';
 import { faFacebookF, faTiktok, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+
+import styles from './HeaderTop.module.scss';
 import Image from '~/components/Image';
 import Button from '~/components/Button';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -82,7 +84,7 @@ const renderContactInfo = () =>
                                 />
                             </Link>
                         ) : (
-                            <Link to="/">
+                            <Link to={config.ROUTES_CONFIG.LOGIN}>
                                 <Button Small primary3>
                                     Login
                                 </Button>

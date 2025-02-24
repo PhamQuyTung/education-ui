@@ -13,6 +13,7 @@ import Button from '~/components/Button';
 import Image from '~/components/Image';
 import ModalVideo from '~/components/Modal';
 import imagesBanner1 from '~/assets/images/Home/Banner/cta-icon1.webp';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -39,7 +40,7 @@ function Banner() {
                                         ngay hôm nay!
                                     </p>
                                 </div>
-                                <Link to="/introduce" className={cx('btn-primary')}>
+                                <Link to={config.ROUTES_CONFIG.INTRODUCE} className={cx('btn-primary')}>
                                     <Button primary ExtraLarge rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
                                         Tham gia
                                     </Button>

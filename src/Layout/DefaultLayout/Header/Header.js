@@ -3,7 +3,7 @@ import HeaderNav from './HeaderNav';
 import HeaderTop from './HeaderTop';
 
 function Header() {
-    const [currentUser, setCurrentUser] = useState(true); // Giả sử user đã đăng nhập
+    const [currentUser, setCurrentUser] = useState(false); // Giả sử user đã đăng nhập
     return (
         <div className="Header-main">
             <HeaderTop currentUser={currentUser} />

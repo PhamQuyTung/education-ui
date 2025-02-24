@@ -16,6 +16,7 @@ import { faFacebook, faInstagram, faTiktok, faTwitter } from '@fortawesome/free-
 import Title from '~/components/Title';
 import imgContentTeacher from '~/assets/images/TeacherTeam/TeacherTeam1.png';
 import imgShapeTeacher from '~/assets/images/TeacherTeam/blog-3-bg-shape.webp';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -143,7 +144,7 @@ function Teacher() {
                                 title="Giảng viên"
                                 sub="Trở thành giảng viên trên nền tảng trực tuyến của chúng tôi"
                                 buttonDescription="Đăng ký"
-                                to="/"
+                                to={config.ROUTES_CONFIG.HOME}
                                 clsSub={cx('custom-sub')}
                             >
                                 <div className={cx('content-info')}>

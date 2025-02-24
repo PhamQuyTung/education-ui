@@ -13,6 +13,7 @@ import imageWcu2 from '~/assets/images/Home/WhyChooseUs/student-group_1_1.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import Button from '~/components/Button';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -41,7 +42,7 @@ function Wcu() {
                                 <Image src={imageWcu1} alt="why choose us 1?" className={cx('img')} />
                             </div>
                             <div className={cx('button-wrap')}>
-                                <Button to='/contact' primary ExtraLarge rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
+                                <Button to={config.ROUTES_CONFIG.CONTACT} primary ExtraLarge rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
                                     Bắt đầu
                                 </Button>
                             </div>

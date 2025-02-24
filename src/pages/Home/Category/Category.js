@@ -8,6 +8,7 @@ import { useInView } from 'react-intersection-observer';
 import styles from './Category.module.scss';
 import Title from '~/components/Title';
 import CategoryList from '~/components/Card/CategoryList';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -31,7 +32,7 @@ function Category() {
                                 title="Danh mục khóa học"
                                 sub="Khám phá các danh mục hàng đầu"
                                 buttonDescription="Xem tất cả danh mục"
-                                to="/course"
+                                to={config.ROUTES_CONFIG.COURSE}
                                 clsBox={cx('custom-box')}
                                 clsTitle={cx('custom-title')}
                                 clsSub={cx('custom-sub')}

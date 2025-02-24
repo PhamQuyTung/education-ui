@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import styles from './PopularCourse.module.scss';
 import Title from '~/components/Title';
 import PopularCourseProduct from './PopularCourseProduct';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -16,7 +17,7 @@ function PopularCourse() {
                     clsTitle={cx('custom-title')}
                     clsSub={cx('custom-subTitle')}
                     buttonDescription="Xem tất cả khoá học"
-                    to="/course"
+                    to={config.ROUTES_CONFIG.COURSE}
                     clsBox={cx('custom-box')}
                 />
                 <div className={cx('products')}>
