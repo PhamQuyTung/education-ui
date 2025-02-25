@@ -11,7 +11,7 @@ import Events from '~/pages/Events';
 import Teacher from '~/pages/Teacher';
 import News from '~/pages/News';
 import Contact from '~/pages/Contact';
-import Login from '~/pages/Login';
+import Login from '~/pages/Auth';
 import CourseDetail from '~/pages/Course/CourseDetail';
 
 //
