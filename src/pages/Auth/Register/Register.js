@@ -116,7 +116,7 @@ function Register({ switchToLogin }) {
                         {/* Input Username */}
                         <div className={cx('form-userName')}>
                             <div className={cx('wrap-icon-user')}>
-                                <FontAwesomeIcon icon={faUser} />
+                                <FontAwesomeIcon className={cx('icon')} icon={faUser} />
                             </div>
                             <input
                                 type="text"
@@ -132,7 +132,7 @@ function Register({ switchToLogin }) {
                         {/* Input Email */}
                         <div className={cx('form-email')}>
                             <div className={cx('wrap-icon-email')}>
-                                <FontAwesomeIcon icon={faEnvelope} />
+                                <FontAwesomeIcon className={cx('icon')} icon={faEnvelope} />
                             </div>
                             <input
                                 type="email"
@@ -148,7 +148,7 @@ function Register({ switchToLogin }) {
                         {/* Input Password */}
                         <div className={cx('form-password')}>
                             <div className={cx('wrap-icon-lock')}>
-                                <FontAwesomeIcon icon={faLock} />
+                                <FontAwesomeIcon className={cx('icon')} icon={faLock} />
                             </div>
                             <input
                                 type={showPassword ? 'text' : 'password'}
@@ -160,7 +160,7 @@ function Register({ switchToLogin }) {
                             />
                             {valuePassword && (
                                 <div className={cx('wrap-icon-eye')} onClick={handleTogglePassword}>
-                                    <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+                                    <FontAwesomeIcon className={cx('icon')} icon={showPassword ? faEyeSlash : faEye} />
                                 </div>
                             )}
                             {errorPassword && <p className={cx('error-message')}>{errorPassword}</p>}
@@ -169,7 +169,7 @@ function Register({ switchToLogin }) {
                         {/* Input Repeat Password */}
                         <div className={cx('form-password')}>
                             <div className={cx('wrap-icon-lock')}>
-                                <FontAwesomeIcon icon={faLock} />
+                                <FontAwesomeIcon className={cx('icon')} icon={faLock} />
                             </div>
                             <input
                                 type={showRepeatPassword ? 'text' : 'password'}
@@ -181,7 +181,7 @@ function Register({ switchToLogin }) {
                             />
                             {valueRepeatPassword && (
                                 <div className={cx('wrap-icon-eye')} onClick={handleToggleRepeatPassword}>
-                                    <FontAwesomeIcon icon={showRepeatPassword ? faEyeSlash : faEye} />
+                                    <FontAwesomeIcon className={cx('icon')} icon={showRepeatPassword ? faEyeSlash : faEye} />
                                 </div>
                             )}
                             {errorRepeatPassword && <p className={cx('error-message')}>{errorRepeatPassword}</p>}

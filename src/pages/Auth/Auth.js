@@ -9,20 +9,30 @@ import imgContent from '~/assets/images/Login/Lovepik_com-450069364- work from h
 import TypingEffect from '~/components/TypingEffect';
 import LoginForm from './Login';
 import RegisterForm from './Register';
+import ForgotPasswordForm from './ForgotPassWord';
 
 const cx = classNames.bind(styles);
 
 function Auth() {
     const [isLogin, setIsLogin] = useState(true);
-
+    const [isForgotPassword, setIsForgotPassword] = useState(false);
+    
     return (
         <div className={cx('Log')}>
             <div className={cx('bg')}>
                 <div className={cx('wrapper')}>
                     <Row className={cx('container')}>
                         <Col lg={6} md={12} xs={12} className={cx('custom-col')}>
-                            {isLogin ? (
-                                <LoginForm switchToRegister={() => setIsLogin(false)} />
+                        {isForgotPassword ? (
+                                <ForgotPasswordForm switchToLogin={() => {
+                                    setIsForgotPassword(false);
+                                    setIsLogin(true);
+                                }} />
+                            ) : isLogin ? (
+                                <LoginForm 
+                                    switchToRegister={() => setIsLogin(false)} 
+                                    switchToForgotPassword={() => setIsForgotPassword(true)} // Chuyển trạng thái
+                                />
                             ) : (
                                 <RegisterForm switchToLogin={() => setIsLogin(true)} />
                             )}

@@ -84,7 +84,7 @@ const renderContactInfo = () =>
                                 />
                             </Link>
                         ) : (
-                            <Link to={config.ROUTES_CONFIG.LOGIN}>
+                            <Link to={config.ROUTES_CONFIG.AUTH}>
                                 <Button Small primary3>
                                     Login
                                 </Button>

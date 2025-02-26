@@ -13,7 +13,7 @@ import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
-function Login({ switchToRegister }) {
+function Login({ switchToRegister, switchToForgotPassword }) {
     const [valueUserName, setValueUserName] = useState('');
     const [valuePassword, setValuePassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -65,7 +65,7 @@ function Login({ switchToRegister }) {
                         {/* Input Username */}
                         <div className={cx('form-userName')}>
                             <div className={cx('wrap-icon-user')}>
-                                <FontAwesomeIcon icon={faUser} />
+                                <FontAwesomeIcon className={cx('icon')} icon={faUser} />
                             </div>
                             <input
                                 type="text"
@@ -80,7 +80,7 @@ function Login({ switchToRegister }) {
                         {/* Input Password */}
                         <div className={cx('form-password')}>
                             <div className={cx('wrap-icon-lock')}>
-                                <FontAwesomeIcon icon={faLock} />
+                                <FontAwesomeIcon className={cx('icon')} icon={faLock} />
                             </div>
                             <input
                                 type={showPassword ? 'text' : 'password'}
@@ -91,7 +91,7 @@ function Login({ switchToRegister }) {
                             />
                             {valuePassword && (
                                 <div className={cx('wrap-icon-eye')} onClick={handleTogglePassword}>
-                                    <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+                                    <FontAwesomeIcon className={cx('icon')} icon={showPassword ? faEyeSlash : faEye} />
                                 </div>
                             )}
                             {errorPassword && <p className={cx('error-message')}>{errorPassword}</p>}
@@ -106,9 +106,9 @@ function Login({ switchToRegister }) {
                             </label>
                         </div>
                         <div className={cx('forgot')}>
-                            <Link className={cx('forgot-link')} to="/forgot-password">
+                            <span className={cx('forgot-link')} onClick={switchToForgotPassword}>
                                 Quên mật khẩu?
-                            </Link>
+                            </span>
                         </div>
                     </div>
 
