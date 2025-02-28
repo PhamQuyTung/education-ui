@@ -12,6 +12,7 @@ import Teacher from '~/pages/Teacher';
 import News from '~/pages/News';
 import Contact from '~/pages/Contact';
 import Auth from '~/pages/Auth';
+import InstructorRegister from '~/pages/InstructorRegister';
 import CourseDetail from '~/pages/Course/CourseDetail';
 
 //
@@ -27,6 +28,7 @@ const publicRoutes = [
     { path: config.ROUTES_CONFIG.NEWS, component: News },
     { path: config.ROUTES_CONFIG.CONTACT, component: Contact },
     { path: config.ROUTES_CONFIG.AUTH, component: Auth, layout: NoLayOut },
+    { path: config.ROUTES_CONFIG.INSTRUCTOR_REGISTER, component: InstructorRegister, layout: NoLayOut },
     { path: config.ROUTES_CONFIG.COURSE_DETAIL, component: CourseDetail },
 ];
 const privateRoutes = [];

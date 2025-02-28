@@ -78,7 +78,7 @@ function SaleContent() {
                                 <Button to={config.ROUTES_CONFIG.CONTACT} primary ExtraLarge rightIcon={<FontAwesomeIcon icon={faArrowRight} />} className={cx('custom-btn')}>
                                     Tham gia
                                 </Button>
-                                <Button to={config.ROUTES_CONFIG.HOME} outline ExtraLarge rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
+                                <Button to={config.ROUTES_CONFIG.INSTRUCTOR_REGISTER} outline ExtraLarge rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
                                     Trở thành giảng viên
                                 </Button>
                             </motion.div>

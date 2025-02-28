@@ -1,3 +1,4 @@
+
 const ROUTES_CONFIG = {
     HOME: '/',
     INTRODUCE: '/introduce',
@@ -7,6 +8,7 @@ const ROUTES_CONFIG = {
     NEWS: '/news',
     CONTACT: '/contact',
     AUTH: '/auth',
+    INSTRUCTOR_REGISTER: '/instructor_register',
     COURSE_DETAIL: '/courseDetail',
 }
 

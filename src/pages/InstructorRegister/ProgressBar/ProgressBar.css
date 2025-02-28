@@ -1,0 +1,55 @@
+.progress-container {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Thanh progress Bootstrap */
+.progress {
+    height: 8px;
+    background-color: #eee;
+}
+
+/* Progress bar */
+.progress-bar {
+    background-color: #f4c542 !important;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Điểm breakpoint */
+.breakpoint {
+    position: absolute;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    background: #ddd;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: background 0.3s, transform 0.3s;
+    /* border: 2px solid white; */
+}
+
+/* Khi đạt đến breakpoint */
+.breakpoint.active {
+    background: #f4c542;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Số phần trăm trên đầu điểm breakpoint */
+.progress-text {
+    position: absolute;
+    bottom: 20px; /* Đưa lên phía trên */
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: #888;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hiển thị khi đạt breakpoint */
+.progress-text.active {
+    opacity: 1;
+    color: #f4c542;
+    transform: translateX(-50%) translateY(-5px);
+}

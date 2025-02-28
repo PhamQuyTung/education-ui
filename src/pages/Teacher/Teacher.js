@@ -144,7 +144,7 @@ function Teacher() {
                                 title="Giảng viên"
                                 sub="Trở thành giảng viên trên nền tảng trực tuyến của chúng tôi"
                                 buttonDescription="Đăng ký"
-                                to={config.ROUTES_CONFIG.HOME}
+                                to={config.ROUTES_CONFIG.INSTRUCTOR_REGISTER}
                                 clsSub={cx('custom-sub')}
                             >
                                 <div className={cx('content-info')}>
