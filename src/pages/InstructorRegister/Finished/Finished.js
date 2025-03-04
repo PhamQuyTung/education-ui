@@ -22,7 +22,7 @@ function Finished({ onBack, onNext }) {
                     <Col lg={6} md={12} xs={12}>
                         <div className={cx('text')}>
                             <h2>Đơn của bạn đã được hoàn thành!</h2>
-                            <p>Bước 6: Chờ kết quả xác nhận</p>
+                            <p>Bước 5: Chờ kết quả xác nhận</p>
                         </div>
                     </Col>
                 </Row>

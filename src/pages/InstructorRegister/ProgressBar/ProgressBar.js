@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ProgressBar.css'; // File CSS custom
 
-const breakpoints = [0, 20, 40, 60, 80, 100];
+const breakpoints = [0, 25, 50, 75, 100];
 
 const ProgressBar = ({ progress }) => {
     return (

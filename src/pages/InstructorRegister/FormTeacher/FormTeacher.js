@@ -13,14 +13,14 @@ function FormTeacher({ onBack, onNext }) {
                     <Col lg={6} md={12} xs={12}>
                         <div className={cx('progress-wrap')}>
                             {/* Progress */}
-                            <Progress progress={80} />
+                            <Progress progress={75} />
                         </div>
                     </Col>
 
                     <Col lg={6} md={12} xs={12}>
                         <div className={cx('text')}>
                             <h2>Cố lên sắp xong rồi! Hãy cung cấp thêm một số thông tin cụ thể để chúng tôi hiểu bạn rõ hơn</h2>
-                            <p>Bước 5: Hoàn thiện thông tin bằng cách điền vào form này</p>
+                            <p>Bước 4: Hoàn thiện thông tin bằng cách điền vào form này</p>
                         </div>
                     </Col>
                 </Row>
